@@ -1,0 +1,20 @@
+package com.example.digitracksdk.domain.repository.attendance_regularization_repository
+
+import com.example.digitracksdk.domain.model.attendance_regularization_model.AttendanceRegularizationListRequestModel
+import com.example.digitracksdk.domain.model.attendance_regularization_model.AttendanceRegularizationListResponseModel
+import com.example.digitracksdk.domain.model.attendance_regularization_model.InsertAttendanceRegularizationRequestModel
+import com.example.digitracksdk.domain.model.attendance_regularization_model.InsertAttendanceRegularizationResponseModel
+import com.example.digitracksdk.domain.model.CommonRequestModel
+import com.example.digitracksdk.domain.model.attendance_regularization_model.AttendanceRegularizationTypeResponseModel
+
+interface AttendanceRegularizationRepository {
+
+    suspend fun callAttendanceRegularizationListApi(request: AttendanceRegularizationListRequestModel): AttendanceRegularizationListResponseModel
+
+    suspend fun callAttendanceRegularizationTypeApi(request: CommonRequestModel): AttendanceRegularizationTypeResponseModel
+
+    suspend fun callAttendanceRegularizationInsertApi(request: InsertAttendanceRegularizationRequestModel): InsertAttendanceRegularizationResponseModel
+
+    suspend fun callInsertAttendanceRegularizationApi(request: InsertAttendanceRegularizationRequestModel): InsertAttendanceRegularizationResponseModel
+
+}

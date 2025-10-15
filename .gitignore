@@ -1,0 +1,20 @@
+
+# Project exclude paths
+/.gradle/
+/app/build/
+/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/
+/app/build/intermediates/javac/debugAndroidTest/compileDebugAndroidTestJavaWithJavac/classes/
+/.idea/modules/digitracksdk/DigiTrac.digitracksdk.main.iml
+/.idea/.gitignore
+/.idea/.name
+/.idea/AndroidProjectSystem.xml
+/.idea/compiler.xml
+/.idea/deploymentTargetSelector.xml
+/.idea/digitracknew.iml
+/.idea/gradle.xml
+/.idea/kotlinc.xml
+/.idea/migrations.xml
+/.idea/misc.xml
+/.idea/NewDigiTrac.iml
+/.idea/runConfigurations.xml
+/.idea/vcs.xml

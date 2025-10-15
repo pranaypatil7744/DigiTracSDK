@@ -1,0 +1,13 @@
+<androidx.appcompat.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/plus_jakarta_display_regular"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:id="@+id/text_information"
+    android:hint="@string/public_transport"
+    android:maxLines="1"
+    android:background="@color/label_color"
+    android:padding="@dimen/dimen16"
+    android:textAppearance="?attr/textAppearanceSubtitle1"
+    android:textColor="@color/black"
+    android:textSize="@dimen/size14" />

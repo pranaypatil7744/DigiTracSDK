@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_reimbursement"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dimen16"
+    android:layout_marginVertical="@dimen/dimen10"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_marginHorizontal="@dimen/dimen10">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ic_item"
+            android:layout_width="@dimen/dimen50"
+            android:layout_height="@dimen/dimen50"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_public_transport" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/btnSelect"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_uncheck" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvVoucher"
+            style="@style/plus_jakarta_display_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen10"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/size14"
+            app:layout_constraintEnd_toStartOf="@id/btnSelect"
+            app:layout_constraintStart_toEndOf="@+id/ic_item"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Travelling public transport" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_item"
+            style="@style/plus_jakarta_display_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen10"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="AttendanceDate   :"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/size14"
+            app:layout_constraintEnd_toStartOf="@id/btnSelect"
+            app:layout_constraintStart_toEndOf="@+id/ic_item"
+            app:layout_constraintTop_toBottomOf="@id/tvVoucher"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_description"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen4"
+            android:layout_marginEnd="@dimen/dimen10"
+            android:text="Day                         :"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/size12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/text_item"
+            app:layout_constraintTop_toBottomOf="@+id/text_item" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPaidStatus"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen4"
+            android:layout_marginEnd="@dimen/dimen10"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/size12"
+            android:text="Punch In              :"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/text_item"
+            app:layout_constraintTop_toBottomOf="@+id/text_description" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPaidDate"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen4"
+            android:layout_marginEnd="@dimen/dimen10"
+            android:paddingBottom="10dp"
+            android:text="Status                   :"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/size12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/text_item"
+            app:layout_constraintTop_toBottomOf="@+id/tvPaidStatus"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvApproverName"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen4"
+            android:layout_marginEnd="@dimen/dimen10"
+            android:textColor="@color/jungle_green"
+            android:textSize="@dimen/size12"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/text_description"
+            app:layout_constraintTop_toBottomOf="@+id/tvPaidDate"
+            tools:text="Approved on - 28/07/2021"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvApprovedDate"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen4"
+            android:layout_marginEnd="@dimen/dimen10"
+            android:textColor="@color/jungle_green"
+            android:textSize="@dimen/size12"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvApproverName"
+            app:layout_constraintTop_toBottomOf="@+id/tvApproverName"
+            tools:text="Approved on - 28/07/2021"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvApprovalStatus"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen4"
+            android:layout_marginEnd="@dimen/dimen10"
+            android:textColor="@color/jungle_green"
+            android:textSize="@dimen/size12"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvApprovedDate"
+            app:layout_constraintTop_toBottomOf="@+id/tvApprovedDate"
+            tools:text="Approved on - 28/07/2021"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvApprovalRemarks"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen4"
+            android:layout_marginEnd="@dimen/dimen10"
+            android:textColor="@color/jungle_green"
+            android:textSize="@dimen/size12"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvApprovalStatus"
+            app:layout_constraintTop_toBottomOf="@+id/tvApprovalStatus"
+            tools:text="Approved on - 28/07/2021"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvApproverName2"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen4"
+            android:layout_marginEnd="@dimen/dimen10"
+            android:textColor="@color/jungle_green"
+            android:textSize="@dimen/size12"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvApprovalRemarks"
+            app:layout_constraintTop_toBottomOf="@+id/tvApprovalRemarks"
+            tools:text="Approved on - 28/07/2021"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvApprovedDate2"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen4"
+            android:layout_marginEnd="@dimen/dimen10"
+            android:textColor="@color/jungle_green"
+            android:textSize="@dimen/size12"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvApproverName2"
+            app:layout_constraintTop_toBottomOf="@+id/tvApproverName2"
+            tools:text="Approved on - 28/07/2021"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvApprovalStatus2"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen4"
+            android:layout_marginEnd="@dimen/dimen10"
+            android:textColor="@color/jungle_green"
+            android:textSize="@dimen/size12"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvApprovedDate2"
+            app:layout_constraintTop_toBottomOf="@+id/tvApprovedDate2"
+            tools:text="Approved on - 28/07/2021"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvApprovalRemarks2"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen4"
+            android:layout_marginEnd="@dimen/dimen10"
+            android:textColor="@color/jungle_green"
+            android:textSize="@dimen/size12"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvApprovalStatus2"
+            app:layout_constraintTop_toBottomOf="@+id/tvApprovalStatus2"
+            tools:text="Approved on - 28/07/2021"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvApproverName3"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen4"
+            android:layout_marginEnd="@dimen/dimen10"
+            android:textColor="@color/jungle_green"
+            android:textSize="@dimen/size12"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvApprovalRemarks2"
+            app:layout_constraintTop_toBottomOf="@+id/tvApprovalRemarks2"
+            tools:text="Approved on - 28/07/2021"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvApprovedDate3"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen4"
+            android:layout_marginEnd="@dimen/dimen10"
+            android:textColor="@color/jungle_green"
+            android:textSize="@dimen/size12"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvApproverName3"
+            app:layout_constraintTop_toBottomOf="@+id/tvApproverName3"
+            tools:text="Approved on - 28/07/2021"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvApprovalStatus3"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen4"
+            android:layout_marginEnd="@dimen/dimen10"
+            android:textColor="@color/jungle_green"
+            android:textSize="@dimen/size12"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvApprovedDate3"
+            app:layout_constraintTop_toBottomOf="@+id/tvApprovedDate3"
+            tools:text="Approved on - 28/07/2021"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvApprovalRemarks3"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen4"
+            android:layout_marginEnd="@dimen/dimen10"
+            android:textColor="@color/jungle_green"
+            android:textSize="@dimen/size12"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvApprovalStatus3"
+            app:layout_constraintTop_toBottomOf="@+id/tvApprovalStatus3"
+            tools:text="Approved on - 28/07/2021"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_amount"
+            style="@style/plus_jakarta_display_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="@dimen/dimen10"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/size16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnRemove"
+            app:layout_constraintTop_toBottomOf="@+id/tvApprovalRemarks3"
+            tools:text="₹50.00" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/btnRemove"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/text_amount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_delete" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

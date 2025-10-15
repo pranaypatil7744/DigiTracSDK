@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_bottom_sheet"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNewLeaveRequest"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/associate_request"
+            android:textColor="@color/mine_shaft"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/btnClose"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="15dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close_icon" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutIssueCategory"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="40dp"
+            android:hint="@string/issue_category"
+            app:boxStrokeWidth="0.5dp"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/tvNewLeaveRequest">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/etIssueCategory"
+                style="@style/plus_jakarta_display_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:text="@string/Select"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutSubIssueCategory"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/issue_sub_category"
+            app:boxStrokeWidth="0.5dp"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/layoutIssueCategory">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/etSubIssueCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/plus_jakarta_display_medium"
+                android:inputType="none"
+                android:text="@string/Select"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutRequestTitle"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/request_title"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/layoutSubIssueCategory">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRequestTitle"
+                style="@style/plus_jakarta_display_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutReason"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/reason"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/layoutRequestTitle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etReason"
+                android:layout_width="match_parent"
+                style="@style/plus_jakarta_display_medium"
+                android:layout_height="90dp"
+                android:gravity="start"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:padding="15dp"
+                android:singleLine="false"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmit"
+            style="@style/MaterialButtonBaseStyle"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutReason" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

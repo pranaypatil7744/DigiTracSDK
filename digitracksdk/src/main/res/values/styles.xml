@@ -1,0 +1,272 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+
+    <style name="Theme.AppCompat.Translucent" parent="Theme.AppCompat.NoActionBar">
+<!--        <item name="android:background">#33000000</item>-->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+    <style name="CustomBottomSheetDialog" parent="@style/Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@drawable/bg_bottom_sheet</item>
+    </style>
+
+    <style name="circleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="roundCornerView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8%</item>
+    </style>
+
+    <style name="AppTheme.Picker" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="android:textColorPrimary">@color/blue_ribbon</item>
+    </style>
+
+    <style name="roundCornerView4" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">4%</item>
+    </style>
+
+    <style name="roundCornerView20" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20%</item>
+    </style>
+
+    <style name="DialogTheme">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_bottom</item>
+    </style>
+
+    <style name="TabLayout" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/plus_jakarta_display_regular</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/alto</item>
+        <item name="boxStrokeWidth">0.5dp</item>
+        <item name="boxCornerRadiusBottomEnd">5dp</item>
+        <item name="boxCornerRadiusBottomStart">5dp</item>
+        <item name="boxCornerRadiusTopEnd">5dp</item>
+        <item name="boxCornerRadiusTopStart">5dp</item>
+    </style>
+
+    <style name="MaterialButtonBaseStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/blue_ribbon</item>
+        <item name="cornerRadius">5dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">@font/plus_jakarta_display_medium
+        </item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+    </style>
+
+    <style name="MaterialLightButtonBaseStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/blue_ribbon</item>
+        <item name="cornerRadius">5dp</item>
+        <item name="android:textSize">@dimen/size16</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">@font/plus_jakarta_display_light
+        </item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+    </style>
+
+    <!--    <style name="MaterialSignUpButtonBaseStyle" parent="Widget.MaterialComponents.Button">-->
+    <!--        <item name="android:textColor">@color/white</item>-->
+    <!--        <item name="backgroundTint">@color/blue_ribbon</item>-->
+    <!--        <item name="android:textSize">14sp</item>-->
+    <!--        <item name="android:fontFamily" tools:ignore="NewApi">@font/plus_jakarta_display_medium</item>-->
+    <!--        <item name="android:layout_width">match_parent</item>-->
+    <!--        <item name="android:layout_height">56dp</item>-->
+    <!--    </style>-->
+
+    <style name="roboto_regular_small">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MaterialCardView.Cut" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">8dp</item>
+        <item name="cornerSizeTopLeft">8dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="MaterialSignUpButtonBaseStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/blue_ribbon</item>
+        <item name="android:textSize">@dimen/size16</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">@font/plus_jakarta_display_regular
+        </item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+    </style>
+
+    <style name="plus_jakarta_display_regular_small">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_regular</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+    <style name="plus_jakarta_display_regular_x_small">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_regular</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+    <style name="plus_jakarta_display_regular_xx_small">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_regular</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+    <style name="plus_jakarta_display_regular">
+        <item name="android:textSize">@dimen/size16</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_regular</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+    <style name="plus_jakarta_display_regular_large">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_regular</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+    <style name="plus_jakarta_display_regular_x_large">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_regular</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+    <style name="plus_jakarta_display_regular_xx_large">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_regular</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+
+    <style name="plus_jakarta_display_medium_small">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_medium</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+    <style name="plus_jakarta_display_medium_x_small">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_medium</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+    <style name="plus_jakarta_display_medium_xx_small">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_medium</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+    <style name="plus_jakarta_display_medium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_medium</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+    <style name="plus_jakarta_display_medium_large">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_medium</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+    <style name="plus_jakarta_display_medium_x_large">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_medium</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+    <style name="plus_jakarta_display_medium_xx_large">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_medium</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+
+    <style name="plus_jakarta_display_light_small">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_light</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+    <style name="plus_jakarta_display_light_x_small">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_light</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+    <style name="plus_jakarta_display_light_xx_small">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_light</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+    <style name="plus_jakarta_display_light">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_light</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+    <style name="plus_jakarta_display_light_large">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_light</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+    <style name="plus_jakarta_display_light_x_large">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_light</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+    <style name="plus_jakarta_display_light_xx_large">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_light</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+
+    <style name="plus_jakarta_display_bold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/plus_jakarta_display_bold</item>
+        <item name="android:textColor">@color/tundora</item>
+    </style>
+
+    <style name="TextInputLayout" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxStrokeColor">@color/silver</item>
+        <item name="boxStrokeWidth">@dimen/dimen2</item>
+    </style>
+
+    <style name="TextLabel" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">@dimen/size12</item>
+        <item name="fontStyle">@style/plus_jakarta_display_regular</item>
+    </style>
+
+</resources>

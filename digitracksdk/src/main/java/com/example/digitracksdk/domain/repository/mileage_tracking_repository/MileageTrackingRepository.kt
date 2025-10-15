@@ -1,0 +1,26 @@
+package com.example.digitracksdk.domain.repository.mileage_tracking_repository
+
+import com.example.digitracksdk.domain.model.mileage_tracking_model.InsertMileageRegularizationRequestModel
+import com.example.digitracksdk.domain.model.mileage_tracking_model.InsertMileageRegularizationResponseModel
+import com.example.digitracksdk.domain.model.mileage_tracking_model.InsertMileageTrackingRequestModel
+import com.example.digitracksdk.domain.model.mileage_tracking_model.InsertMileageTrackingResponseModel
+import com.example.digitracksdk.domain.model.mileage_tracking_model.MileageRegularizationListRequestModel
+import com.example.digitracksdk.domain.model.mileage_tracking_model.MileageRegularizationListResponseModel
+import com.example.digitracksdk.domain.model.mileage_tracking_model.MileageTrackingFlagRequestModel
+import com.example.digitracksdk.domain.model.mileage_tracking_model.MileageTrackingFlagResponseModel
+import com.example.digitracksdk.domain.model.mileage_tracking_model.MileageTrackingListRequestModel
+import com.example.digitracksdk.domain.model.mileage_tracking_model.MileageTrackingListResponseModel
+
+interface MileageTrackingRepository {
+
+    suspend fun callInsertMileageRegularizationApi(request: InsertMileageRegularizationRequestModel): InsertMileageRegularizationResponseModel
+
+    suspend fun callMileageRegularizationListApi(request: MileageRegularizationListRequestModel): MileageRegularizationListResponseModel
+
+    suspend fun callInsertMileageTrackingApi(request: InsertMileageTrackingRequestModel): InsertMileageTrackingResponseModel
+
+    suspend fun callMileageTrackingListApi(request: MileageTrackingListRequestModel): MileageTrackingListResponseModel
+
+    suspend fun callMileageTrackingFlagApi(request: MileageTrackingFlagRequestModel): MileageTrackingFlagResponseModel
+
+}

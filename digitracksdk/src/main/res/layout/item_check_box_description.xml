@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dimen16"
+    android:layout_marginVertical="@dimen/dimen10">
+
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/item_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="@dimen/dimen0"
+        app:buttonTint="@color/blue_ribbon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_description"
+        style="@style/plus_jakarta_display_light"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/light_label"
+        android:textSize="@dimen/size10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item_check_box"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/aadhar_card_holder_description" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

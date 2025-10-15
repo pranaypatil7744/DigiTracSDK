@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_bottom_sheet"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNewReimbursementRequest"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/mileage_tracking"
+            android:textColor="@color/mine_shaft"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/btnClose"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="15dp"
+            android:scaleType="fitXY"
+            app:tint="@color/silver_chalice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close_icon" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutChooseDate"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="40dp"
+            android:hint="@string/date"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/tvNewReimbursementRequest">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etChooseDate"
+                style="@style/plus_jakarta_display_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:focusable="false"
+                android:drawableEnd="@drawable/ic_calendar"
+                app:drawableTint="@color/alto"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutOpeningReading"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/opening_reading"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/layoutChooseDate">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etOpening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/plus_jakarta_display_medium"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutClosingReading"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/closing_reading"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/layoutOpeningReading">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etClosing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/plus_jakarta_display_medium"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutUploadImage"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/upload_image"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/layoutClosingReading">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUploadImage"
+                style="@style/plus_jakarta_display_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="none"
+                android:focusable="false"
+                android:padding="15dp"
+                android:paddingEnd="50dp"
+                android:singleLine="true"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutUploadImage2"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/upload_image"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/layoutUploadImage">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUploadImage2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/plus_jakarta_display_medium"
+                android:imeOptions="actionNext"
+                android:inputType="none"
+                android:ellipsize="end"
+                android:clickable="false"
+                android:focusable="false"
+                android:paddingEnd="50dp"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/layoutUploadImage"
+            app:layout_constraintEnd_toEndOf="@id/layoutUploadImage"
+            app:layout_constraintTop_toTopOf="@id/layoutUploadImage"
+            app:layout_constraintVertical_bias="0.40"
+            app:srcCompat="@drawable/ic_delete" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUploadFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/plus_jakarta_display_medium"
+            android:text="@string/add_image"
+            app:icon="@drawable/ic_upload"
+            app:iconTint="@color/colorPrimaryDark"
+            app:iconGravity="textStart"
+            android:gravity="center"
+            android:background="@drawable/bg_btn_upload"
+            android:textColor="@color/mine_shaft"
+            android:textAllCaps="false"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutUploadImage2" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutReason"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/reason"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/btnUploadFile">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etReason"
+                android:layout_width="match_parent"
+                style="@style/plus_jakarta_display_medium"
+                android:layout_height="90dp"
+                android:gravity="start"
+                android:imeOptions="actionDone"
+                android:inputType="none"
+                android:padding="15dp"
+                android:singleLine="false"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDone"
+            style="@style/MaterialButtonBaseStyle"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/apply"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutReason" />
+        <include
+            layout="@layout/content_loading"
+            android:id="@+id/content_loading"
+            android:visibility="gone"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

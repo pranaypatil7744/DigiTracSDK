@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.digitracksdk.presentation.home.jobs_and_refer_fds.submit_document.SubmitDocumentsActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_main"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/btnSubmit">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCover"
+                style="@style/plus_jakarta_display_regular_small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/cover_letter"
+                android:textColor="@color/mine_shaft"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnEdit" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/btnEdit"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/ic_edit"
+                app:tint="@color/blue_ribbon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLetterText"
+                style="@style/plus_jakarta_display_light_x_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/gray"
+                app:layout_constraintTop_toBottomOf="@id/tvCover"
+                android:layout_marginTop="15dp" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDocuments"
+                style="@style/plus_jakarta_display_regular_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/documents"
+                android:textColor="@color/mine_shaft"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/tvLetterText"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUploadImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/plus_jakarta_display_medium_small"
+                app:layout_constraintTop_toBottomOf="@id/tvDocuments"
+                android:background="@drawable/bg_text_round_corner"
+                android:layout_marginTop="15dp"
+                android:inputType="none"
+                android:ellipsize="end"
+                android:clickable="false"
+                android:focusable="false"
+                android:paddingEnd="50dp"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/mine_shaft" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/etUploadImage"
+                app:layout_constraintEnd_toEndOf="@id/etUploadImage"
+                app:layout_constraintTop_toTopOf="@id/etUploadImage"
+                app:layout_constraintVertical_bias="0.40"
+                app:srcCompat="@drawable/ic_outline_close_square" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUploadFile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/plus_jakarta_display_medium"
+                android:text="@string/add_document"
+                app:icon="@drawable/ic_upload"
+                app:iconTint="@color/colorPrimaryDark"
+                app:iconGravity="textStart"
+                android:gravity="center"
+                android:background="@drawable/bg_btn_upload"
+                android:textColor="@color/mine_shaft"
+                android:textAllCaps="false"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etUploadImage" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmit"
+        style="@style/MaterialButtonBaseStyle"
+        android:layout_margin="16dp"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

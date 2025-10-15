@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_bottom_sheet"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAttendanceHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/plus_jakarta_display_light"
+        android:textColor="@color/mine_shaft"
+        android:text="@string/time_sheet"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/btnClose"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:srcCompat="@drawable/ic_close_icon"
+        android:layout_margin="10dp"
+        android:scaleType="fitXY"
+        app:tint="@color/silver_chalice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <include
+        layout="@layout/time_sheet_top_item"
+        android:id="@+id/timeSheetTop"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvAttendanceHistory"
+        android:layout_width="match_parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAttendanceHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:minHeight="100dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/timeSheetTop" />
+
+    <include
+        layout="@layout/content_loading"
+        android:id="@+id/content_loading"
+        android:layout_height="@dimen/_0dimen"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent" />
+    <include
+        layout="@layout/no_data_layout"
+        android:id="@+id/layoutNoData"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/timeSheetTop"
+        android:visibility="gone"
+        android:layout_width="match_parent" />
+
+    <include
+        android:id="@+id/layoutNoInternet"
+        layout="@layout/layout_no_internet_connection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/timeSheetTop" />
+</androidx.constraintlayout.widget.ConstraintLayout>

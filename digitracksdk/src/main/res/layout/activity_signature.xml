@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context="com.example.digitracksdk.presentation.onboarding.signature_screen.SignatureActivity">
+
+    <include
+        layout="@layout/toolbar_main"
+        android:id="@+id/toolbar"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutDocument"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="20dp"
+        app:errorEnabled="true"
+        app:hintEnabled="false"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUploadImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/plus_jakarta_display_regular_small"
+            android:imeOptions="actionNext"
+            android:inputType="none"
+            android:ellipsize="end"
+            tools:text="Signature.pdf"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingEnd="110dp"
+            android:paddingVertical="20dp"
+            android:singleLine="true"
+            android:textColor="@color/mine_shaft" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnView"
+        style="@style/MaterialButtonBaseStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:visibility="visible"
+        android:text="@string/add"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/layoutDocument"
+        app:layout_constraintEnd_toEndOf="@id/layoutDocument"
+        app:layout_constraintTop_toTopOf="@id/layoutDocument"
+        app:layout_constraintVertical_bias="0.15"/>
+
+
+    <include
+        layout="@layout/content_loading"
+        android:id="@+id/content_loading"
+        android:visibility="gone"/>
+
+    <include
+        layout="@layout/no_data_layout"
+        android:id="@+id/layoutNoData"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/layoutNoInternet"
+        layout="@layout/layout_no_internet_connection"
+        android:visibility="gone" />
+</androidx.constraintlayout.widget.ConstraintLayout>

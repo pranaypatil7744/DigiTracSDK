@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    app:cardElevation="6dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="302dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgClose"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_close_icon"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPfUan"
+            style="@style/plus_jakarta_display_regular_x_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/pf_uan"
+            android:textColor="@color/cod_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgClose" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPfUanNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/plus_jakarta_display_medium_small"
+            android:text="@string/pf_uan_no"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvPfUan"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPfUanNoValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/plus_jakarta_display_medium_small"
+            tools:text="2345678"
+            android:textColor="@color/gray"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintTop_toTopOf="@id/tvPfUanNo"
+            app:layout_constraintStart_toEndOf="@id/tvPfUanNo"
+            app:layout_constraintBottom_toBottomOf="@id/tvPfUanNo"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/plus_jakarta_display_medium_small"
+            android:text="@string/name_"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintTop_toBottomOf="@id/tvPfUanNo"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNameValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="pranay"
+            style="@style/plus_jakarta_display_medium_small"
+            android:textColor="@color/gray"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvName"
+            app:layout_constraintTop_toTopOf="@id/tvName"
+            app:layout_constraintStart_toEndOf="@id/tvName"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

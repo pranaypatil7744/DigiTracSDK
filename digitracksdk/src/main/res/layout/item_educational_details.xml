@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/container_educational_details"
+    android:layout_marginHorizontal="@dimen/common_margin"
+    android:layout_marginVertical="@dimen/dimen10"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="3dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_qualification"
+            style="@style/plus_jakarta_display_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen8"
+            android:layout_marginTop="@dimen/dimen10"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/size14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="SSC" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_university"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen8"
+            android:layout_marginTop="@dimen/dimen5"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/size12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_qualification"
+            tools:text="Secondary board of education,bhopal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_percentage"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen8"
+            android:layout_marginTop="@dimen/dimen5"
+            android:layout_marginBottom="@dimen/dimen10"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/size12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_university"
+            tools:text="75 %" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_month_year"
+            style="@style/plus_jakarta_display_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen10"
+            android:layout_marginEnd="@dimen/dimen8"
+            android:textColor="@color/light_label"
+            android:textSize="@dimen/size10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="March, 2013" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_details"
+            style="@style/plus_jakarta_display_medium_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen8"
+            android:layout_marginBottom="@dimen/dimen8"
+            android:drawableEnd="@drawable/ic_arrow_right_small"
+            android:drawablePadding="@dimen/dimen10"
+            android:text="@string/view_details"
+            android:textColor="@color/toolbar_color"
+            android:textSize="@dimen/size10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_percentage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

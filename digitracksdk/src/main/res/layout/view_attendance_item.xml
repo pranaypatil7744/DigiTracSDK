@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDayDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/plus_jakarta_display_regular_x_small"
+        android:paddingVertical="10dp"
+        android:textColor="@color/blue_ribbon"
+        android:gravity="center"
+        android:background="@color/colorPrimary_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Monday, 28 June 2021" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAttendanceDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_bg"
+        android:paddingHorizontal="16dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        app:layout_constraintTop_toBottomOf="@id/tvDayDate"
+        tools:itemCount="5"
+        tools:listitem="@layout/profile_detail_items" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAttendanceRegularization"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MaterialButtonBaseStyle"
+        android:textAllCaps="false"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/attendance_regularization"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewAttendanceDetails"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnApplyLeave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/apply_leave"
+        android:textAllCaps="false"
+        android:textColor="@color/blue_ribbon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/btnAttendanceRegularization"
+        app:layout_constraintTop_toTopOf="@id/btnAttendanceRegularization"
+        app:strokeColor="@color/blue_ribbon"
+        app:strokeWidth="1dp" />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/alto"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAttendanceRegularization"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

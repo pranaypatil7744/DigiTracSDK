@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="15dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="10dp"
+    android:background="@drawable/bg_btn">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/img_for_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvProfilePercentage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/plus_jakarta_display_medium"
+        android:textColor="@color/white"
+        android:text="70 % completed"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imgProfile"/>
+
+    <ProgressBar
+        android:id="@+id/progressProfile"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:layout_marginTop="12dp"
+        android:max="100"
+        android:progress="70"
+        android:scrollbarSize="20dp"
+        android:progressTint="@color/lightning_yellow"
+        app:layout_constraintEnd_toEndOf="@id/tvProfilePercentage"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/tvProfilePercentage"
+        app:layout_constraintTop_toBottomOf="@id/tvProfilePercentage" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWeNeed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/plus_jakarta_display_light_x_small"
+        android:textColor="@color/white"
+        android:text="@string/we_need_a_few_more_details_to_complete_your_profile"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/progressProfile"
+        app:layout_constraintStart_toStartOf="@id/tvProfilePercentage"
+        app:layout_constraintEnd_toEndOf="@id/tvProfilePercentage"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnComplateNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Complate Now"
+        android:layout_marginTop="15dp"
+        android:textAllCaps="false"
+        style="@style/plus_jakarta_display_regular_small"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/blue_ribbon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWeNeed"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="6dp"
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="18dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="15dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/plus_jakarta_display_medium_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mine_shaft"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/tvStatus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="InnovSource services pvt.Ltd" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvStatus"
+            style="@style/plus_jakarta_display_medium_x_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/jungle_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvTitle"
+            tools:text="Accepted" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSubTitle"
+            style="@style/plus_jakarta_display_regular_x_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mine_shaft"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="InnovSource services pvt.Ltd" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvJoiningDate"
+            style="@style/plus_jakarta_display_regular_x_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mine_shaft"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSubTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="InnovSource services pvt.Ltd" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:srcCompat="@drawable/dot_line"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toStartOf="@id/btnDownload"
+            app:layout_constraintTop_toBottomOf="@id/tvJoiningDate"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPdfName"
+            style="@style/plus_jakarta_display_regular_x_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mine_shaft"
+            android:layout_marginTop="20dp"
+            android:drawableStart="@drawable/ic_pdf"
+            android:drawablePadding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Candidate_LOI.pdf" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/btnDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvPdfName"
+            app:layout_constraintStart_toEndOf="@id/tvPdfName"
+            app:layout_constraintTop_toTopOf="@id/tvPdfName"
+            app:srcCompat="@drawable/ic_download" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/jungle_green"
+            android:text="@string/accept"
+            android:textAllCaps="false"
+            app:cornerRadius="18dp"
+            android:fontFamily="@font/plus_jakarta_display_regular"
+            android:textSize="11sp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/btnDownload"
+            app:layout_constraintEnd_toStartOf="@id/btnReject"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/btnDownload"
+            app:layout_constraintTop_toTopOf="@id/btnDownload" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/rejected_color"
+            android:text="@string/reject"
+            android:textAllCaps="false"
+            app:cornerRadius="18dp"
+            android:fontFamily="@font/plus_jakarta_display_regular"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@id/btnDownload"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btnDownload" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context="com.example.digitracksdk.presentation.onboarding.bank_details.BankDetailsActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_main" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutPanCardNumber"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="15dp"
+            android:hint="@string/pan_card_number"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPanCardNumber"
+                style="@style/plus_jakarta_display_regular_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:imeOptions="actionNext"
+                android:inputType="textCapCharacters"
+                android:maxLength="10"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutBankNames"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/bank_name"
+            app:boxStrokeColor="@color/athens_gray"
+            app:boxStrokeWidth="0.5dp"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/layoutPanCardNumber">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/etBankName"
+                style="@style/plus_jakarta_display_regular_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:inputType="none"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:text="@string/Select"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutAccountNumber"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="15dp"
+            android:hint="@string/bank_account_number"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/layoutBankNames">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAccountNumber"
+                style="@style/plus_jakarta_display_regular_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutIfsc"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="15dp"
+            android:hint="@string/bank_ifsc"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/layoutAccountNumber">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etIfsc"
+                style="@style/plus_jakarta_display_regular_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="QWERTYUIOPLKJHGFDSAZXCVBNM,0123456789"
+                android:enabled="false"
+                android:imeOptions="actionNext"
+                android:inputType="textCapCharacters"
+                android:maxLength="11"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutBranchDetails"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="15dp"
+            android:hint="@string/branch_details"
+            android:visibility="gone"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/layoutIfsc">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etBranchDetails"
+                style="@style/plus_jakarta_display_regular_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutUploadCheque"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/upload_cheque"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            app:errorIconTint="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@id/layoutBranchDetails">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUploadCheque"
+                style="@style/plus_jakarta_display_regular_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:ellipsize="end"
+                android:focusable="false"
+                android:inputType="none"
+                android:paddingVertical="15dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="50dp"
+                android:singleLine="true"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="14dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/layoutUploadCheque"
+            app:layout_constraintEnd_toEndOf="@id/layoutUploadCheque"
+            app:layout_constraintTop_toTopOf="@id/layoutUploadCheque"
+            app:layout_constraintVertical_bias="0.40"
+            app:srcCompat="@drawable/ic_delete" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUploadCheque"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/bg_btn_upload"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="@string/add_image"
+            android:textAllCaps="false"
+            android:textColor="@color/mine_shaft"
+            app:icon="@drawable/ic_upload"
+            app:iconGravity="textStart"
+            app:iconTint="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutUploadCheque" />
+
+        <include
+            android:id="@+id/content_loading"
+            layout="@layout/content_loading"
+            android:visibility="gone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/layoutNoInternet"
+        layout="@layout/layout_no_internet_connection"
+        android:visibility="gone" />
+</androidx.constraintlayout.widget.ConstraintLayout>

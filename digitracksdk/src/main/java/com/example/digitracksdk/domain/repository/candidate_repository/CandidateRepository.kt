@@ -1,0 +1,9 @@
+package com.example.digitracksdk.domain.repository.candidate_repository
+
+import com.example.digitracksdk.domain.model.attendance_regularization_model.InsertAttendanceRegularizationRequestModel
+import com.example.digitracksdk.domain.model.attendance_regularization_model.InsertAttendanceRegularizationResponseModel
+
+interface CandidateRepository {
+    suspend fun callInsertAttendance(request: InsertAttendanceRegularizationRequestModel): InsertAttendanceRegularizationResponseModel
+
+}

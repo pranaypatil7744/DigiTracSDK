@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="2dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="10dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="17dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            app:shapeAppearance="@style/circleImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/profile_placeholder" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Sung Jin-Woo"
+            style="@style/plus_jakarta_display_medium"
+            app:layout_constraintStart_toStartOf="@id/imgProfile"
+            app:layout_constraintEnd_toEndOf="@id/imgProfile"
+            app:layout_constraintTop_toBottomOf="@id/imgProfile"
+            android:layout_marginTop="12dp"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDesignation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Sr. Product Designer"
+            style="@style/plus_jakarta_display_light_small"
+            android:textColor="@color/silver_chalice"
+            app:layout_constraintStart_toStartOf="@id/tvName"
+            app:layout_constraintEnd_toEndOf="@id/tvName"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            android:layout_marginTop="9dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDepartment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Design Department"
+            style="@style/plus_jakarta_display_light_x_small"
+            android:textColor="@color/blue_ribbon"
+            android:background="@drawable/bg_btn"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="15dp"
+            android:backgroundTint="@color/blue_ribbon_20"
+            app:layout_constraintStart_toStartOf="@id/tvDesignation"
+            app:layout_constraintEnd_toEndOf="@id/tvDesignation"
+            app:layout_constraintTop_toBottomOf="@id/tvDesignation"
+            android:layout_marginTop="9dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

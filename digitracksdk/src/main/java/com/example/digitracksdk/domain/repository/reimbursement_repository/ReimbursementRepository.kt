@@ -1,0 +1,110 @@
+package com.example.digitracksdk.domain.repository.reimbursement_repository
+
+import com.example.digitracksdk.domain.model.new_reimbursement.DeleteNewReimbursementItemRequestModel
+import com.example.digitracksdk.domain.model.new_reimbursement.DeleteNewReimbursementItemResponseModel
+import com.example.digitracksdk.domain.model.new_reimbursement.GenerateVoucherFromNewReimbursementRequestModel
+import com.example.digitracksdk.domain.model.new_reimbursement.GenerateVoucherFromNewReimbursementResponseModel
+import com.example.digitracksdk.domain.model.new_reimbursement.GetMonthDetailsResponseModel
+import com.example.digitracksdk.domain.model.new_reimbursement.GetMonthYearDetailsRequestModel
+import com.example.digitracksdk.domain.model.new_reimbursement.GetYearDetailsResponseModel
+import com.example.digitracksdk.domain.model.new_reimbursement.InsertNewReimbursementRequestModel
+import com.example.digitracksdk.domain.model.new_reimbursement.InsertNewReimbursementResponseModel
+import com.example.digitracksdk.domain.model.reimbursement_model.CheckReimbursementLimitRequestModel
+import com.example.digitracksdk.domain.model.reimbursement_model.CheckReimbursementLimitResponseModel
+import com.example.digitracksdk.domain.model.reimbursement_model.CheckReimbursementLimitV1RequestModel
+import com.example.digitracksdk.domain.model.reimbursement_model.CheckReimbursementLimitV1ResponseModel
+import com.example.digitracksdk.domain.model.reimbursement_model.InsertReimbursementRequestModel
+import com.example.digitracksdk.domain.model.reimbursement_model.InsertReimbursementResponseModel
+import com.example.digitracksdk.domain.model.reimbursement_model.ModeOfTravelRequestModel
+import com.example.digitracksdk.domain.model.reimbursement_model.ModeOfTravelResponseModel
+import com.example.digitracksdk.domain.model.reimbursement_model.PendingReimbursementRequestModel
+import com.example.digitracksdk.domain.model.reimbursement_model.PendingReimbursementResponseModel
+import com.example.digitracksdk.domain.model.reimbursement_model.ReimbursementCategoryRequestModel
+import com.example.digitracksdk.domain.model.reimbursement_model.ReimbursementCategoryResponseModel
+import com.example.digitracksdk.domain.model.reimbursement_model.ReimbursementEndKmRequestModel
+import com.example.digitracksdk.domain.model.reimbursement_model.ReimbursementEndKmResponseModel
+import com.example.digitracksdk.domain.model.reimbursement_model.ReimbursementListRequestModel
+import com.example.digitracksdk.domain.model.reimbursement_model.ReimbursementListResponseModel
+import com.example.digitracksdk.domain.model.reimbursement_model.ReimbursementSubCategoryRequestModel
+import com.example.digitracksdk.domain.model.reimbursement_model.ReimbursementSubCategoryResponseModel
+import com.example.digitracksdk.domain.model.reimbursement_model.ReimbursementValidationRequestModel
+import com.example.digitracksdk.domain.model.reimbursement_model.ReimbursementValidationResponseModel
+import com.example.digitracksdk.domain.model.reimbursement_model.RejectedEndKmRequestModel
+import com.example.digitracksdk.domain.model.reimbursement_model.RejectedEndKmResponseModel
+import com.example.digitracksdk.domain.model.reimbursement_model.RejectedReimbursementValidationRequestModel
+import com.example.digitracksdk.domain.model.reimbursement_model.RejectedReimbursementValidationResponseModel
+import com.example.digitracksdk.domain.model.reimbursement_model.SaveReimbursementPreApprovalRequestModel
+import com.example.digitracksdk.domain.model.reimbursement_model.SaveReimbursementPreApprovalResponseModel
+import com.example.digitracksdk.domain.model.reimbursement_model.UpdatePendingReimbursementRequestModel
+import com.example.digitracksdk.domain.model.reimbursement_model.UpdatePendingReimbursementResponseModel
+import com.example.digitracksdk.domain.model.reimbursement_model.UpdateReimbursementDetailsRequestModel
+import com.example.digitracksdk.domain.model.reimbursement_model.UpdateReimbursementDetailsResponseModel
+import com.example.digitracksdk.domain.model.reimbursement_model.UploadReimbursementBillRequestModel
+import com.example.digitracksdk.domain.model.reimbursement_model.UploadReimbursementBillResponseModel
+import com.example.digitracksdk.domain.model.GnetIdRequestModel
+import com.example.digitracksdk.domain.model.new_reimbursement.GetNewReimbursementListResponseModel
+import com.example.digitracksdk.domain.model.reimbursement_model.ReimbursementBillResponseModel
+import com.example.digitracksdk.domain.model.reimbursement_model.ReimbursementDetailsRequestModel
+import com.example.digitracksdk.domain.model.reimbursement_model.ReimbursementDetailsResponseModel
+import com.example.digitracksdk.domain.model.reimbursement_model.UpdateReimbursementStatusRequestModel
+import com.example.digitracksdk.domain.model.reimbursement_model.UpdateReimbursementStatusResponseModel
+
+interface ReimbursementRepository {
+
+    suspend fun callReimbursementListApi(request: ReimbursementListRequestModel): ReimbursementListResponseModel
+
+    suspend fun callReimbursementDetailsApi(request: ReimbursementDetailsRequestModel): ReimbursementDetailsResponseModel
+
+    suspend fun callReimbursementBillApi(request: ReimbursementDetailsRequestModel): ReimbursementBillResponseModel
+
+    suspend fun callReimbursementCategoryApi(request: ReimbursementCategoryRequestModel): ReimbursementCategoryResponseModel
+
+    suspend fun callReimbursementSubCategoryApi(request: ReimbursementSubCategoryRequestModel): ReimbursementSubCategoryResponseModel
+
+    suspend fun callReimbursementModeOfTravelApi(request: ModeOfTravelRequestModel): ModeOfTravelResponseModel
+
+    suspend fun callReimbursementEndKmApi(request: ReimbursementEndKmRequestModel): ReimbursementEndKmResponseModel
+
+    suspend fun callReimbursementValidationApi(request: ReimbursementValidationRequestModel): ReimbursementValidationResponseModel
+
+    suspend fun callInsertReimbursementApi(request: InsertReimbursementRequestModel): InsertReimbursementResponseModel
+
+    suspend fun callUploadReimbursementBillApi(request: UploadReimbursementBillRequestModel): UploadReimbursementBillResponseModel
+
+    suspend fun callPendingReimbursementListApi(request: PendingReimbursementRequestModel): PendingReimbursementResponseModel
+
+    suspend fun callUpdatePendingReimbursementApi(request: UpdatePendingReimbursementRequestModel): UpdatePendingReimbursementResponseModel
+
+    suspend fun callUpdateReimbursementStatusApi(request: UpdateReimbursementStatusRequestModel): UpdateReimbursementStatusResponseModel
+
+    suspend fun callUpdateReimbursementDetailsApi(request: UpdateReimbursementDetailsRequestModel): UpdateReimbursementDetailsResponseModel
+
+    suspend fun callRejectedReimbursementValidationApi(request: RejectedReimbursementValidationRequestModel): RejectedReimbursementValidationResponseModel
+
+    suspend fun callCheckReimbursementLimitV1Api(request: CheckReimbursementLimitV1RequestModel): CheckReimbursementLimitV1ResponseModel
+
+    suspend fun callCheckReimbursementLimitApi(request: CheckReimbursementLimitRequestModel): CheckReimbursementLimitResponseModel
+
+    suspend fun callSaveReimbursementPreApprovalApi(request: SaveReimbursementPreApprovalRequestModel): SaveReimbursementPreApprovalResponseModel
+
+    suspend fun callRejectedEndKmApi(request: RejectedEndKmRequestModel): RejectedEndKmResponseModel
+
+    suspend fun callGetReimbursementListForVoucherApi(request: GnetIdRequestModel): GetNewReimbursementListResponseModel
+
+    suspend fun callDeleteNewReimbursementListItem(request: DeleteNewReimbursementItemRequestModel): DeleteNewReimbursementItemResponseModel
+
+    suspend fun callGenerateNewReimbursementVoucher(request: GenerateVoucherFromNewReimbursementRequestModel): GenerateVoucherFromNewReimbursementResponseModel
+
+    suspend fun callInsertNewReimbursementApi(request: InsertNewReimbursementRequestModel): InsertNewReimbursementResponseModel
+
+    suspend fun callGetNewReimbursementPendingListApi(request: ReimbursementListRequestModel): ReimbursementListResponseModel
+
+    suspend fun callGetNewReimbursementApprovedListApi(request: ReimbursementListRequestModel): ReimbursementListResponseModel
+
+    suspend fun callGetNewReimbursementRejectedListApi(request: ReimbursementListRequestModel): ReimbursementListResponseModel
+
+    suspend fun callGetMonthDetailApi(request: GetMonthYearDetailsRequestModel): GetMonthDetailsResponseModel
+
+    suspend fun callGetYearDetailApi(request: GetMonthYearDetailsRequestModel): GetYearDetailsResponseModel
+
+}

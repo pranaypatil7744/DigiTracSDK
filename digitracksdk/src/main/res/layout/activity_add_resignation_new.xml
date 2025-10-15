@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context="com.example.digitracksdk.presentation.resignation.add_resignation.AddResignationActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_main" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutResignationCategory"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="30dp"
+        android:hint="@string/resignation_category"
+        app:boxStrokeColor="@color/athens_gray"
+        app:boxStrokeWidth="0.5dp"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/etResignationCategory"
+            style="@style/plus_jakarta_display_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:text="@string/Select"
+            android:textColor="@color/mine_shaft" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutExpectedLastWorkingDay"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/preferred_last_working_date"
+        app:boxStrokeColor="@color/athens_gray"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/layoutResignationCategory">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etExpectedLastWorkingDay"
+            style="@style/plus_jakarta_display_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:drawableEnd="@drawable/ic_calendar"
+            android:focusable="false"
+            android:inputType="none"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textColor="@color/mine_shaft"
+            app:drawableTint="@color/alto" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutLastWorkingDay"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/last_working_date"
+        app:boxStrokeColor="@color/athens_gray"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/layoutExpectedLastWorkingDay">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etLastWorkingDay"
+            style="@style/plus_jakarta_display_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:inputType="none"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textColor="@color/mine_shaft" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutReason"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:hint="@string/reason"
+        app:boxStrokeColor="@color/athens_gray"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/layoutLastWorkingDay">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/etResignationReason"
+            style="@style/plus_jakarta_display_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:text="@string/Select"
+            android:textColor="@color/mine_shaft" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutUploadImage"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/upload_image"
+        app:boxStrokeColor="@color/athens_gray"
+        app:errorEnabled="true"
+        app:errorIconTint="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/layoutReason">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUploadImage"
+            style="@style/plus_jakarta_display_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:imeOptions="actionNext"
+            android:inputType="none"
+            android:paddingVertical="15dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="50dp"
+            android:singleLine="true"
+            android:textColor="@color/mine_shaft" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/btnDelete"
+        android:layout_width="14dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/layoutUploadImage"
+        app:layout_constraintEnd_toEndOf="@id/layoutUploadImage"
+        app:layout_constraintTop_toTopOf="@id/layoutUploadImage"
+        app:layout_constraintVertical_bias="0.40"
+        app:srcCompat="@drawable/ic_delete" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnUploadFile"
+        style="@style/plus_jakarta_display_medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/bg_btn_upload"
+        android:gravity="center"
+        android:text="@string/add_image"
+        android:textAllCaps="false"
+        android:textColor="@color/mine_shaft"
+        app:icon="@drawable/ic_upload"
+        app:iconGravity="textStart"
+        app:iconTint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutUploadImage" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmit"
+        style="@style/MaterialButtonBaseStyle"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUploadFile"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <include
+        android:id="@+id/content_loading"
+        layout="@layout/content_loading"
+        android:visibility="gone" />
+</androidx.constraintlayout.widget.ConstraintLayout>

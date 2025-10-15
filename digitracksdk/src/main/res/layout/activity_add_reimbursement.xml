@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/main_bg"
+    tools:context="com.example.digitracksdk.presentation.home.reimbursements.AddReimbursementActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_main" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/btnSubmit"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutAddReimbursement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="0dp"
+                android:paddingEnd="18dp"
+                android:visibility="visible"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutExpenseType"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="40dp"
+                    android:hint="@string/select_expense_types"
+                    app:boxStrokeColor="@color/athens_gray"
+                    app:boxStrokeWidth="0.5dp"
+                    app:errorEnabled="true"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/etExpenseType"
+                        style="@style/plus_jakarta_display_regular_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:padding="18dp"
+                        android:singleLine="true"
+                        android:text="@string/Select"
+                        android:textColor="@color/mine_shaft" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutSubLeaveType"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/select_expense_sub_types"
+                    android:visibility="gone"
+                    app:boxStrokeColor="@color/athens_gray"
+                    app:boxStrokeWidth="0.5dp"
+                    app:errorEnabled="true"
+                    app:layout_constraintTop_toBottomOf="@id/layoutExpenseType">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/etExpenseSubType"
+                        style="@style/plus_jakarta_display_regular_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:padding="18dp"
+                        android:singleLine="true"
+                        android:textColor="@color/mine_shaft" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutBillNo"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/bill_number"
+                    app:boxStrokeColor="@color/athens_gray"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toStartOf="@id/divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layoutSubLeaveType">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etBillNo"
+                        style="@style/plus_jakarta_display_regular_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:padding="18dp"
+                        android:singleLine="true"
+                        android:textColor="@color/mine_shaft" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutClaimDate"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/claim_date"
+                    app:boxStrokeColor="@color/athens_gray"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toStartOf="@id/divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layoutBillNo">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etClaimDate"
+                        style="@style/plus_jakarta_display_regular_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_calendar"
+                        android:focusable="false"
+                        android:imeOptions="actionNext"
+                        android:inputType="none"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/mine_shaft"
+                        app:drawableTint="@color/alto" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutBillDate"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:hint="@string/bill_date"
+                    app:boxStrokeColor="@color/athens_gray"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/layoutClaimDate"
+                    app:layout_constraintTop_toTopOf="@id/layoutClaimDate">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etBillDate"
+                        style="@style/plus_jakarta_display_regular_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_calendar"
+                        android:focusable="false"
+                        android:imeOptions="actionNext"
+                        android:inputType="none"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/mine_shaft"
+                        app:drawableTint="@color/alto" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutBillFrom"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/bill_from"
+                    android:visibility="visible"
+                    app:boxStrokeColor="@color/athens_gray"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toStartOf="@id/divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layoutClaimDate">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etBillFrom"
+                        style="@style/plus_jakarta_display_regular_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_calendar"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/mine_shaft"
+                        app:drawableTint="@color/alto" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutBillTo"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:hint="@string/bill_to"
+                    app:boxStrokeColor="@color/athens_gray"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/layoutBillFrom"
+                    app:layout_constraintTop_toTopOf="@id/layoutBillFrom">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etBillTo"
+                        style="@style/plus_jakarta_display_regular_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_calendar"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/mine_shaft"
+                        app:drawableTint="@color/alto" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutJourneyFrom"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/journey_from"
+                    app:boxStrokeColor="@color/athens_gray"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toStartOf="@id/divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layoutBillFrom">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etJourneyFrom"
+                        style="@style/plus_jakarta_display_regular_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:padding="18dp"
+                        android:singleLine="true"
+                        android:textColor="@color/mine_shaft" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutJourneyTo"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:hint="@string/journey_to"
+                    app:boxStrokeColor="@color/athens_gray"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/layoutJourneyFrom"
+                    app:layout_constraintTop_toTopOf="@id/layoutJourneyFrom">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etJourneyTo"
+                        style="@style/plus_jakarta_display_regular_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:padding="18dp"
+                        android:singleLine="true"
+                        android:textColor="@color/mine_shaft" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutBaseAmt"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/base_amount"
+                    app:boxStrokeColor="@color/athens_gray"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toStartOf="@id/divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layoutJourneyFrom">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etBaseAmt"
+                        style="@style/plus_jakarta_display_regular_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:padding="18dp"
+                        android:maxLength="9"
+                        android:singleLine="true"
+                        android:textColor="@color/mine_shaft" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutTaxAmt"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/tax_amount"
+                    app:boxStrokeColor="@color/athens_gray"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toStartOf="@id/divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layoutBaseAmt">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etTaxAmt"
+                        style="@style/plus_jakarta_display_regular_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:padding="18dp"
+                        android:text="@string/_0"
+                        android:maxLength="9"
+                        android:singleLine="true"
+                        android:textColor="@color/mine_shaft" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutGrossAmt"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:hint="@string/gross_amount"
+                    app:boxStrokeColor="@color/athens_gray"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/layoutTaxAmt"
+                    app:layout_constraintTop_toTopOf="@id/layoutTaxAmt">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etGrossAmt"
+                        style="@style/plus_jakarta_display_regular_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:enabled="false"
+                        android:padding="18dp"
+                        android:singleLine="true"
+                        android:textColor="@color/mine_shaft" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutStartKm"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/start_km"
+                    app:boxStrokeColor="@color/athens_gray"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toStartOf="@id/divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layoutTaxAmt">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etStartKm"
+                        style="@style/plus_jakarta_display_regular_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:padding="18dp"
+                        android:maxLength="6"
+                        android:singleLine="true"
+                        android:textColor="@color/mine_shaft" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutEndKm"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:hint="@string/end_km"
+                    app:boxStrokeColor="@color/athens_gray"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/layoutStartKm"
+                    app:layout_constraintTop_toTopOf="@id/layoutStartKm">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEndKm"
+                        style="@style/plus_jakarta_display_regular_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:padding="18dp"
+                        android:maxLength="6"
+                        android:singleLine="true"
+                        android:textColor="@color/mine_shaft" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutTravelMode"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/travel_mode"
+                    app:boxStrokeColor="@color/athens_gray"
+                    app:boxStrokeWidth="0.5dp"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toStartOf="@id/divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layoutStartKm">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/etTravelMode"
+                        style="@style/plus_jakarta_display_regular_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:padding="18dp"
+                        android:singleLine="true"
+                        android:text="@string/Select"
+                        android:textColor="@color/mine_shaft" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutRunKm"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:hint="@string/run_km"
+                    app:boxStrokeColor="@color/athens_gray"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/layoutTravelMode"
+                    app:layout_constraintTop_toTopOf="@id/layoutTravelMode">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRunKm"
+                        style="@style/plus_jakarta_display_regular_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:padding="18dp"
+                        android:singleLine="true"
+                        android:textColor="@color/mine_shaft" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutUploadVoucher"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/upload_voucher"
+                    app:boxStrokeColor="@color/athens_gray"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layoutTravelMode">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etUploadVoucher"
+                        style="@style/plus_jakarta_display_regular_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:paddingVertical="18dp"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="110dp"
+                        android:singleLine="true"
+                        android:textColor="@color/mine_shaft"
+                        app:drawableTint="@color/alto" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnUpload"
+                    style="@style/MaterialButtonBaseStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/silver_chalice"
+                    android:text="@string/upload"
+                    android:textAllCaps="false"
+                    app:cornerRadius="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintBottom_toBottomOf="@id/layoutUploadVoucher"
+                    app:layout_constraintEnd_toEndOf="@id/layoutUploadVoucher"
+                    app:layout_constraintTop_toTopOf="@id/layoutUploadVoucher"
+                    app:layout_constraintVertical_bias="0.25" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutRemark"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/remark"
+                    android:visibility="visible"
+                    app:boxStrokeColor="@color/athens_gray"
+                    app:errorEnabled="true"
+                    app:layout_constraintTop_toBottomOf="@id/layoutUploadVoucher">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRemark"
+                        style="@style/plus_jakarta_display_regular_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:gravity="start"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine"
+                        android:maxLines="4"
+                        android:padding="15dp"
+                        android:singleLine="false"
+                        android:textColor="@color/mine_shaft" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutReimbursementList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerReimbursementList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:itemCount="5"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:listitem="@layout/item_reimbursement" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAddReimbursement"
+                    style="@style/plus_jakarta_display_medium_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue_ribbon"
+                    android:layout_margin="@dimen/dimen20"
+                    android:gravity="center_vertical"
+                    android:text="@string/add_reimbursement"
+                    android:drawableStart="@drawable/ic_add_circle"
+                    android:drawablePadding="@dimen/dimen10"
+                    app:layout_constraintTop_toBottomOf="@id/recyclerReimbursementList"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmit"
+        style="@style/MaterialButtonBaseStyle"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/add"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/content_loading"
+        layout="@layout/content_loading"
+        android:visibility="gone" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="3dp"
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="18dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="15dp">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgTrainingIcon"
+            android:layout_width="105dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/dummy_training_doc"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/plus_jakarta_display_medium_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/mine_shaft"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgTrainingIcon"
+            app:layout_constraintTop_toTopOf="@id/imgTrainingIcon"
+            tools:text="Improving database skills" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDocType"
+            style="@style/plus_jakarta_display_regular_x_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/mine_shaft"
+            android:background="@drawable/bg_status"
+            android:backgroundTint="@color/blue_ribbon_50"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="12dp"
+            app:layout_constraintStart_toStartOf="@id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            tools:text="Functional" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDocDetails"
+            style="@style/plus_jakarta_display_regular_x_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/mine_shaft"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvDocType"
+            tools:text="InnovSource services pvt.Ltd" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvViewDetails"
+            style="@style/plus_jakarta_display_medium_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawablePadding="10dp"
+            android:drawableEnd="@drawable/ic_arrow_right_small"
+            android:text="@string/view_details"
+            android:textColor="@color/blue_ribbon"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvDocDetails" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

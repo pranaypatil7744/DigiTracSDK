@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTime"
+        style="@style/plus_jakarta_display_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mine_shaft"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15"
+        tools:text="10:00" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDayDate"
+        style="@style/plus_jakarta_display_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTime"
+        tools:text="Friday, June 25,2021" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchAttendanceAnywhere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="@string/attendance_from_anywhere"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDayDate" />
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/bgAttendanceBtn"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        app:shapeAppearance="@style/circleImageView"
+        android:background="@color/jungle_green_15"
+        app:strokeWidth="3dp"
+        app:strokeColor="@color/jungle_green_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/layoutAttendance"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="8dp"
+        app:cardMaxElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/bgAttendanceBtn"
+        app:layout_constraintEnd_toEndOf="@id/bgAttendanceBtn"
+        app:layout_constraintStart_toStartOf="@id/bgAttendanceBtn"
+        app:layout_constraintTop_toTopOf="@id/bgAttendanceBtn">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgFinger"
+                android:layout_width="27dp"
+                android:layout_height="30dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.40"
+                app:srcCompat="@drawable/ic_fingerprint"
+                app:tint="@color/jungle_green" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCheckInOut"
+                style="@style/plus_jakarta_display_light"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/check_in"
+                android:textColor="@color/jungle_green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgFinger" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCheckOutTime"
+        style="@style/plus_jakarta_display_medium_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_check_out"
+        android:drawablePadding="8dp"
+        android:text="--:--"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutAttendance"
+        tools:text="19:00" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCheckOut"
+        style="@style/plus_jakarta_display_light_x_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="@string/check_out"
+        android:textColor="@color/dove_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tvCheckOutTime"
+        app:layout_constraintStart_toStartOf="@id/tvCheckOutTime"
+        app:layout_constraintTop_toBottomOf="@id/tvCheckOutTime" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCheckInTime"
+        style="@style/plus_jakarta_display_medium_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:drawableTop="@drawable/ic_check_in"
+        android:drawablePadding="8dp"
+        android:text="--:--"
+        app:layout_constraintBottom_toBottomOf="@id/tvCheckOutTime"
+        app:layout_constraintEnd_toStartOf="@+id/tvCheckOutTime"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="10:00" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCheckIn"
+        style="@style/plus_jakarta_display_light_x_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check_in"
+        android:textColor="@color/dove_gray"
+        app:layout_constraintEnd_toEndOf="@id/tvCheckInTime"
+        app:layout_constraintStart_toStartOf="@id/tvCheckInTime"
+        app:layout_constraintTop_toBottomOf="@id/tvCheckInTime" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWorkingHrsTime"
+        style="@style/plus_jakarta_display_medium_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:drawableTop="@drawable/ic_working_hrs"
+        android:drawablePadding="8dp"
+        android:text="--:--"
+        app:layout_constraintBottom_toBottomOf="@id/tvCheckOutTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvCheckOutTime"
+        tools:text="10:00" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWorkingHrs"
+        style="@style/plus_jakarta_display_light_x_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/working_hours"
+        android:textColor="@color/dove_gray"
+        app:layout_constraintEnd_toEndOf="@id/tvWorkingHrsTime"
+        app:layout_constraintStart_toStartOf="@id/tvWorkingHrsTime"
+        app:layout_constraintTop_toBottomOf="@id/tvWorkingHrsTime" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

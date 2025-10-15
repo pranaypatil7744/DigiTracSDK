@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="@dimen/dimen16"
+    android:layout_marginVertical="@dimen/dimen10">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ic_profile"
+        android:layout_width="@dimen/dimen120"
+        android:layout_height="@dimen/dimen120"
+        android:scaleType="centerCrop"
+        app:shapeAppearance="@style/circleImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile_placeholder" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_name"
+        style="@style/plus_jakarta_display_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen8"
+        android:textColor="@color/mine_shaft"
+        android:textSize="@dimen/size16"
+        app:layout_constraintEnd_toStartOf="@id/btnEditProfile"
+        app:layout_constraintStart_toStartOf="@id/ic_profile"
+        app:layout_constraintTop_toBottomOf="@+id/ic_profile"
+        tools:text="Walter Gordon" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnEditProfile"
+        style="@style/plus_jakarta_display_light_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_btn"
+        android:backgroundTint="#0058FF"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="5dp"
+        android:text="@string/edit_profile"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/text_name"
+        app:layout_constraintTop_toTopOf="@id/text_name"
+        app:layout_constraintBottom_toBottomOf="@id/text_name"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDesignation"
+        style="@style/plus_jakarta_display_light_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_btn"
+        android:backgroundTint="@color/royal_blue_20"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="5dp"
+        tools:text="Design Department"
+        android:textColor="@color/royal_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_name" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDesignation"
+        android:background="@color/alto"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

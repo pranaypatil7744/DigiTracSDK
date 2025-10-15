@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.digitracksdk.presentation.attendance.attendance_map.AttendanceMapActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_main"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/mapContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/layoutBottom"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDay"
+            style="@style/plus_jakarta_display_regular_x_large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/cod_gray"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/btnAttendance"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Friday" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLat"
+            style="@style/plus_jakarta_display_regular_x_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/lat"
+            android:textColor="@color/cod_gray"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toStartOf="@+id/btnAttendance"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLatValue"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:textColor="@color/gray"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/tvLat"
+            app:layout_constraintEnd_toStartOf="@id/btnLog"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/tvLat"
+            app:layout_constraintTop_toTopOf="@id/tvLat"
+            tools:text="25 June 2021" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLong"
+            style="@style/plus_jakarta_display_regular_x_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/long_"
+            android:textColor="@color/cod_gray"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@id/tvLat"
+            app:layout_constraintEnd_toStartOf="@+id/btnAttendance"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/tvLat"
+            app:layout_constraintTop_toBottomOf="@id/tvLat" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLongValue"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:textColor="@color/gray"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/tvLong"
+            app:layout_constraintEnd_toStartOf="@id/btnLog"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/tvLong"
+            app:layout_constraintTop_toTopOf="@id/tvLong"
+            tools:text="25 June 2021" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDate"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/gray"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDay"
+            tools:text="25 June 2021" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/btnAttendance"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_attendance_finger" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnLog"
+            style="@style/plus_jakarta_display_medium"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_log_visit"
+            android:gravity="center"
+            android:text="@string/log"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutViewImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgCandidate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:scaleX="-1"
+            android:src="@drawable/profile_placeholder" />
+
+        <View
+            android:id="@+id/divider50"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDiscard"
+            style="@style/MaterialButtonBaseStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/plus_jakarta_display_regular"
+            android:paddingVertical="15dp"
+            android:text="@string/discard"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_ribbon"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/divider50"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            style="@style/MaterialButtonBaseStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/plus_jakarta_display_regular"
+            android:paddingVertical="15dp"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/divider50" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/content_loading"
+        layout="@layout/content_loading"
+        android:visibility="gone" />
+</androidx.constraintlayout.widget.ConstraintLayout>

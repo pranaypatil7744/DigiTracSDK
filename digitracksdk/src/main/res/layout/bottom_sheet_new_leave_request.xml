@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_bottom_sheet"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNewLeaveRequest"
+            style="@style/plus_jakarta_display_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/new_leave_request"
+            android:textColor="@color/mine_shaft"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/btnClose"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="15dp"
+            android:scaleType="fitXY"
+            app:tint="@color/silver_chalice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close_icon" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutLeaveType"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="40dp"
+            app:boxStrokeWidth="0.5dp"
+            android:hint="@string/choose_leave_type"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/tvNewLeaveRequest">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/etLeaveType"
+                style="@style/plus_jakarta_display_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:text="@string/Select"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutSubLeaveType"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="5dp"
+            app:boxStrokeWidth="0.5dp"
+            android:hint="@string/choose_leave_sub_type"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/layoutLeaveType">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/etSubLeaveType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/plus_jakarta_display_medium"
+                android:inputType="none"
+                android:text="@string/Select"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutFromDate"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/choose_from_date"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/layoutSubLeaveType">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFromDate"
+                style="@style/plus_jakarta_display_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="none"
+                android:focusable="false"
+                android:padding="15dp"
+                android:drawableEnd="@drawable/ic_calendar"
+                app:drawableTint="@color/alto"
+                android:singleLine="true"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutToDate"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/choose_to_date"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/layoutFromDate">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etToDate"
+                style="@style/plus_jakarta_display_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="none"
+                android:focusable="false"
+                android:drawableEnd="@drawable/ic_calendar"
+                app:drawableTint="@color/alto"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutInTime"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/in_time"
+            android:visibility="gone"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/layoutToDate">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etInTime"
+                style="@style/plus_jakarta_display_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="none"
+                android:focusable="false"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutOutTime"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/out_time"
+            android:visibility="gone"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/layoutInTime">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etOutTime"
+                style="@style/plus_jakarta_display_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="none"
+                android:focusable="false"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutLocation"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/location"
+            android:visibility="gone"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@id/layoutOutTime">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLocation"
+                style="@style/plus_jakarta_display_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutReason"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/reason"
+            app:boxStrokeColor="@color/athens_gray"
+            app:errorEnabled="true"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/layoutLocation">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etReason"
+                android:layout_width="match_parent"
+                style="@style/plus_jakarta_display_medium"
+                android:layout_height="90dp"
+                android:gravity="start"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:padding="15dp"
+                android:singleLine="false"
+                android:textColor="@color/mine_shaft" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBalanceLeave"
+            style="@style/plus_jakarta_display_medium_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/leave_balance"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="15dp"
+            android:visibility="visible"
+            android:textColor="@color/mine_shaft"
+            app:layout_constraintTop_toBottomOf="@id/layoutReason"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBalanceLeaveValue"
+            style="@style/plus_jakarta_display_medium_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@id/tvBalanceLeave"
+            app:layout_constraintTop_toTopOf="@id/tvBalanceLeave"
+            app:layout_constraintBottom_toBottomOf="@id/tvBalanceLeave"
+            android:layout_marginStart="8dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnApply"
+            style="@style/MaterialButtonBaseStyle"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/apply"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBalanceLeave" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

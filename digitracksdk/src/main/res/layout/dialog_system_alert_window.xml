@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@android:color/transparent"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="20dp"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="6dp"
+    app:cardBackgroundColor="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="302dp"
+        android:layout_height="wrap_content"
+        android:padding="26dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAllowPermission"
+            style="@style/plus_jakarta_display_medium_large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/allow_permission"
+            android:textColor="@color/cod_gray"
+            android:drawableStart="@drawable/ic_warning"
+            android:drawablePadding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMsg"
+            style="@style/plus_jakarta_display_light_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/we_need_location_permission_for_geo_tracking"
+            android:textColor="@color/jumbo"
+            app:layout_constraintTop_toBottomOf="@id/tvAllowPermission" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOk"
+            style="@style/plus_jakarta_display_medium_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/okay"
+            android:layout_marginTop="35dp"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMsg"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDeny"
+            style="@style/plus_jakarta_display_medium_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deny"
+            android:layout_marginEnd="30dp"
+            android:textColor="@color/rejected_color"
+            app:layout_constraintEnd_toStartOf="@id/tvOk"
+            app:layout_constraintTop_toTopOf="@id/tvOk"
+            app:layout_constraintTop_toBottomOf="@id/tvMsg"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

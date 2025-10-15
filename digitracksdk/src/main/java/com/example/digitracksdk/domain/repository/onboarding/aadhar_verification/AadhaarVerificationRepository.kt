@@ -1,0 +1,19 @@
+package com.example.digitracksdk.domain.repository.onboarding.aadhar_verification
+
+import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification.AadhaarVerificationOtpValidationRequestModel
+import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification.AadhaarVerificationOtpValidationResponseModel
+import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification.AadhaarVerificationSendOtpRequestModel
+import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification.AadhaarVerificationSendOtpResponseModel
+import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification.GetAadhaarVerificationDetailsResponseModel
+import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification.ValidateAadhaarRequestModel
+import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification.ValidateAadhaarResponseModel
+
+interface AadhaarVerificationRepository{
+
+    suspend fun callAadhaarVerificationSendOtpApi(request: AadhaarVerificationSendOtpRequestModel): AadhaarVerificationSendOtpResponseModel
+
+    suspend fun callAadhaarVerificationOtpValidationApi(request: AadhaarVerificationOtpValidationRequestModel): AadhaarVerificationOtpValidationResponseModel
+    suspend fun callValidateAadhaarApi(request: ValidateAadhaarRequestModel): ValidateAadhaarResponseModel
+    suspend fun callGetAadhaarVerificationDetailsApi(request: ValidateAadhaarRequestModel): GetAadhaarVerificationDetailsResponseModel
+
+}

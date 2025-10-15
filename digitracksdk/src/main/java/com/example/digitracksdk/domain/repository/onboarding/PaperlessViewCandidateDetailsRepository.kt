@@ -1,0 +1,15 @@
+package com.example.digitracksdk.domain.repository.onboarding
+
+import com.example.digitracksdk.domain.model.onboarding.InnovIDRequestModel
+import com.example.digitracksdk.domain.model.onboarding.PaperlessViewCandidateDetailsResponseModel
+import com.example.digitracksdk.domain.model.onboarding.insert.PaperlessUpdateCandidateBasicDetailsRequestModel
+import com.example.digitracksdk.domain.model.onboarding.insert.PaperlessUpdateCandidateBasicDetailsResponseModel
+
+interface PaperlessViewCandidateDetailsRepository {
+
+    suspend fun callViewCandidateDetailsApi(request: InnovIDRequestModel): PaperlessViewCandidateDetailsResponseModel
+
+    suspend fun callUpdateCandidateBasicDetailsApi(request: PaperlessUpdateCandidateBasicDetailsRequestModel): PaperlessUpdateCandidateBasicDetailsResponseModel
+
+}
+

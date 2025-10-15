@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_family_details"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ic_gender"
+        android:layout_width="@dimen/dimen50"
+        android:layout_height="@dimen/dimen50"
+        android:layout_marginStart="@dimen/dimen16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/circleImageView"
+        tools:srcCompat="@drawable/ic_male" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dimen10"
+        android:layout_marginStart="@dimen/dimen8"
+        android:layout_marginEnd="@dimen/dimen16"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ic_gender"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_name"
+                style="@style/plus_jakarta_display_medium_small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen8"
+                android:layout_marginTop="@dimen/dimen10"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/mine_shaft"
+                android:textSize="@dimen/size14"
+                app:layout_constraintEnd_toStartOf="@id/txtIsNominee"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Samantha Prabhu" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtIsNominee"
+                style="@style/plus_jakarta_display_medium_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen8"
+                android:layout_marginTop="@dimen/dimen8"
+                android:text="@string/nominee"
+                android:textColor="@color/jungle_green"
+                android:textSize="@dimen/size10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_designation"
+                style="@style/plus_jakarta_display_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen5"
+                android:textColor="@color/mine_shaft"
+                android:textSize="@dimen/size12"
+                app:layout_constraintStart_toStartOf="@+id/text_name"
+                app:layout_constraintTop_toBottomOf="@+id/text_name"
+                tools:text="Investment banker" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_dob"
+                style="@style/plus_jakarta_display_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen5"
+                android:layout_marginBottom="@dimen/dimen8"
+                android:textColor="@color/mine_shaft"
+                android:textSize="@dimen/size12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/text_designation"
+                app:layout_constraintTop_toBottomOf="@+id/text_designation"
+                tools:text="13/03/1997" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_details"
+                style="@style/plus_jakarta_display_medium_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen8"
+                android:layout_marginBottom="@dimen/dimen8"
+                android:drawableEnd="@drawable/ic_arrow_right_small"
+                android:drawablePadding="@dimen/dimen10"
+                android:text="@string/view_details"
+                android:textColor="@color/toolbar_color"
+                android:textSize="@dimen/size10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_dob" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

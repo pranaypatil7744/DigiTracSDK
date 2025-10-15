@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.digitracksdk.presentation.my_profile.create_edit_profile.CreateEditProfileActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_main" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen0"
+        android:background="@drawable/main_bg"
+        app:layout_constraintBottom_toTopOf="@id/btnSubmit"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPersonalDetails"
+                style="@style/plus_jakarta_display_medium_x_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_ribbon_10"
+                android:padding="12dp"
+                android:text="@string/personal_details"
+                android:textColor="@color/blue_ribbon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgUserProfile"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="18dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPersonalDetails"
+                app:shapeAppearance="@style/circleImageView"
+                app:srcCompat="@drawable/img_camera_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProfilePic"
+                style="@style/plus_jakarta_display_medium_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/profile_picture"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgUserProfile" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutFirstName"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="25dp"
+                android:hint="@string/first_name"
+                app:boxStrokeColor="@color/athens_gray"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvProfilePic">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFirstName"
+                    style="@style/plus_jakarta_display_regular_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="qwertzuiopasdfghjklyxcvbnm,_,-, ,QWERTYUIOPLKJHGFDSAZXCVBNM"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:textColor="@color/mine_shaft" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutMiddleName"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:hint="@string/middle_name"
+                android:visibility="visible"
+                app:boxStrokeColor="@color/athens_gray"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutFirstName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMiddleName"
+                    style="@style/plus_jakarta_display_regular_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="qwertzuiopasdfghjklyxcvbnm,_,-, ,QWERTYUIOPLKJHGFDSAZXCVBNM"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:textColor="@color/mine_shaft" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutLastName"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:hint="@string/last_name"
+                android:visibility="visible"
+                app:boxStrokeColor="@color/athens_gray"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutMiddleName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLastName"
+                    style="@style/plus_jakarta_display_regular_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="qwertzuiopasdfghjklyxcvbnm,_,-, ,QWERTYUIOPLKJHGFDSAZXCVBNM"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:textColor="@color/mine_shaft" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutEmail"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:hint="@string/emergency_contact_name"
+                app:boxStrokeColor="@color/athens_gray"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutLastName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    style="@style/plus_jakarta_display_regular_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:textColor="@color/mine_shaft" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutMobileNo"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:hint="@string/emergency_contact_number"
+                app:boxStrokeColor="@color/athens_gray"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutEmail">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMobileNo"
+                    style="@style/plus_jakarta_display_regular_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:textColor="@color/mine_shaft" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutBloodGroup"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/blood_group"
+                app:boxStrokeColor="@color/athens_gray"
+                app:boxStrokeWidth="0.5dp"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@id/layoutMobileNo">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/etBloodGroup"
+                    style="@style/plus_jakarta_display_regular_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:text="@string/blood_group"
+                    android:textColor="@color/mine_shaft" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutRoleForApply"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:hint="@string/role_for_applying"
+                app:boxStrokeColor="@color/athens_gray"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutBloodGroup">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etRoleForApply"
+                    style="@style/plus_jakarta_display_regular_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="qwertzuiopasdfghjklyxcvbnm,_,-, ,QWERTYUIOPLKJHGFDSAZXCVBNM"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:textColor="@color/mine_shaft" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMaritalStatus"
+                style="@style/plus_jakarta_display_medium_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/marital_status"
+                app:layout_constraintTop_toBottomOf="@id/layoutRoleForApply" />
+
+            <RadioGroup
+                android:id="@+id/radioMaritalStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMaritalStatus">
+
+                <RadioButton
+                    android:id="@+id/radioSingle"
+                    style="@style/plus_jakarta_display_medium_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:buttonTint="@color/blue_ribbon"
+                    android:text="@string/single" />
+
+                <RadioButton
+                    android:id="@+id/radioMarried"
+                    style="@style/plus_jakarta_display_medium_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:buttonTint="@color/blue_ribbon"
+                    android:text="@string/married" />
+
+                <RadioButton
+                    android:id="@+id/radioDivorced"
+                    style="@style/plus_jakarta_display_medium_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:buttonTint="@color/blue_ribbon"
+                    android:text="@string/divorced" />
+
+                <RadioButton
+                    android:id="@+id/radioWidow"
+                    style="@style/plus_jakarta_display_medium_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:buttonTint="@color/blue_ribbon"
+                    android:text="@string/widow" />
+
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLocalAddress"
+                style="@style/plus_jakarta_display_medium_x_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:background="@color/blue_ribbon_10"
+                android:padding="12dp"
+                android:text="@string/local_address"
+                android:textColor="@color/blue_ribbon"
+                app:layout_constraintTop_toBottomOf="@id/radioMaritalStatus" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutHouseName"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="25dp"
+                android:hint="@string/house_building_name"
+                app:boxStrokeColor="@color/athens_gray"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLocalAddress">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etHouseName"
+                    style="@style/plus_jakarta_display_regular_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:textColor="@color/mine_shaft" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutStreet"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:hint="@string/street"
+                app:boxStrokeColor="@color/athens_gray"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutHouseName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etStreet"
+                    style="@style/plus_jakarta_display_regular_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:textColor="@color/mine_shaft" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutLandmark"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:hint="@string/landmark"
+                app:boxStrokeColor="@color/athens_gray"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutStreet">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLandmark"
+                    style="@style/plus_jakarta_display_regular_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:textColor="@color/mine_shaft" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutPinCode"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:hint="@string/pin_code"
+                app:boxStrokeColor="@color/athens_gray"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutLandmark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPinCode"
+                    style="@style/plus_jakarta_display_regular_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:textColor="@color/mine_shaft" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutState"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/state"
+                app:boxStrokeColor="@color/athens_gray"
+                app:boxStrokeWidth="0.5dp"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toStartOf="@id/divider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutPinCode">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/etState"
+                    style="@style/plus_jakarta_display_regular_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:text="@string/Select"
+                    android:textColor="@color/mine_shaft" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutCity"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/city"
+                app:boxStrokeColor="@color/athens_gray"
+                app:boxStrokeWidth="0.5dp"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/divider"
+                app:layout_constraintTop_toBottomOf="@id/layoutPinCode">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/etCity"
+                    style="@style/plus_jakarta_display_regular_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:text="@string/Select"
+                    android:textColor="@color/mine_shaft" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkSameAddress"
+                style="@style/plus_jakarta_display_regular_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/same_as_local_address"
+                android:textColor="@color/mine_shaft"
+                app:layout_constraintTop_toBottomOf="@id/layoutCity" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPreOrPerAddress"
+                style="@style/plus_jakarta_display_medium_x_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:background="@color/blue_ribbon_10"
+                android:padding="12dp"
+                android:text="@string/permanent_address"
+                android:textColor="@color/blue_ribbon"
+                app:layout_constraintTop_toBottomOf="@id/checkSameAddress" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutHouseNamePresent"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="25dp"
+                android:hint="@string/house_building_name"
+                app:boxStrokeColor="@color/athens_gray"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPreOrPerAddress">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etHouseNamePresent"
+                    style="@style/plus_jakarta_display_regular_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:textColor="@color/mine_shaft" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutStreetPresent"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:hint="@string/street"
+                app:boxStrokeColor="@color/athens_gray"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutHouseNamePresent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etStreetPresent"
+                    style="@style/plus_jakarta_display_regular_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:textColor="@color/mine_shaft" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutLandmarkPresent"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:hint="@string/landmark"
+                app:boxStrokeColor="@color/athens_gray"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutStreetPresent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLandmarkPresent"
+                    style="@style/plus_jakarta_display_regular_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:textColor="@color/mine_shaft" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutPinCodePresent"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:hint="@string/pin_code"
+                app:boxStrokeColor="@color/athens_gray"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutLandmarkPresent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPinCodePresent"
+                    style="@style/plus_jakarta_display_regular_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:textColor="@color/mine_shaft" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutStatePresent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/state"
+                app:boxStrokeColor="@color/athens_gray"
+                app:boxStrokeWidth="0.5dp"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toStartOf="@id/divider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutPinCodePresent">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/etStatePresent"
+                    style="@style/plus_jakarta_display_regular_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:text="@string/Select"
+                    android:textColor="@color/mine_shaft" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutCityPresent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/city"
+                app:boxStrokeColor="@color/athens_gray"
+                app:boxStrokeWidth="0.5dp"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/divider"
+                app:layout_constraintTop_toBottomOf="@id/layoutPinCodePresent">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/etCityPresent"
+                    style="@style/plus_jakarta_display_regular_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:text="@string/Select"
+                    android:textColor="@color/mine_shaft" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue_ribbon"
+        android:insetBottom="@dimen/dimen0"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        app:cornerRadius="@dimen/dimen0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/content_loading"
+        layout="@layout/content_loading"
+        android:visibility="gone" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+package com.example.digitracksdk.domain.repository.onboarding.bank_account_verification
+
+import com.example.digitracksdk.domain.model.onboarding.bank_account_verification.BankAccountVerificationDetailsRequestModel
+import com.example.digitracksdk.domain.model.onboarding.bank_account_verification.BankAccountVerificationDetailsResponseModel
+import com.example.digitracksdk.domain.model.onboarding.bank_account_verification.BankAccountVerificationRequestModel
+import com.example.digitracksdk.domain.model.onboarding.bank_account_verification.BankAccountVerificationResponseModel
+
+interface BankAccountVerificationRepository{
+
+    suspend fun callBankAccountVerificationApi(request: BankAccountVerificationRequestModel): BankAccountVerificationResponseModel
+    suspend fun callBankAccountVerificationDetailsApi(request : BankAccountVerificationDetailsRequestModel)  : BankAccountVerificationDetailsResponseModel
+}

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/btnClose"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close_icon"
+        app:tint="@color/silver_chalice" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOtp"
+        style="@style/plus_jakarta_display_bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="@dimen/dimen50"
+        android:text="@string/otp_verification"
+        android:textSize="@dimen/size21"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvEnterOtp"
+        style="@style/plus_jakarta_display_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="@string/enter_4_digit_otp_sent_to"
+        android:textSize="@dimen/size14"
+        app:layout_constraintEnd_toEndOf="@id/tvOtp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/tvOtp"
+        app:layout_constraintTop_toBottomOf="@id/tvOtp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMob"
+        style="@style/plus_jakarta_display_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/tundora"
+        android:textSize="@dimen/size14"
+        app:layout_constraintBottom_toBottomOf="@id/tvEnterOtp"
+        app:layout_constraintStart_toEndOf="@id/tvEnterOtp"
+        app:layout_constraintTop_toTopOf="@id/tvEnterOtp"
+        tools:text="+91 8291317711" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutOtp"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="52dp"
+        android:hint="@string/otp"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/tvEnterOtp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etOtp"
+            style="@style/plus_jakarta_display_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="4"
+            android:padding="15dp"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDintReceive"
+        style="@style/plus_jakarta_display_light_x_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen10"
+        android:text="@string/didn_t_receive_otp"
+        app:layout_constraintStart_toStartOf="@id/layoutOtp"
+        app:layout_constraintTop_toBottomOf="@id/layoutOtp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvResendOtp"
+        style="@style/plus_jakarta_display_medium_x_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/re_send"
+        android:textColor="@color/blue_ribbon"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/tvDintReceive"
+        app:layout_constraintStart_toEndOf="@id/tvDintReceive"
+        app:layout_constraintTop_toTopOf="@id/tvDintReceive"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTimer"
+        style="@style/plus_jakarta_display_medium_x_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_timer"
+        android:drawablePadding="@dimen/dimen10"
+        android:textColor="@color/timer_color"
+        app:layout_constraintBottom_toBottomOf="@id/tvDintReceive"
+        app:layout_constraintEnd_toEndOf="@+id/layoutOtp"
+        app:layout_constraintTop_toTopOf="@id/tvDintReceive"
+        tools:text="@string/timer" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnVerify"
+        style="@style/MaterialButtonBaseStyle"
+        android:layout_marginHorizontal="@dimen/dimen16"
+        android:layout_marginVertical="@dimen/dimen25"
+        android:text="@string/verify"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTimer" />
+
+    <include
+        android:id="@+id/content_loading"
+        layout="@layout/content_loading"
+        android:visibility="gone" />
+</androidx.constraintlayout.widget.ConstraintLayout>

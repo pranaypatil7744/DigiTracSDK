@@ -1,0 +1,48 @@
+package com.example.digitracksdk.domain.model.onboarding.bank_model
+
+import androidx.annotation.Keep
+
+@Keep
+data class PaperlessViewBankDetailsResponseModel(
+    val AccountNumber: String? ="",
+    val AdharCard: String? ="",
+    val AdharCardEnrollmentDate: String? ="",
+    val AdharCardEnrollmentNo: String? ="",
+    val BankAccountName: String?="",
+    val BankId: String?="",
+    val BankName: String? ="",
+    val BranchDetails: String? ="",
+    val CandidateBankDetailsID: String?="",
+    val CandidateID: String?="",
+    val ChequeDocImageArr: String?="",
+    val ChequeFilePath: String?="",
+    val DispensaryName: String?="",
+    val DocPath: String?="",
+    val DrivingLicenseExpiryDate: String?="",
+    val DrivingLicenseIssueDate: String?="",
+    val DrivingLicenseNumber: String?="",
+    val EmpCode: String?="",
+    val EmployeesPensionSchemeCheck: String?="",
+    val EmployeesPfCheck: String?="",
+    val ExistPFNo: String?="",
+    val ExistUANNo: String?="",
+    val ExitDate: String?="",
+    val Extn: String?="",
+    val IFSCcode: String?="",
+    val InnovID: String?="",
+    val InsuranceNo: String?="",
+    val IsAccountOpened: Boolean?= false,
+    val IsBankDocSkip: Boolean?=false,
+    val IsPortal: Boolean?=false,
+    val IsVerified: Boolean?=false,
+    val MappingID: String?="",
+    val Message: String?="",
+    val ModeOfPaymentId: String?="",
+    val Neft: String?="",
+    val NomineeAddress: String?="",
+    val NomineeName: String?="",
+    val NomineePercentageAllocation: String?="",
+    val PANNumber: String?="",
+    val Passport: String?="",
+    val status: String?=""
+)

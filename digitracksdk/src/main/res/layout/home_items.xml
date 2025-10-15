@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgIcon"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        app:srcCompat="@drawable/ic_calendar"
+        android:scaleType="centerInside"
+        android:background="@color/colorPrimary_15"
+        app:shapeAppearance="@style/circleImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/plus_jakarta_display_regular_x_small"
+        tools:text="Reimbursement"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/tundora"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgIcon"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+package com.example.digitracksdk.domain.repository.onboarding.pan_verification
+
+import com.example.digitracksdk.domain.model.onboarding.pan_verification.GetPanCardVerificationDetailsRequestModel
+import com.example.digitracksdk.domain.model.onboarding.pan_verification.GetPanCardVerificationDetailsResponseModel
+import com.example.digitracksdk.domain.model.onboarding.pan_verification.PanCardVerificationRequestModel
+import com.example.digitracksdk.domain.model.onboarding.pan_verification.PanCardVerificationResponseModel
+
+interface PanVerificationRepository{
+
+    suspend fun callPanVerificationApi(request: PanCardVerificationRequestModel): PanCardVerificationResponseModel
+    suspend fun callPanVerificationDetailsApi(request : GetPanCardVerificationDetailsRequestModel) : GetPanCardVerificationDetailsResponseModel
+}

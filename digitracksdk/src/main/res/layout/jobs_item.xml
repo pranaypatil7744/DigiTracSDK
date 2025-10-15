@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="18dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/roundCornerView20"
+            app:srcCompat="@drawable/dummy_training_doc" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReferFriend"
+            style="@style/MaterialButtonBaseStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/refer_a_friend"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/dimen10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSalary"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnViewPolicy"
+            style="@style/MaterialButtonBaseStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_policy"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/blue_ribbon"
+            app:strokeColor="@color/blue_ribbon"
+            app:strokeWidth="1dp"
+            android:textAllCaps="false"
+            android:layout_marginEnd="@dimen/dimen10"
+            app:layout_constraintTop_toTopOf="@id/btnReferFriend"
+            app:layout_constraintEnd_toStartOf="@id/btnReferFriend"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/plus_jakarta_display_medium_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgProfile"
+            app:layout_constraintTop_toTopOf="@id/imgProfile"
+            tools:text="Graphic Designer" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSubTitle"
+            style="@style/plus_jakarta_display_light_x_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/jumbo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgProfile"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            tools:text="Graphic Designer" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSalary"
+            style="@style/plus_jakarta_display_medium_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen10"
+            android:gravity="start"
+            android:textColor="@color/mine_shaft"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvSubTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubTitle"
+            tools:text="₹ 15000-20000" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

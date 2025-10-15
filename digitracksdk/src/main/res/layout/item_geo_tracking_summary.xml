@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="18dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="16dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgArrow"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerInside"
+            android:tint="@color/tundora"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/roundCornerView"
+            app:srcCompat="@drawable/ic_arrow_forward" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTrackingDate"
+            style="@style/plus_jakarta_display_regular_x_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:textColor="@color/mine_shaft"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgArrow"
+            tools:text="---" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvStartTime"
+            style="@style/plus_jakarta_display_regular_x_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/start_time"
+            android:textColor="@color/mine_shaft"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTrackingDate" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEndTime"
+            style="@style/plus_jakarta_display_regular_x_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/end_time"
+            android:textColor="@color/mine_shaft"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStartTime" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvS"
+            style="@style/plus_jakarta_display_medium"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bullet_popat"
+            android:backgroundTint="@color/gray_15"
+            android:gravity="center"
+            android:text="S"
+            app:layout_constraintBottom_toBottomOf="@id/imgArrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imgArrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSource"
+            style="@style/plus_jakarta_display_regular_x_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="-5dp"
+            android:text="@string/source"
+            android:textColor="@color/blue_ribbon"
+            app:layout_constraintEnd_toStartOf="@id/imgArrow"
+            app:layout_constraintStart_toEndOf="@id/tvS"
+            app:layout_constraintTop_toTopOf="@id/imgArrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSourceValue"
+            style="@style/plus_jakarta_display_medium_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/tundora"
+            app:layout_constraintEnd_toStartOf="@id/imgArrow"
+            app:layout_constraintStart_toEndOf="@id/tvS"
+            app:layout_constraintTop_toBottomOf="@id/tvSource"
+            tools:text="Source" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvD"
+            style="@style/plus_jakarta_display_medium"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/bullet_popat"
+            android:backgroundTint="@color/gray_15"
+            android:gravity="center"
+            android:text="D"
+            app:layout_constraintBottom_toBottomOf="@id/imgArrow"
+            app:layout_constraintStart_toEndOf="@id/imgArrow"
+            app:layout_constraintTop_toTopOf="@id/imgArrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDestination"
+            style="@style/plus_jakarta_display_regular_x_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="-5dp"
+            android:text="@string/destination"
+            android:textColor="@color/blue_ribbon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvD"
+            app:layout_constraintTop_toTopOf="@id/imgArrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDestinationValue"
+            style="@style/plus_jakarta_display_medium_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/tundora"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvDestination"
+            app:layout_constraintTop_toBottomOf="@id/tvDestination"
+            tools:text="Destination" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnView"
+            style="@style/MaterialButtonBaseStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/view"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_ribbon"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEndTime"
+            app:strokeColor="@color/blue_ribbon"
+            app:strokeWidth="0.5dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

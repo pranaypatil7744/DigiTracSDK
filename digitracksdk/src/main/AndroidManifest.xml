@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- SDK permissions -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" /> <!-- <uses-permission android:name="android.permission.RECEIVE_SMS" /> -->
+    <!-- <uses-permission android:name="android.permission.READ_SMS" /> -->
+    <!-- <uses-permission android:name="android.permission.CALL_PHONE" /> -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.front" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+
+    <application>
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.cibil_score.CibilScoreActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.bank_account_verification.BankAccountActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.pan_verification.PanVerificationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.BannerViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.attendance.view_attendance_new.ViewAttendanceNewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.attendance.attendance_camera.AttendanceCameraActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.new_reimbursement.Reimbursement1Activity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.walkthrough.SplashScreenActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.canhub.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.my_letters.form_16.Form16Activity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.view_payout.ViewPayoutActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.resignation.ResignationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.resignation.view_resignation.ViewResignationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.resignation_new.ResignationNewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.resignation_new.add_resignation_new.AddResignationNewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.attendance.new_timesheet.NewTimeSheetViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.attendance.new_timesheet.NewTimeSheetActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.aadhar_verification.AadhaarVerificationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.aadhaar_verification_DigiLocker.AadhaarVerificationDigiLockerActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.example.digitracksdk.presentation.leaves.leave_status.LeaveHistoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.leaves.leave_status.LeaveStatusActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.pending_reimbursement.PendingReimbursementActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.my_letters.other_letter.OtherLetterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.attendance.view_attendance.ViewAttendanceActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.walkthrough.SelectLanguageActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.attendance.time_sheet.AttendanceTimeSheetActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.notification.NotificationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCYQQiwK4YkCwnDOGeX62lHJ8rAytbyPwM" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /> <!-- <receiver android:name=".receiver.SMSBroadcastReceiver"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.provider.Telephony.SMS_RECEIVED" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.document.AddPendingDocumentsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.kyc_screen.AddPendingKycDocument"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.work_experience.WorkExperienceViewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.signature_screen.AddSignatureActivity"
+            android:exported="true"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.reimbursements.AddReimbursementActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.reimbursements.UpdateReimbursementVoucher"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.image_view.ImageViewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.my_profile.create_edit_profile.CreateEditProfileActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.utils.AddImageUtils"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.family_details_screen.FamilyDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.my_profile.view_profile.MyProfileActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.reimbursements.ReimbursementActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.signup.SignUpActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.walkthrough.WalkThroughActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.educational_details.AddEducationalDetailsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.family_details_screen.AddFamilyMemberActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.document.DocumentDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.bank_details.BankDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.esic_details.ESICDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.pf_uan.PFUanDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.epf_details.EPFDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.work_experience.WorkExperienceActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.educational_details.EducationalDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.candidate_details.CandidateDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.kyc_screen.KycActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.reference_details_screen.add_person_screen.AddPersonActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.reference_details_screen.ReferenceDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.signature_screen.SignatureActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.jobs_and_refer_fds.refer_a_friend.ReferAFriendActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.jobs_and_refer_fds.submit_document.SubmitDocumentsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.jobs_and_refer_fds.referral_profile_details.ReferralProfileDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.jobs_and_refer_fds.job_details_screen.JobDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.innov.digitrac.fileprovider"
+            android:enabled="true"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name="com.example.digitracksdk.presentation.leaves.apply_leave.ApplyLeaveActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.leaves.LeavesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.web_view.WebViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.pf_esic_insurance.pf_esic_insurance_view_screen.PfEsicInsuranceViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.my_letters.offer_letter.OfferLettersActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.my_letters.candidate_loi.CandidateLoiActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.payslip.PayslipActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.pf_esic_insurance.PfEsicInsuranceActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.my_letters.MyLettersActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.resignation.add_resignation.AddResignationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.jobs_and_refer_fds.JobsAndReferFdsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.help_and_support.HelpAndSupportActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.innov_id_card.InnovIdCardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.training.TrainingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.client_policy.ClientPolicyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.rewards.RewardsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.exit_questionnaire.ExitQuestionnaireActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.attendance.attendance_regularization.AttendanceRegularizationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.attendance.mileage_tracking.MileageTrackingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.attendance.attendance_map.AttendanceMapActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.attendance.AttendanceActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.onboarding.OnboardingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.utils.LocationUtils"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.HomeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.login.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.geo_tracking.GeoTrackingSummaryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.geo_tracking_2.GeoTrackingActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.geo_tracking_2.GeoTrackingListingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.digitracksdk.presentation.home.geo_tracking.tracking_details.GeoTrackingDetailsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.example.digitracksdk.service.MyFirebaseMessageService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.example.digitracksdk.service.NotificationListener"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.example.digitracksdk.service.LocationUpdateService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="location" />
+        <service
+            android:name="com.example.digitracksdk.service.LocationTrackingService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="location"
+            android:permission="com.example.myapp.permission.ACCESS_LOCATION" />
+
+    </application>
+
+</manifest>

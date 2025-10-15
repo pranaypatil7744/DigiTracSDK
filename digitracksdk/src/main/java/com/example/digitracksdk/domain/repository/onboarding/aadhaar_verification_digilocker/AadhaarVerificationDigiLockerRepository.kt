@@ -1,0 +1,15 @@
+package com.example.digitracksdk.domain.repository.onboarding.aadhaar_verification_digilocker
+
+import com.innov.digitrac.paperless.aadhaar_new.model.DigiLockerRequestModel
+import com.innov.digitrac.paperless.aadhaar_new.model.DigiLockerResponseModel
+import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification_digilocker.GetAadhaarDetailDigiLockerRequestModel
+import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification_digilocker.GetAadhaarDetailDigiLockerResponseModel
+import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification_digilocker.SaveDigiLockerRequestIDRequestModel
+import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification_digilocker.SaveDigiLockerRequestIDResponseModel
+
+interface AadhaarVerificationDigiLockerRepository {
+    suspend fun callSaveRequestIDApi(request: SaveDigiLockerRequestIDRequestModel) : SaveDigiLockerRequestIDResponseModel
+    suspend fun callGetAadhaarDataApi(request: GetAadhaarDetailDigiLockerRequestModel) : GetAadhaarDetailDigiLockerResponseModel
+    suspend fun callAadhaarVerificationDigiLockerApi(request: DigiLockerRequestModel) : DigiLockerResponseModel
+
+}

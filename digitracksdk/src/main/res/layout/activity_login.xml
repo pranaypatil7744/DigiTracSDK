@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context="com.example.digitracksdk.presentation.login.LoginActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_main" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWelcomeBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/welcome_back"
+        android:textColor="@color/tundora"
+        style="@style/plus_jakarta_display_bold"
+        android:textSize="@dimen/size21"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvContinueWith"
+        style="@style/plus_jakarta_display_light"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen13"
+        android:text="@string/login_using_your_mobile_number"
+        android:textColor="@color/jumbo"
+        android:textSize="@dimen/size14"
+        app:layout_constraintEnd_toEndOf="@id/tvWelcomeBack"
+        app:layout_constraintStart_toStartOf="@id/tvWelcomeBack"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeBack" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutPhoneEmail"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="52dp"
+        android:hint="@string/phone_number"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/tvContinueWith">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmailMob"
+            style="@style/plus_jakarta_display_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="10"
+            android:padding="15dp"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        style="@style/MaterialButtonBaseStyle"
+        android:layout_marginHorizontal="@dimen/dimen16"
+        android:layout_marginVertical="@dimen/dimen25"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutPhoneEmail" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDontHaveAnAccount"
+        style="@style/plus_jakarta_display_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen13"
+        android:layout_marginEnd="@dimen/dimen50"
+        android:text="@string/don_t_have_an_account"
+        android:textColor="@color/jumbo"
+        android:textSize="@dimen/size14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRegister"
+        style="@style/plus_jakarta_display_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen5"
+        android:layout_marginTop="@dimen/dimen13"
+        android:layout_marginEnd="@dimen/dimen40"
+        android:text="@string/register"
+        android:textColor="@color/blue_ribbon"
+        android:textSize="@dimen/size14"
+        app:layout_constraintStart_toEndOf="@+id/tvDontHaveAnAccount"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/bg_login_screen"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <include
+        android:id="@+id/content_loading"
+        layout="@layout/content_loading"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
