@@ -9,7 +9,7 @@ apply plugin: 'kotlin-kapt'
 //apply plugin: 'realm-android'
 
 
-afterEvaluate {
+//afterEvaluate {
     publishing {
         publications {
             DigiTrackSDK(MavenPublication) {
@@ -21,7 +21,8 @@ afterEvaluate {
                 artifact("$buildDir/outputs/aar/digitracksdk-release.aar")
             }
         }
-    }}
+    }
+//}
 
 
 group = "com.github.pranaypatil7744"
