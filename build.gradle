@@ -17,6 +17,7 @@ buildscript {
         google()
 //        jcenter()
         mavenCentral()
+        gradlePluginPortal()
         maven { url "https://www.jitpack.io" }
     }
 
