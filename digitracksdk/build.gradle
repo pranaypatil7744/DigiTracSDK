@@ -12,22 +12,16 @@ apply plugin: 'kotlin-kapt'
 afterEvaluate {
     publishing {
         publications {
-            release(MavenPublication) {
-                // Use findByName to avoid missing component
-                def releaseComponent = components.findByName("release")
-                if (releaseComponent != null) {
-                    from releaseComponent
-                } else {
-                    println "⚠️ Warning: release component not found!"
-                }
-
+            DigiTrackSDK(MavenPublication) {
                 groupId = 'com.github.pranaypatil7744'
                 artifactId = 'DigiTrackSDK'
                 version = '1.0.0'
+
+                // Publish the release AAR
+                artifact("$buildDir/outputs/aar/digitracksdk-release.aar")
             }
         }
-    }
-}
+    }}
 
 
 group = "com.github.pranaypatil7744"
