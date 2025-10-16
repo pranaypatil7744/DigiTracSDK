@@ -3,7 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'maven-publish'
 }
-apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 //apply plugin: 'com.google.gms.google-services'
 //apply plugin: 'realm-android'
@@ -13,15 +13,25 @@ afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                from components.release
-                groupId = 'com.github.pranaypatil7744'  // Your GitHub username
-                artifactId = 'DigiTrackSDK'             // Library name on JitPack
-                version = '1.0.0'                       // Tag version on GitHub
+                // Use findByName to avoid missing component
+                def releaseComponent = components.findByName("release")
+                if (releaseComponent != null) {
+                    from releaseComponent
+                } else {
+                    println "⚠️ Warning: release component not found!"
+                }
+
+                groupId = 'com.github.pranaypatil7744'
+                artifactId = 'DigiTrackSDK'
+                version = '1.0.0'
             }
         }
     }
 }
 
+
+group = "com.github.pranaypatil7744"
+version = "1.0.0"
 
 android {
     namespace 'com.example.digitracksdk'
