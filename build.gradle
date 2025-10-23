@@ -50,6 +50,6 @@ buildscript {
 }
 
 
-tasks.register('clean', Delete) {
-    delete rootProject.layout.buildDirectory
+tasks.register("publishToMavenLocal") {
+    dependsOn(":digitracksdk:publishReleasePublicationToMavenLocal")
 }
