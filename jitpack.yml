@@ -1,0 +1,8 @@
+jdk:
+  - openjdk17
+
+before install:
+    - echo "Building and publishing library module
+
+install:
+  - ./gradle :librarytrial:assembleRelease :librarytrial:publishToMavenLocal
