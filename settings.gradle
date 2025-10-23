@@ -15,3 +15,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "DigiTrac"
 include(":app", ":digitracksdk")
+
+if (System.getenv("JITPACK") == null) {
+    include(":app")
+}
