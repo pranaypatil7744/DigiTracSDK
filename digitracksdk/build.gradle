@@ -2,31 +2,11 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'maven-publish'
+    id 'kotlin-kapt'
 }
-//apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
-//apply plugin: 'com.google.gms.google-services'
-//apply plugin: 'realm-android'
 
-
-//afterEvaluate {
-    publishing {
-        publications {
-            DigiTrackSDK(MavenPublication) {
-                groupId = 'com.github.pranaypatil7744'
-                artifactId = 'DigiTrackSDK'
-                version = '1.0.0'
-
-                // Publish the release AAR
-                artifact("$buildDir/outputs/aar/digitracksdk-release.aar")
-            }
-        }
-    }
-//}
-
-
-group = "com.github.pranaypatil7744"
-version = "1.0.0"
+group = 'com.github.pranaypatil7744'
+version = '1.0.0'
 
 android {
     namespace 'com.example.digitracksdk'
@@ -34,7 +14,6 @@ android {
 
     defaultConfig {
         minSdk 24
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -45,20 +24,38 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
+
     kotlinOptions {
         jvmTarget = '11'
     }
+
     buildFeatures {
         viewBinding = true
     }
+
     lint {
         abortOnError false
     }
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.pranaypatil7744'
+                artifactId = 'DigiTrackSDK'
+                version = '1.0.0'
+            }
+        }
+    }
+}
+
 
 dependencies {
 
