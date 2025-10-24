@@ -173,7 +173,7 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId = 'com.github.pranaypatil7744'
-                artifactId = 'DigiTrackSDK'
+                artifactId = 'DigiTracSDK'
                 version = '1.0.0'
             }
         }
