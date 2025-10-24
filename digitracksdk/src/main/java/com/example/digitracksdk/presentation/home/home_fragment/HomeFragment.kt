@@ -19,8 +19,6 @@ import com.example.digitracksdk.domain.model.GnetIdRequestModel
 import com.example.digitracksdk.domain.model.attendance_model.UpdateAttendanceStatusRequestModel
 import com.example.digitracksdk.domain.model.client_policies.PolicyAcknowledgeRequestModel
 import com.example.digitracksdk.domain.model.customer_id_card.CustomerIdCardRequestModel
-import com.example.digitracksdk.domain.model.home_model.HomeBannerRequestModel
-import com.example.digitracksdk.domain.model.home_model.ListBannerModel
 import com.example.digitracksdk.domain.model.income_tax.IncomeTaxDeclarationRequestModel
 import com.example.digitracksdk.domain.model.refine.RefineRequest
 import com.example.digitracksdk.presentation.attendance.AttendanceActivity
@@ -68,6 +66,8 @@ import com.example.digitracksdk.utils.DialogUtils
 import com.example.digitracksdk.utils.PermissionUtils
 import com.example.digitracksdk.utils.isNetworkAvailable
 import com.example.digitracksdk.utils.*
+import com.innov.digitrac.domain.model.home_model.HomeBannerRequestModel
+import com.innov.digitrac.domain.model.home_model.ListBannerModel
 import org.koin.android.viewmodel.ext.android.viewModel
 
 

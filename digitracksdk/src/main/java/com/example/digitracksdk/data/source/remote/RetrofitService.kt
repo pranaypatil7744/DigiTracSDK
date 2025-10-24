@@ -2,7 +2,6 @@ package com.example.digitracksdk.data.source.remote
 
 import com.chuckerteam.chucker.api.ChuckerCollector
 import com.chuckerteam.chucker.api.ChuckerInterceptor
-import com.innov.digitrac.base.BaseApplication
 import com.example.digitracksdk.data.source.remote.ApiNames.Companion.BASE_URL
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -31,8 +30,8 @@ object RetrofitService {
         val httpLoggingInterceptor = HttpLoggingInterceptor()
         httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
         return OkHttpClient.Builder().addInterceptor(
-            ChuckerInterceptor.Builder(BaseApplication().getAppContext())
-                .collector(ChuckerCollector(BaseApplication().getAppContext()))
+            ChuckerInterceptor.Builder(TODO())
+                .collector(ChuckerCollector(TODO()))
                 .maxContentLength(250000L)
                 .redactHeaders(emptySet())
                 .alwaysReadResponseBody(false)

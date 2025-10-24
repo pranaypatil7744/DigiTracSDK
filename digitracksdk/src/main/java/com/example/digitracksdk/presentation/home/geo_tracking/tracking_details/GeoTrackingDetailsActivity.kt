@@ -26,10 +26,10 @@ import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.maps.model.PolylineOptions
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
 import com.example.digitracksdk.data.database.GeoTrackingDataModel
-import com.innov.digitrac.databinding.ActivityGeoTrackingDetailsBinding
+import com.example.digitracksdk.databinding.ActivityGeoTrackingDetailsBinding
 import com.example.digitracksdk.domain.model.geo_tracking_model.GeoTrackingDetailsRequestModel
 import com.example.digitracksdk.domain.model.geo_tracking_model.lstGeoTrackingDetails
 import com.example.digitracksdk.presentation.home.geo_tracking.GeoTrackingSummaryViewModel

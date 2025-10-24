@@ -13,8 +13,7 @@ import com.example.digitracksdk.data.repository.RefineRepositoryImp
 import com.example.digitracksdk.data.repository.VerifyLoginOtpRepositoryImp
 import com.example.digitracksdk.domain.usecase.reimbursement_usecase.ReimbursementValidationUseCase
 import com.google.gson.GsonBuilder
-import com.innov.digitrac.base.BaseApplication
-import com.innov.digitrac.data.repository.*
+import com.example.digitracksdk.data.repository.*
 import com.example.digitracksdk.data.repository.attendance_regularization_repo_imp.AttendanceRegularizationRepositoryImp
 import com.example.digitracksdk.data.repository.attendance_repo_imp.AttendanceRepositoryImp
 import com.example.digitracksdk.data.repository.attendance_repo_imp.CandidateRepositoryImp
@@ -43,7 +42,7 @@ import com.example.digitracksdk.data.repository.onboarding.PaperlessViewEpfRepos
 import com.example.digitracksdk.data.repository.onboarding.PaperlessViewEsicRepositoryImp
 import com.example.digitracksdk.data.repository.onboarding.PaperlessViewGetSignatureDetailsRepositoryImp
 import com.example.digitracksdk.data.repository.onboarding.PaperlessViewWorkExpDetailsRepositoryImp
-import com.innov.digitrac.data.repository.onboarding.*
+import com.example.digitracksdk.data.repository.onboarding.*
 import com.example.digitracksdk.data.repository.onboarding.insert.CandidateProfileAckRepositoryImp
 import com.example.digitracksdk.data.repository.onboarding.insert.POBInsertEpfRepositoryImp
 import com.example.digitracksdk.data.repository.onboarding.insert.POBInsertEsicRepositoryImp
@@ -85,7 +84,7 @@ import com.example.digitracksdk.domain.repository.onboarding.PaperlessViewCandid
 import com.example.digitracksdk.domain.repository.onboarding.PaperlessViewEpfRepository
 import com.example.digitracksdk.domain.repository.onboarding.PaperlessViewEsicRepository
 import com.example.digitracksdk.domain.repository.onboarding.PaperlessViewWorkExpDetailsRepository
-import com.innov.digitrac.domain.repository.onboarding.*
+import com.example.digitracksdk.domain.repository.onboarding.*
 import com.example.digitracksdk.domain.repository.onboarding.aadhaar_verification_digilocker.AadhaarVerificationDigiLockerRepository
 import com.example.digitracksdk.domain.repository.onboarding.aadhar_verification.AadhaarVerificationRepository
 import com.example.digitracksdk.domain.repository.onboarding.bank.BankDetailsRepository
@@ -135,7 +134,7 @@ import com.example.digitracksdk.domain.usecase.attendance_usecase.InsertAttendan
 import com.example.digitracksdk.domain.usecase.attendance_regularization_usecase.InsertAttendanceRegularizationUseCase
 import com.example.digitracksdk.domain.usecase.attendance_usecase.AttendanceMarkUseCase
 import com.example.digitracksdk.domain.usecase.attendance_usecase.CreateLogVisitTokenUseCase
-import com.innov.digitrac.domain.usecase.attendance_usecase.*
+import com.example.digitracksdk.domain.usecase.attendance_usecase.*
 import com.example.digitracksdk.domain.usecase.candidate_usecase.CandidateAttendanceUseCase
 import com.example.digitracksdk.domain.usecase.client_policies.ClientPoliciesUseCase
 import com.example.digitracksdk.domain.usecase.client_policies.InsertAcknowledgeUseCase
@@ -158,7 +157,7 @@ import com.example.digitracksdk.domain.usecase.help_and_support_usecase.Associat
 import com.example.digitracksdk.domain.usecase.help_and_support_usecase.IssueCategoryUseCase
 import com.example.digitracksdk.domain.usecase.help_and_support_usecase.IssueDetailsUseCase
 import com.example.digitracksdk.domain.usecase.help_and_support_usecase.IssueSubCategoryUseCase
-import com.innov.digitrac.domain.usecase.help_and_support_usecase.*
+import com.example.digitracksdk.domain.usecase.help_and_support_usecase.*
 import com.example.digitracksdk.domain.usecase.home_usecase.HomeBannerUseCase
 import com.example.digitracksdk.domain.usecase.home_usecase.HomeDashboardUseCase
 import com.example.digitracksdk.domain.usecase.leave_usecase.ApplyLeavesUseCase
@@ -171,7 +170,7 @@ import com.example.digitracksdk.domain.usecase.onboarding.PaperlessViewWorkExpDe
 import com.example.digitracksdk.domain.usecase.income_tax_use_case.IncomeTaxDeclarationUseCase
 import com.example.digitracksdk.domain.usecase.leave_usecase.BalanceLeaveStatusUseCase
 import com.example.digitracksdk.domain.usecase.leave_usecase.LeavesRequestViewUseCase
-import com.innov.digitrac.domain.usecase.leave_usecase.*
+import com.example.digitracksdk.domain.usecase.leave_usecase.*
 import com.example.digitracksdk.domain.usecase.login_usecase.CheckAppVersionUseCase
 import com.example.digitracksdk.domain.usecase.mileage_tracking_usecase.InsertMileageRegularizationUseCase
 import com.example.digitracksdk.domain.usecase.mileage_tracking_usecase.MileageTrackingListUseCase
@@ -189,8 +188,8 @@ import com.example.digitracksdk.domain.usecase.mileage_tracking_usecase.MileageT
 import com.example.digitracksdk.domain.usecase.my_letters_usecase.GetFinancialYearListUseCase
 import com.example.digitracksdk.domain.usecase.my_letters_usecase.OtherLettersUseCase
 import com.example.digitracksdk.domain.usecase.my_letters_usecase.ViewCandidateLoiUseCase
-import com.innov.digitrac.domain.usecase.mileage_tracking_usecase.*
-import com.innov.digitrac.domain.usecase.my_letters_usecase.*
+import com.example.digitracksdk.domain.usecase.mileage_tracking_usecase.*
+import com.example.digitracksdk.domain.usecase.my_letters_usecase.*
 import com.example.digitracksdk.domain.usecase.notification_usecase.NotificationDetailsUseCase
 import com.example.digitracksdk.domain.usecase.notification_usecase.NotificationListUseCase
 import com.example.digitracksdk.domain.usecase.onboarding.GetEducationCategoryUseCase
@@ -199,7 +198,7 @@ import com.example.digitracksdk.domain.usecase.onboarding.PaperlessViewCandidate
 import com.example.digitracksdk.domain.usecase.onboarding.PaperlessViewCandidateReferenceDetailsUseCase
 import com.example.digitracksdk.domain.usecase.onboarding.PaperlessViewEpfUseCase
 import com.example.digitracksdk.domain.usecase.onboarding.PaperlessViewEsicUseCase
-import com.innov.digitrac.domain.usecase.onboarding.*
+import com.example.digitracksdk.domain.usecase.onboarding.*
 import com.example.digitracksdk.domain.usecase.onboarding.aadhaar_verification.AadhaarVerificationOtpValidationUseCase
 import com.example.digitracksdk.domain.usecase.onboarding.aadhaar_verification.AadhaarVerificationSendOtpUseCase
 import com.example.digitracksdk.domain.usecase.onboarding.aadhaar_verification.GetAadhaarVerificationDetailsUseCase
@@ -221,7 +220,7 @@ import com.example.digitracksdk.domain.usecase.onboarding.documents.InsertPendin
 import com.example.digitracksdk.domain.usecase.onboarding.documents.PendingDocumentListUseCase
 import com.example.digitracksdk.domain.usecase.onboarding.documents.UploadedDocumentsListUseCase
 import com.example.digitracksdk.domain.usecase.onboarding.documents.ViewDocumentsListUseCase
-import com.innov.digitrac.domain.usecase.onboarding.documents.*
+import com.example.digitracksdk.domain.usecase.onboarding.documents.*
 import com.example.digitracksdk.domain.usecase.onboarding.education_details.EducationalStreamUseCase
 import com.example.digitracksdk.domain.usecase.onboarding.insert.InsertCandidateReferenceDetailsUseCase
 import com.example.digitracksdk.domain.usecase.onboarding.insert.POBEpfUseCase
@@ -234,7 +233,7 @@ import com.example.digitracksdk.domain.usecase.onboarding.insert.GetReferenceCat
 import com.example.digitracksdk.domain.usecase.onboarding.insert.POBInsertEducationInfoUseCase
 import com.example.digitracksdk.domain.usecase.onboarding.insert.PaperlessUpdateCandidateBasicDetailsUseCase
 import com.example.digitracksdk.domain.usecase.onboarding.family_details.ViewFamilyDetailsUseCase
-import com.innov.digitrac.domain.usecase.onboarding.insert.*
+import com.example.digitracksdk.domain.usecase.onboarding.insert.*
 import com.example.digitracksdk.domain.usecase.onboarding.kyc.KycDocumentPendingListUseCase
 import com.example.digitracksdk.domain.usecase.onboarding.kyc.KycDocumentsUseCase
 import com.example.digitracksdk.domain.usecase.onboarding.pan_verification.PanVerificationDetailsUseCase
@@ -255,7 +254,7 @@ import com.example.digitracksdk.domain.usecase.profile_usecase.StateListUseCase
 import com.example.digitracksdk.domain.usecase.pf_esic_insurance_usecase.EsicCardUseCase
 import com.example.digitracksdk.domain.usecase.pf_esic_insurance_usecase.EsicMedicalCardUseCase
 import com.example.digitracksdk.domain.usecase.pf_esic_insurance_usecase.MedicalCardUseCase
-import com.innov.digitrac.domain.usecase.profile_usecase.*
+import com.example.digitracksdk.domain.usecase.profile_usecase.*
 import com.example.digitracksdk.domain.usecase.refer_friend_usecase.BranchDetailsListUseCase
 import com.example.digitracksdk.domain.usecase.refer_friend_usecase.ReferralFriendUseCase
 import com.example.digitracksdk.domain.usecase.refer_friend_usecase.SkillListUseCase
@@ -287,7 +286,7 @@ import com.example.digitracksdk.domain.usecase.reimbursement_usecase.SaveReimbur
 import com.example.digitracksdk.domain.usecase.reimbursement_usecase.UpdatePendingReimbursementUseCase
 import com.example.digitracksdk.domain.usecase.reimbursement_usecase.UpdateReimbursementStatusUseCase
 import com.example.digitracksdk.domain.usecase.reimbursement_usecase.UploadReimbursementBillUseCase
-import com.innov.digitrac.domain.usecase.reimbursement_usecase.*
+import com.example.digitracksdk.domain.usecase.reimbursement_usecase.*
 import com.example.digitracksdk.domain.usecase.resignation_usecase.ResignationCategoryUseCase
 import com.example.digitracksdk.domain.usecase.resignation_usecase.ResignationListUseCase
 import com.example.digitracksdk.domain.usecase.resignation_usecase.ResignationNoticePeriodUseCase
@@ -373,8 +372,8 @@ fun createOkHttpClient(): OkHttpClient {
     val httpLoggingInterceptor = HttpLoggingInterceptor()
     httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
     return OkHttpClient.Builder().addInterceptor(
-        ChuckerInterceptor.Builder(BaseApplication().getAppContext())
-            .collector(ChuckerCollector(BaseApplication().getAppContext()))
+        ChuckerInterceptor.Builder(context = TODO()) //TODO
+            .collector(ChuckerCollector(context = TODO()))
             .maxContentLength(250000L)
             .redactHeaders(emptySet())
             .alwaysReadResponseBody(false)
