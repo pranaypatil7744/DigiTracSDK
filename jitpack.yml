@@ -1,8 +1,18 @@
+#jdk:
+#  - openjdk17
+#
+#before install:
+#    - echo "Building and publishing library module
+#
+#install:
+#  - ./gradlew :librarytrial:assembleRelease :librarytrial:publishToMavenLocal
+
 jdk:
   - openjdk17
 
-before install:
-    - echo "Building and publishing library module
-
 install:
-  - ./gradlew :librarytrial:assembleRelease :librarytrial:publishToMavenLocal
+  - ./gradlew :librarytrial:assembleRelease
+
+artifacts:
+  - path: librarytrial/build/outputs/aar/librarytrial-release.aar
+    type: aar
