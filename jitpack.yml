@@ -11,8 +11,8 @@ jdk:
   - openjdk17
 
 install:
-  - ./gradlew :librarytrial:assembleRelease
+  - ./gradlew :digitracksdk:assembleRelease
 
 artifacts:
-  - path: librarytrial/build/outputs/aar/librarytrial-release.aar
+  - path: digitracksdk/build/outputs/aar/digitracksdk-release.aar
     type: aar
