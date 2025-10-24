@@ -5,7 +5,7 @@
 #    - echo "Building and publishing library module
 #
 #install:
-#  - ./gradlew :librarytrial:assembleRelease :librarytrial:publishToMavenLocal
+#  - ./gradlew :digitracksdk:assembleRelease :digitracksdk:publishToMavenLocal
 
 jdk:
   - openjdk17
