@@ -34,8 +34,8 @@
 
     <application
         android:name=".base.BaseApplication"
-        android:icon="@mipmap/appicon"
         android:label="@string/app_name"
+        android:allowBackup="false"
         tools:ignore="DataExtractionRules,HardcodedDebugMode"
         tools:replace="allowBackup">
 
