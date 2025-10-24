@@ -9,13 +9,12 @@ import android.view.MotionEvent
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.core.content.ContextCompat
-import com.google.android.material.chip.Chip
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityNewTimeSheetViewBinding
-import com.innov.digitrac.databinding.ItemCalendarDayHeaderBinding
-import com.innov.digitrac.databinding.ItemCalendarItemBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityNewTimeSheetViewBinding
+import com.example.digitracksdk.databinding.ItemCalendarDayHeaderBinding
+import com.example.digitracksdk.databinding.ItemCalendarItemBinding
 import com.example.digitracksdk.domain.model.attendance_model.AttendanceCycleRequestModel
 import com.example.digitracksdk.domain.model.attendance_model.LeaveHexCodeRequestModel
 import com.example.digitracksdk.domain.model.attendance_model.LeaveHexData
@@ -25,6 +24,7 @@ import com.example.digitracksdk.presentation.attendance.AttendanceViewModel
 import com.example.digitracksdk.utils.AppUtils
 import com.example.digitracksdk.utils.PreferenceUtils
 import com.example.digitracksdk.utils.isNetworkAvailable
+import com.google.android.material.chip.Chip
 import com.kizitonwose.calendar.core.CalendarDay
 import com.kizitonwose.calendar.core.CalendarMonth
 import com.kizitonwose.calendar.core.DayPosition
@@ -34,7 +34,6 @@ import com.kizitonwose.calendar.view.MonthDayBinder
 import com.kizitonwose.calendar.view.MonthHeaderFooterBinder
 import com.kizitonwose.calendar.view.ViewContainer
 import org.koin.android.viewmodel.ext.android.viewModel
-import java.lang.Exception
 import java.text.SimpleDateFormat
 import java.time.DayOfWeek
 import java.time.LocalDate
@@ -126,7 +125,7 @@ class NewTimeSheetViewActivity : BaseActivity() {
                 toggleLoader(false)
                 if (it.status.equals(Constant.success, true)) {
                     if (!it?.lstAttendance.isNullOrEmpty()) {
-                        val data = it?.lstAttendance?:java.util.ArrayList()
+                        val data = it?.lstAttendance ?: java.util.ArrayList()
                         leaveHexData = data
 
                         setUpAdapter(data ?: arrayListOf())
@@ -143,7 +142,7 @@ class NewTimeSheetViewActivity : BaseActivity() {
                 if (it.Status.equals(Constant.SUCCESS, true)) {
 
                     if (!it.LSTAttendaceTimeAsheetDetails.isNullOrEmpty()) {
-                        colorAttendanceDateList = it?.LSTAttendaceTimeAsheetDetails?: arrayListOf()
+                        colorAttendanceDateList = it?.LSTAttendaceTimeAsheetDetails ?: arrayListOf()
                         setUpCalendar()
                         calendarDay.clear()
                         hexacolor.clear()
@@ -251,7 +250,7 @@ class NewTimeSheetViewActivity : BaseActivity() {
 
             }
 
-           dayBinder = object : MonthDayBinder<DayViewContainer> {
+            dayBinder = object : MonthDayBinder<DayViewContainer> {
                 override fun create(view: View) = DayViewContainer(view)
 
                 @SuppressLint("ResourceType")
@@ -460,11 +459,9 @@ class NewTimeSheetViewActivity : BaseActivity() {
             btnSubmit.setOnClickListener {
                 if (etFromDate.text.isNullOrEmpty()) {
                     showToast(getString(R.string.please_choose_from_date))
-                }
-                else if (etEndDate.text.isNullOrEmpty()) {
+                } else if (etEndDate.text.isNullOrEmpty()) {
                     showToast(getString(R.string.please_choose_end_date))
-                }
-                else {
+                } else {
                     callApi()
                 }
             }
@@ -495,6 +492,7 @@ class NewTimeSheetViewActivity : BaseActivity() {
         }
 
     }
+
     private fun callDetailTimeSheetApi(startDate: String, endDate: String) {
 
         binding.apply {
@@ -514,6 +512,7 @@ class NewTimeSheetViewActivity : BaseActivity() {
             }
         }
     }
+
     private fun callLeaveCodeApi() {
         binding.apply {
             if (this@NewTimeSheetViewActivity.isNetworkAvailable()) {
@@ -532,6 +531,7 @@ class NewTimeSheetViewActivity : BaseActivity() {
 
         }
     }
+
     private fun callAttendanceCycleApi() {
         binding.apply {
             if (this@NewTimeSheetViewActivity.isNetworkAvailable()) {
@@ -549,6 +549,7 @@ class NewTimeSheetViewActivity : BaseActivity() {
             }
         }
     }
+
     private fun toggleLoader(showLoader: Boolean) {
         toggleFadeView(
             binding.root,
@@ -557,6 +558,7 @@ class NewTimeSheetViewActivity : BaseActivity() {
             showLoader
         )
     }
+
     private fun setUpToolbar() {
 
         binding.toolbar.apply {

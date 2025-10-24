@@ -15,9 +15,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.webkit.WebViewAssetLoader
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityWebViewBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityWebViewBinding
 import com.example.digitracksdk.domain.model.client_policies.AcknowledgeRequestModel
 import com.example.digitracksdk.presentation.home.client_policy.ClientPoliciesViewModel
 import com.example.digitracksdk.presentation.home.client_policy.model.PolicyStatusType

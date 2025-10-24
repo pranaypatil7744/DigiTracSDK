@@ -9,9 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseFragment
-import com.innov.digitrac.databinding.FragmentVerifyOtpBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseFragment
+import com.example.digitracksdk.databinding.FragmentVerifyOtpBinding
 import com.example.digitracksdk.domain.model.login_model.LoginRequestModel
 import com.example.digitracksdk.domain.model.profile_model.CheckOtpRequestModel
 import com.example.digitracksdk.domain.model.profile_model.CheckOtpResponseModel
@@ -26,7 +26,7 @@ import com.example.digitracksdk.presentation.login.login_fragment.LoginViewModel
 import com.example.digitracksdk.presentation.my_profile.ProfileViewModel
 import com.example.digitracksdk.utils.AppUtils
 import com.example.digitracksdk.utils.InnovSingleton
-import com.innov.digitrac.utils.*
+import com.example.digitracksdk.utils.*
 import org.koin.android.viewmodel.ext.android.viewModel
 import java.util.*
 

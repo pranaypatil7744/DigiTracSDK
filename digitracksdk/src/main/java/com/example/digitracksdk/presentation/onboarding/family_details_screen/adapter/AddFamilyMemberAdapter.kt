@@ -5,10 +5,10 @@ import android.text.Editable
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ItemEditTextBinding
-import com.innov.digitrac.databinding.ItemMultiEditTextBinding
-import com.innov.digitrac.databinding.ItemSpinnerBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.ItemEditTextBinding
+import com.example.digitracksdk.databinding.ItemMultiEditTextBinding
+import com.example.digitracksdk.databinding.ItemSpinnerBinding
 import com.example.digitracksdk.presentation.onboarding.epf_details.model.DetailModel
 import com.example.digitracksdk.presentation.onboarding.family_details_screen.model.FamilyViewType
 import com.example.digitracksdk.presentation.onboarding.family_details_screen.model.MultiEditTextModel

@@ -7,8 +7,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.TrainingVideoItemBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.TrainingVideoItemBinding
 import com.example.digitracksdk.presentation.home.training.video_fragment.model.TrainingVideoModel
 import com.example.digitracksdk.presentation.web_view.WebViewActivity
 import com.example.digitracksdk.utils.ImageUtils

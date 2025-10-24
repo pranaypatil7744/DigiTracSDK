@@ -18,8 +18,8 @@ import androidx.core.content.ContextCompat
 import androidx.core.widget.doAfterTextChanged
 import androidx.core.widget.doOnTextChanged
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.*
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.*
 import com.example.digitracksdk.presentation.onboarding.epf_details.model.DetailItemType
 import com.example.digitracksdk.presentation.onboarding.epf_details.model.DetailModel
 import com.example.digitracksdk.presentation.onboarding.epf_details.model.SpinnerType

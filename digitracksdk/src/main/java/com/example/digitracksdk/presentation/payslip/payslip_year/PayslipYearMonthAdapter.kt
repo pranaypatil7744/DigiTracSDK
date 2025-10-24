@@ -7,8 +7,8 @@ import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ItemPayslipYearBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.ItemPayslipYearBinding
 import com.example.digitracksdk.presentation.payslip.adapter.PayslipBottomSheetAdapter
 import com.example.digitracksdk.presentation.payslip.model.YearOrMonthListModel
 import kotlin.collections.ArrayList

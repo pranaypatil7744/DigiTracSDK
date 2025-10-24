@@ -25,10 +25,8 @@ import androidx.core.text.HtmlCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.analytics.FirebaseAnalytics
-import com.innov.digitrac.BuildConfig
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseApplication
+import com.example.digitracksdk.R
 import com.example.digitracksdk.presentation.attendance.model.AttendanceStatus
 import com.example.digitracksdk.presentation.leaves.apply_leave.model.LeavesStatus
 import com.example.digitracksdk.presentation.my_letters.candidate_loi.model.CandidateLoiStatus
@@ -62,9 +60,9 @@ class AppUtils {
     }
 
     fun logMe(tag: String, message: String?) {
-        if (BuildConfig.DEBUG) {
-            Log.e(tag, message ?: "")
-        }
+//        if (BuildConfig.DEBUG) {
+//            Log.e(tag, message ?: "")
+//        }
     }
 
     fun setLang(context: Context) {
@@ -117,11 +115,13 @@ class AppUtils {
     }
 
     fun isLocationEnabled(): Boolean {
-        val locationManager: LocationManager =
-            BaseApplication.mContext.getSystemService(AppCompatActivity.LOCATION_SERVICE) as LocationManager
-        return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || locationManager.isProviderEnabled(
-            LocationManager.NETWORK_PROVIDER
-        )
+//        val locationManager: LocationManager =
+//            BaseApplication.mContext.getSystemService(AppCompatActivity.LOCATION_SERVICE) as LocationManager
+//        return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || locationManager.isProviderEnabled(
+//            LocationManager.NETWORK_PROVIDER
+//        )
+        // TODO
+        return true
     }
 
     @SuppressLint("HardwareIds")

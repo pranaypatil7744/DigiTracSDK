@@ -5,9 +5,9 @@ import android.view.View
 import android.widget.ArrayAdapter
 import androidx.activity.enableEdgeToEdge
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityPfuandetailsBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityPfuandetailsBinding
 import com.example.digitracksdk.domain.model.onboarding.pf_uan.GetPFESICRequestModel
 import com.example.digitracksdk.domain.model.onboarding.pf_uan.GetPFESICResponseModel
 import com.example.digitracksdk.domain.model.onboarding.pf_uan.InsertPFESICRequestModel

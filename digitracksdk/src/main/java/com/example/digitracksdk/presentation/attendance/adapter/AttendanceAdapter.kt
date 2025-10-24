@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.AttendanceListItemBinding
-import com.innov.digitrac.databinding.AttendanceTopItemBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.AttendanceListItemBinding
+import com.example.digitracksdk.databinding.AttendanceTopItemBinding
 import com.example.digitracksdk.presentation.attendance.AttendanceManagerListener
 import com.example.digitracksdk.presentation.attendance.model.AttendanceListModel
 import com.example.digitracksdk.presentation.attendance.model.AttendanceStatus
@@ -39,6 +39,7 @@ class AttendanceAdapter(
                 val binding = AttendanceTopItemBinding.bind(view)
                 ViewHolder(binding)
             }
+
             else -> {
                 val view = LayoutInflater.from(context)
                     .inflate(R.layout.attendance_list_item, parent, false)
@@ -50,14 +51,14 @@ class AttendanceAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val data = attendanceItemList[position]
-        when(holder.itemViewType){
+        when (holder.itemViewType) {
             AttendanceType.ATTENDANCE_TOP_ITEM.value -> {
                 holder.attendanceTopItemBinding?.apply {
                     tvTime.text = data.time
                     tvDayDate.text = data.dateDay
                     switchAttendanceAnywhere.isChecked = data.isAttendanceAnywhere == true
                     layoutAttendance.setOnClickListener {
-                        if (data.attendanceStatus != AttendanceStatus.CHECK_OUT){
+                        if (data.attendanceStatus != AttendanceStatus.CHECK_OUT) {
                             listener.clickOnAttendance(position)
                         }
                     }
@@ -70,43 +71,72 @@ class AttendanceAdapter(
                             tvCheckOutTime.text = "--:--"
                             tvWorkingHrsTime.text = "--:--"
                             tvCheckInOut.text = context.getString(R.string.check_in)
-                            tvCheckInOut.setTextColor(ContextCompat.getColor(context,R.color.jungle_green))
-                            imgFinger.imageTintList = ContextCompat.getColorStateList(context,R.color.jungle_green)
+                            tvCheckInOut.setTextColor(
+                                ContextCompat.getColor(
+                                    context,
+                                    R.color.jungle_green
+                                )
+                            )
+                            imgFinger.imageTintList =
+                                ContextCompat.getColorStateList(context, R.color.jungle_green)
                             bgAttendanceBtn.apply {
-                                isEnabled=true
-                                strokeColor = ContextCompat.getColorStateList(context,R.color.jungle_green_8)
-                                setBackgroundColor(ContextCompat.getColor(context,R.color.jungle_green_15))
+                                isEnabled = true
+                                strokeColor =
+                                    ContextCompat.getColorStateList(context, R.color.jungle_green_8)
+                                setBackgroundColor(
+                                    ContextCompat.getColor(
+                                        context,
+                                        R.color.jungle_green_15
+                                    )
+                                )
                             }
                         }
+
                         AttendanceStatus.CHECK_IN -> {
                             tvCheckInTime.text = data.checkInTime
                             tvCheckOutTime.text = "--:--"
                             tvWorkingHrsTime.text = data.workingHrs
                             tvCheckInOut.text = context.getString(R.string.check_out)
-                            tvCheckInOut.setTextColor(ContextCompat.getColor(context,R.color.cinnabar))
-                            imgFinger.imageTintList = ContextCompat.getColorStateList(context,R.color.cinnabar)
+                            tvCheckInOut.setTextColor(
+                                ContextCompat.getColor(
+                                    context,
+                                    R.color.cinnabar
+                                )
+                            )
+                            imgFinger.imageTintList =
+                                ContextCompat.getColorStateList(context, R.color.cinnabar)
                             bgAttendanceBtn.apply {
-                                isEnabled=true
-                                strokeColor = ContextCompat.getColorStateList(context,R.color.cinnabar_8)
-                                setBackgroundColor(ContextCompat.getColor(context,R.color.cinnabar_15))
+                                isEnabled = true
+                                strokeColor =
+                                    ContextCompat.getColorStateList(context, R.color.cinnabar_8)
+                                setBackgroundColor(
+                                    ContextCompat.getColor(
+                                        context,
+                                        R.color.cinnabar_15
+                                    )
+                                )
                             }
                         }
+
                         AttendanceStatus.CHECK_OUT -> {
                             tvCheckInOut.text = context.getString(R.string.complete)
                             tvCheckInTime.text = data.checkInTime
                             tvCheckOutTime.text = data.checkOutTime
                             tvWorkingHrsTime.text = data.workingHrs
-                            tvCheckInOut.setTextColor(ContextCompat.getColor(context,R.color.gray))
-                            imgFinger.imageTintList = ContextCompat.getColorStateList(context,R.color.gray)
+                            tvCheckInOut.setTextColor(ContextCompat.getColor(context, R.color.gray))
+                            imgFinger.imageTintList =
+                                ContextCompat.getColorStateList(context, R.color.gray)
                             bgAttendanceBtn.apply {
-                                isEnabled=false
-                                strokeColor = ContextCompat.getColorStateList(context,R.color.gray_8)
-                                setBackgroundColor(ContextCompat.getColor(context,R.color.gray_15))
+                                isEnabled = false
+                                strokeColor =
+                                    ContextCompat.getColorStateList(context, R.color.gray_8)
+                                setBackgroundColor(ContextCompat.getColor(context, R.color.gray_15))
                             }
                         }
                     }
                 }
             }
+
             AttendanceType.ATTENDANCE_ITEM_LIST.value -> {
                 holder.attendanceListItemBinding?.apply {
                     tvItemName.text = data.attendanceItemName

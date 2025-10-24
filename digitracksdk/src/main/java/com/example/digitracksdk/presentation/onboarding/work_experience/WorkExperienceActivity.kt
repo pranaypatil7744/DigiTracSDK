@@ -8,9 +8,9 @@ import android.view.View.VISIBLE
 import android.widget.ArrayAdapter
 import androidx.activity.enableEdgeToEdge
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityWorkExperienceBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityWorkExperienceBinding
 import com.example.digitracksdk.domain.model.onboarding.ListWorkExpModel
 import com.example.digitracksdk.domain.model.onboarding.work_experience.InsertWorkExpRequestModel
 import com.example.digitracksdk.listener.ValidationListener

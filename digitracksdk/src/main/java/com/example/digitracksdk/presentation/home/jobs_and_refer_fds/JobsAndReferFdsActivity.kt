@@ -7,16 +7,17 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ActivityJobsAndReferFdsBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityJobsAndReferFdsBinding
 import com.example.digitracksdk.presentation.attendance.mileage_tracking.adapter.TabAdapter
 import com.example.digitracksdk.presentation.home.jobs_and_refer_fds.jobs.JobsFragment
 import com.example.digitracksdk.presentation.home.jobs_and_refer_fds.referrals.ReferralsFragment
 import com.google.android.material.tabs.TabLayoutMediator
 import com.example.digitracksdk.utils.AppUtils
 
-class JobsAndReferFdsActivity : AppCompatActivity() {
-    lateinit var binding:ActivityJobsAndReferFdsBinding
+class JobsAndReferFdsActivity : BaseActivity() {
+    lateinit var binding: ActivityJobsAndReferFdsBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

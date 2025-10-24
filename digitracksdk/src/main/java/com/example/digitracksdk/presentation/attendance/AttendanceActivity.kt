@@ -17,10 +17,10 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.*
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityAttendanceBinding
-import com.innov.digitrac.databinding.BottomSheetYourVisitMapBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityAttendanceBinding
+import com.example.digitracksdk.databinding.BottomSheetYourVisitMapBinding
 import com.example.digitracksdk.domain.model.CommonRequestModel
 import com.example.digitracksdk.domain.model.attendance_model.AttendanceValidationRequestModel
 import com.example.digitracksdk.domain.model.attendance_model.DashboardAttendanceStatusResponseModel

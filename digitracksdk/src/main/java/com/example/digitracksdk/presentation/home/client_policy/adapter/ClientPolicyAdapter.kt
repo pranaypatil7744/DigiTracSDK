@@ -6,8 +6,8 @@ import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ClientPolicyItemBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.ClientPolicyItemBinding
 import com.example.digitracksdk.presentation.home.client_policy.model.ClientPolicyModel
 import com.example.digitracksdk.presentation.home.client_policy.model.PolicyStatusType
 

@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
+import com.example.digitracksdk.R
 import com.example.digitracksdk.domain.model.ApiError
 import com.example.digitracksdk.domain.model.attendance_regularization_model.AttendanceRegularizationListRequestModel
 import com.example.digitracksdk.domain.model.attendance_regularization_model.AttendanceRegularizationListResponseModel
@@ -13,7 +13,6 @@ import com.example.digitracksdk.domain.model.attendance_regularization_model.Ins
 import com.example.digitracksdk.domain.model.attendance_regularization_model.InsertAttendanceRegularizationResponseModel
 import com.example.digitracksdk.domain.model.CommonRequestModel
 import com.example.digitracksdk.domain.model.attendance_regularization_model.AttendanceRegularizationTypeResponseModel
-import com.innov.digitrac.domain.model.attendance_regularization_model.*
 import com.example.digitracksdk.domain.usecase.attendance_regularization_usecase.AttendanceRegularizationListUseCase
 import com.example.digitracksdk.domain.usecase.attendance_regularization_usecase.AttendanceRegularizationTypeUseCase
 import com.example.digitracksdk.domain.usecase.attendance_regularization_usecase.AttendanceRegularizationInsertUseCase

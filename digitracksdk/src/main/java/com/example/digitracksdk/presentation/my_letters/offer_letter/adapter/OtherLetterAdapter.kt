@@ -3,8 +3,8 @@ package com.example.digitracksdk.presentation.my_letters.offer_letter.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.CandidateLoiItemBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.CandidateLoiItemBinding
 import com.example.digitracksdk.domain.model.my_letters.AssociateAllLettersListModel
 
 class OtherLetterAdapter(val context:Context,

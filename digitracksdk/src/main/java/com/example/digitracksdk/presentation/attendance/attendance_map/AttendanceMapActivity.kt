@@ -24,10 +24,9 @@ import com.example.digitracksdk.domain.model.attendance_model.CreateLogYourVisit
 import com.example.digitracksdk.domain.model.attendance_model.CurrentDayAttendanceStatusRequestModel
 import com.example.digitracksdk.domain.model.attendance_model.CurrentDayAttendanceStatusResponseModel
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityAttendanceMapBinding
-import com.innov.digitrac.domain.model.attendance_model.*
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityAttendanceMapBinding
 import com.example.digitracksdk.domain.usecase.attendance_usecase.InsertAttendancePicRequestModel
 import com.example.digitracksdk.domain.usecase.attendance_usecase.InsertAttendancePicResponseModel
 import com.example.digitracksdk.presentation.attendance.AttendanceViewModel
@@ -40,7 +39,6 @@ import com.example.digitracksdk.utils.LocationUtils
 import com.example.digitracksdk.utils.PermissionUtils
 import com.example.digitracksdk.utils.PreferenceUtils
 import com.example.digitracksdk.utils.isNetworkAvailable
-import com.innov.digitrac.utils.*
 import org.koin.android.viewmodel.ext.android.viewModel
 import java.io.File
 

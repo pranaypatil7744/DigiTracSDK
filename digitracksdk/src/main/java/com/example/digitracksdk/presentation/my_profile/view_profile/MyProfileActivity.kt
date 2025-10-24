@@ -5,9 +5,9 @@ import android.os.Bundle
 import android.view.View.VISIBLE
 import androidx.activity.enableEdgeToEdge
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityMyProfileBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityMyProfileBinding
 import com.example.digitracksdk.domain.model.home_model.request.InnovIDCardRequestModel
 import com.example.digitracksdk.domain.model.home_model.response.InnovIDCardResponseModel
 import com.example.digitracksdk.presentation.my_profile.create_edit_profile.CreateEditProfileActivity

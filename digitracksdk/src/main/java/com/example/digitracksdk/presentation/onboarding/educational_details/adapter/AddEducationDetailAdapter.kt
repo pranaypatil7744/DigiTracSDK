@@ -5,8 +5,8 @@ import android.text.Editable
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ItemEditTextBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.ItemEditTextBinding
 import com.example.digitracksdk.presentation.onboarding.educational_details.model.AddEducationDetailModel
 
 class AddEducationDetailAdapter(

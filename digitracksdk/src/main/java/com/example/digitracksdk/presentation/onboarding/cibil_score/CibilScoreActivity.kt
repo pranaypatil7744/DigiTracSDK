@@ -5,12 +5,12 @@ import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.core.content.ContextCompat
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.base.BaseActivity
+import com.example.digitracksdk.base.BaseActivity
 import com.example.digitracksdk.listener.ValidationListener
 import com.example.digitracksdk.utils.PreferenceUtils
 import com.example.digitracksdk.utils.isNetworkAvailable
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ActivityCibilScoreBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.ActivityCibilScoreBinding
 import com.example.digitracksdk.domain.model.onboarding.cibil_score.GetCibilScoreRequestModel
 import com.example.digitracksdk.utils.AppUtils
 import com.example.digitracksdk.utils.DialogUtils

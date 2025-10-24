@@ -4,8 +4,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.JobDetailsBulletPointsItemBinding
+import com.example.digitracksdk.databinding.JobDetailsBulletPointsItemBinding
+import com.example.digitracksdk.R
 
 class JobBulletPointsAdapter(val context: Context, var pointList: ArrayList<String>) :
     RecyclerView.Adapter<JobBulletPointsAdapter.ViewHolder>() {

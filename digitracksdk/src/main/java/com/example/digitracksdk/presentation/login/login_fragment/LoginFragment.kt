@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.FragmentLoginBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.FragmentLoginBinding
 import com.example.digitracksdk.domain.model.login_model.LoginRequestModel
 import com.example.digitracksdk.presentation.login.LoginActivity
 import com.example.digitracksdk.presentation.signup.SignUpActivity

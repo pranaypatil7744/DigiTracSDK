@@ -6,14 +6,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
+import com.example.digitracksdk.R
 import com.example.digitracksdk.domain.model.ApiError
 import com.example.digitracksdk.domain.model.onboarding.insert.InsertCandidateReferenceDetailsModel
 import com.example.digitracksdk.domain.model.onboarding.insert.InsertCandidateReferenceDetailsResponseModel
 import com.example.digitracksdk.domain.model.onboarding.InnovIDRequestModel
 import com.example.digitracksdk.domain.model.onboarding.PaperlessViewGetCandidateReferenceDetailsResponseModel
 import com.example.digitracksdk.domain.model.onboarding.insert.GetReferenceCategoryModel
-import com.innov.digitrac.domain.model.onboarding.insert.*
+import com.example.digitracksdk.domain.model.onboarding.insert.*
 import com.example.digitracksdk.domain.usecase.base.UseCaseResponse
 import com.example.digitracksdk.domain.usecase.onboarding.PaperlessViewCandidateReferenceDetailsUseCase
 import com.example.digitracksdk.domain.usecase.onboarding.insert.GetReferenceCategoryUseCase

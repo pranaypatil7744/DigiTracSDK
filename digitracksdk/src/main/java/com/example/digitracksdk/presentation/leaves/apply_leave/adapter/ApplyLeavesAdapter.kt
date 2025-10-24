@@ -5,10 +5,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ItemApplyLeaveTitleBinding
-import com.innov.digitrac.databinding.ItemLeavesHistoryBinding
-import com.innov.digitrac.databinding.ItemMyLeavesDashboardBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.ItemApplyLeaveTitleBinding
+import com.example.digitracksdk.databinding.ItemLeavesHistoryBinding
+import com.example.digitracksdk.databinding.ItemMyLeavesDashboardBinding
 import com.example.digitracksdk.presentation.leaves.apply_leave.model.ApplyLeavesModel
 import com.example.digitracksdk.presentation.leaves.apply_leave.model.LeavesStatus
 import com.example.digitracksdk.presentation.leaves.apply_leave.model.LeavesType

@@ -10,15 +10,14 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityAadhaarVerificationBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityAadhaarVerificationBinding
 import com.example.digitracksdk.domain.model.home_model.response.InnovIDCardResponseModel
 import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification.AadhaarVerificationSendOtpRequestModel
 import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification.ValidateAadhaarRequestModel
 import com.example.digitracksdk.listener.ValidationListener
 import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification_digilocker.Data
-import com.innov.digitrac.paperless.aadhaar_new.model.DigiLockerRequestModel
 import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification_digilocker.GetAadhaarDetailDigiLockerRequestModel
 import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification_digilocker.SaveDigiLockerRequestIDRequestModel
 import com.example.digitracksdk.presentation.my_profile.adapter.MyProfileAdapter
@@ -28,6 +27,7 @@ import com.example.digitracksdk.presentation.web_view.WebViewActivity
 import com.example.digitracksdk.utils.AppUtils
 import com.example.digitracksdk.utils.PreferenceUtils
 import com.example.digitracksdk.utils.isNetworkAvailable
+import com.innov.digitrac.paperless.aadhaar_new.model.DigiLockerRequestModel
 import org.koin.android.viewmodel.ext.android.viewModel
 import kotlin.collections.ArrayList
 

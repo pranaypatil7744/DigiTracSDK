@@ -4,8 +4,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ViewDocumentItemBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.ViewDocumentItemBinding
 import com.example.digitracksdk.domain.model.uploaded_documents.CandidateDocListModel
 
 class KycAdapter(

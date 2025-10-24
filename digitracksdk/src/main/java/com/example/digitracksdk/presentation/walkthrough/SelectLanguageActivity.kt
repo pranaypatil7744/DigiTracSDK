@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.view.View.VISIBLE
 import androidx.activity.enableEdgeToEdge
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivitySelectLanguageBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivitySelectLanguageBinding
 import com.example.digitracksdk.utils.AppUtils
 import com.example.digitracksdk.utils.LocaleHelper
 import com.example.digitracksdk.utils.PreferenceUtils

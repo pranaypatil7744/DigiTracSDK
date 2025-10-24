@@ -13,7 +13,7 @@ android {
     compileSdk 35
 
     defaultConfig {
-        minSdk 24
+        minSdk 26
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -60,6 +60,7 @@ dependencies {
     implementation 'androidx.compose.foundation:foundation-android:1.8.3'
     implementation 'androidx.compose.ui:ui-android:1.8.3'
     implementation('androidx.activity:activity-compose:1.10.1')
+    implementation 'io.realm:realm-android-library:10.15.1'
 
 
     testImplementation 'junit:junit:4.13.2'

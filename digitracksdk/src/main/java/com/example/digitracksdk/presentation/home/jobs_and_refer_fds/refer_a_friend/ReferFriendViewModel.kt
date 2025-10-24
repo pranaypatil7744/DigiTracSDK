@@ -5,14 +5,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
 import com.example.digitracksdk.domain.model.ApiError
 import com.example.digitracksdk.domain.model.refer_a_friend.BranchDetailsRequestModel
 import com.example.digitracksdk.domain.model.refer_a_friend.BranchDetailsResponseModel
 import com.example.digitracksdk.domain.model.refer_a_friend.ReferralFriendRequestModel
 import com.example.digitracksdk.domain.model.refer_a_friend.ReferralFriendResponseModel
 import com.example.digitracksdk.domain.model.refer_a_friend.SkillListResponseModel
-import com.innov.digitrac.domain.model.refer_a_friend.*
 import com.example.digitracksdk.domain.usecase.base.UseCaseResponse
 import com.example.digitracksdk.domain.usecase.refer_friend_usecase.BranchDetailsListUseCase
 import com.example.digitracksdk.domain.usecase.refer_friend_usecase.ReferralFriendUseCase

@@ -5,9 +5,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityInnovIdCardBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityInnovIdCardBinding
 import com.example.digitracksdk.domain.model.home_model.innov_id_card.QrCodeRequestModel
 import com.example.digitracksdk.domain.model.home_model.request.InnovIDCardRequestModel
 import com.example.digitracksdk.domain.model.home_model.response.InnovIDCardResponseModel
@@ -18,7 +18,7 @@ import com.example.digitracksdk.utils.isNetworkAvailable
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class InnovIdCardActivity : BaseActivity() {
-    lateinit var binding:ActivityInnovIdCardBinding
+    lateinit var binding: ActivityInnovIdCardBinding
     private val innovIDCardViewModel: InnovIDCardViewModel by viewModel()
     lateinit var preferenceUtils: PreferenceUtils
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -19,15 +19,15 @@ import com.example.digitracksdk.domain.model.profile_model.CityListRequestModel
 import com.example.digitracksdk.domain.model.profile_model.StateListModel
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityCreateEditProfileBinding
-import com.innov.digitrac.databinding.BottomSheetAddPhotoBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityCreateEditProfileBinding
+import com.example.digitracksdk.databinding.BottomSheetAddPhotoBinding
 import com.example.digitracksdk.domain.model.CommonRequestModel
 import com.example.digitracksdk.domain.model.profile_model.NewInnovIdCreationRequestModel
 import com.example.digitracksdk.domain.model.profile_model.UpdateProfileRequestModel
 import com.example.digitracksdk.domain.model.home_model.response.InnovIDCardResponseModel
-import com.innov.digitrac.domain.model.profile_model.*
+import com.example.digitracksdk.domain.model.profile_model.*
 import com.example.digitracksdk.listener.ValidationListener
 import com.example.digitracksdk.presentation.login.LoginActivity
 import com.example.digitracksdk.utils.AddImageUtils
@@ -37,7 +37,7 @@ import com.example.digitracksdk.utils.isNetworkAvailable
 import com.example.digitracksdk.presentation.my_profile.ProfileViewModel
 import com.example.digitracksdk.utils.AppUtils
 import com.example.digitracksdk.utils.DialogUtils
-import com.innov.digitrac.utils.*
+import com.example.digitracksdk.utils.*
 import org.koin.android.viewmodel.ext.android.viewModel
 import java.io.File
 

@@ -11,10 +11,10 @@ import android.view.View.VISIBLE
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityAddPendingDocumentsBinding
-import com.innov.digitrac.databinding.BottomSheetAddPhotoBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityAddPendingDocumentsBinding
+import com.example.digitracksdk.databinding.BottomSheetAddPhotoBinding
 import com.example.digitracksdk.domain.model.onboarding.documents.InsertPendingDocumentsRequestModel
 import com.example.digitracksdk.domain.model.onboarding.documents.ListDocumentModel
 import com.example.digitracksdk.domain.model.onboarding.documents.PendingDocumentsListRequestModel
@@ -27,7 +27,7 @@ import com.example.digitracksdk.utils.AppUtils
 import com.example.digitracksdk.utils.PreferenceUtils
 import com.example.digitracksdk.utils.isNetworkAvailable
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.innov.digitrac.utils.*
+import com.example.digitracksdk.utils.*
 import org.koin.android.viewmodel.ext.android.viewModel
 import java.io.File
 

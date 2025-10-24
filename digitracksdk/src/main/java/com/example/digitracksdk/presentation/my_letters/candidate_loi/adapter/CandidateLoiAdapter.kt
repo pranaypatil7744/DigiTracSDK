@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.CandidateLoiItemBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.CandidateLoiItemBinding
 import com.example.digitracksdk.presentation.my_letters.candidate_loi.model.CandidateLoiModel
 import com.example.digitracksdk.presentation.my_letters.candidate_loi.model.CandidateLoiStatus
 

@@ -9,10 +9,10 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.core.widget.doOnTextChanged
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ItemEditTextBinding
-import com.innov.digitrac.databinding.ItemLabelBinding
-import com.innov.digitrac.databinding.ItemSpinnerBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.ItemEditTextBinding
+import com.example.digitracksdk.databinding.ItemLabelBinding
+import com.example.digitracksdk.databinding.ItemSpinnerBinding
 import com.example.digitracksdk.presentation.onboarding.candidate_details.model.CandidateDetails
 import com.example.digitracksdk.presentation.onboarding.candidate_details.model.CandidateItemType
 

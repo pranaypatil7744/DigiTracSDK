@@ -7,12 +7,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.HomeBannerItemBinding
-import com.innov.digitrac.domain.model.home_model.ListBannerModel
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.HomeBannerItemBinding
 import com.example.digitracksdk.presentation.web_view.WebViewActivity
 import com.example.digitracksdk.utils.ImageUtils
 import com.example.digitracksdk.utils.PreferenceUtils
+import com.innov.digitrac.domain.model.home_model.ListBannerModel
 
 class HomeBannerAdapter(val context: Context, private val bannerList: ArrayList<ListBannerModel>) :
     RecyclerView.Adapter<HomeBannerAdapter.ViewHolder>() {

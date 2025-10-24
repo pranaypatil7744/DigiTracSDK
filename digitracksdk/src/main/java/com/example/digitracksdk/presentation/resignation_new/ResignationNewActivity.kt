@@ -4,9 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityResignationNewBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityResignationNewBinding
 import com.example.digitracksdk.presentation.my_letters.adapter.MyLettersAdapter
 import com.example.digitracksdk.presentation.my_letters.model.MyLettersModel
 import com.example.digitracksdk.presentation.resignation.view_resignation.ViewResignationActivity

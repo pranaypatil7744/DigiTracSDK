@@ -4,9 +4,9 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.BottomSheetPayslipDownloadBinding
-import com.innov.digitrac.databinding.BottomSheetPayslipYearBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.BottomSheetPayslipDownloadBinding
+import com.example.digitracksdk.databinding.BottomSheetPayslipYearBinding
 import com.example.digitracksdk.presentation.payslip.model.PayslipBottomSheetModel
 import com.example.digitracksdk.presentation.payslip.model.YearOrMonthListModel
 import com.example.digitracksdk.presentation.payslip.payslip_year.PayslipMonthAdapter

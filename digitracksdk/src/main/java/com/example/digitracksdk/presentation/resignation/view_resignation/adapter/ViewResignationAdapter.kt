@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ItemResignationViewBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.ItemResignationViewBinding
 import com.example.digitracksdk.domain.model.resignation.ResignationsListModel
 
 class ViewResignationAdapter(

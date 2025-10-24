@@ -31,10 +31,10 @@ import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
+import com.example.digitracksdk.R
 import com.example.digitracksdk.data.database.GeoTrackingDataModel
 import com.example.digitracksdk.data.source.remote.RetrofitService
-import com.innov.digitrac.databinding.DialogSystemAlertWindowBinding
+import com.example.digitracksdk.databinding.DialogSystemAlertWindowBinding
 import com.example.digitracksdk.domain.model.geo_tracking_model.GeoTrackingUpdateRequestModel
 import com.example.digitracksdk.domain.model.geo_tracking_model.GeoTrackingUpdateResponseModel
 import com.example.digitracksdk.presentation.home.HomeActivity
@@ -187,7 +187,7 @@ class LocationUpdateService : Service() {
                 )
             )
             .setPriority(NotificationCompat.PRIORITY_HIGH)
-            .setSmallIcon(R.mipmap.appicon)
+            .setSmallIcon(R.drawable.ic_loi)
             .setContentIntent(pendingIntent)
             .build()
 

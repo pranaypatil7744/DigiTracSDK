@@ -6,10 +6,10 @@ import android.view.View.VISIBLE
 import androidx.activity.enableEdgeToEdge
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityViewResignationBinding
-import com.innov.digitrac.databinding.BottomSheetRevokeResignationBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityViewResignationBinding
+import com.example.digitracksdk.databinding.BottomSheetRevokeResignationBinding
 import com.example.digitracksdk.domain.model.resignation.ResignationListRequestModel
 import com.example.digitracksdk.domain.model.resignation.ResignationsListModel
 import com.example.digitracksdk.domain.model.resignation.RevokeResignationRequestModel

@@ -9,10 +9,10 @@ import android.view.View.VISIBLE
 import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseFragment
-import com.innov.digitrac.databinding.BottomSheetMileageTrackingBinding
-import com.innov.digitrac.databinding.FragmentMileageTrackingRegularizationBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseFragment
+import com.example.digitracksdk.databinding.BottomSheetMileageTrackingBinding
+import com.example.digitracksdk.databinding.FragmentMileageTrackingRegularizationBinding
 import com.example.digitracksdk.domain.model.mileage_tracking_model.InsertMileageRegularizationRequestModel
 import com.example.digitracksdk.domain.model.mileage_tracking_model.MileageRegularizationListRequestModel
 import com.example.digitracksdk.listener.ValidationListener

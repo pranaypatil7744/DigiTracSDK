@@ -18,7 +18,7 @@ import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority
 import com.example.digitracksdk.Constant
 import com.example.digitracksdk.Constant.PermissionRequestCodes.Companion.NOTIFICATION_PERMISSION_CODE
-import com.innov.digitrac.R
+import com.example.digitracksdk.R
 import com.example.digitracksdk.presentation.home.geo_tracking_2.model.GeoTrackingDataBaseModel
 import com.example.digitracksdk.utils.AppUtils
 import io.realm.Realm
@@ -111,7 +111,7 @@ class LocationTrackingService : Service() {
             .setContentText(
                 "Latitude--> ${location?.latitude}\nLongitude --> ${location?.longitude}"
             )
-            .setSmallIcon(R.mipmap.appicon)
+            .setSmallIcon(R.drawable.ic_loi)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setOngoing(true)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

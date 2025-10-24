@@ -7,11 +7,11 @@ import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.DividerItemBinding
-import com.innov.digitrac.databinding.IssueDetailsMultiLineItemBinding
-import com.innov.digitrac.databinding.IssueDetailsSingleLineItemBinding
-import com.innov.digitrac.databinding.IssueDetailsTwoLineItemBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.DividerItemBinding
+import com.example.digitracksdk.databinding.IssueDetailsMultiLineItemBinding
+import com.example.digitracksdk.databinding.IssueDetailsSingleLineItemBinding
+import com.example.digitracksdk.databinding.IssueDetailsTwoLineItemBinding
 import com.example.digitracksdk.presentation.home.help_and_support.model.HelpSupportStatus
 import com.example.digitracksdk.presentation.home.help_and_support.model.IssueDetailsModel
 import com.example.digitracksdk.presentation.home.help_and_support.model.IssueDetailsType
@@ -19,8 +19,8 @@ import com.example.digitracksdk.presentation.home.help_and_support.model.IssueDe
 class IssueDetailsAdapter(val context: Context, private val issueDetailsList:ArrayList<IssueDetailsModel>):RecyclerView.Adapter<IssueDetailsAdapter.ViewHolder>(){
 
     class ViewHolder : RecyclerView.ViewHolder{
-        var dividerItemBinding:DividerItemBinding? = null
-        var issueDetailsSingleLineItemBinding:IssueDetailsSingleLineItemBinding? = null
+        var dividerItemBinding: DividerItemBinding? = null
+        var issueDetailsSingleLineItemBinding: IssueDetailsSingleLineItemBinding? = null
         var issueDetailsTwoLineItemBinding: IssueDetailsTwoLineItemBinding? = null
         var issueDetailsMultiLineItemBinding: IssueDetailsMultiLineItemBinding? = null
         constructor(binding: DividerItemBinding):super(binding.root){

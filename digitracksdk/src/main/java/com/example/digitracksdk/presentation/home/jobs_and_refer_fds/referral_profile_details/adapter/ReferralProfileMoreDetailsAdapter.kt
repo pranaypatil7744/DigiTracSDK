@@ -5,8 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ProfileEduWorkDetailsItemBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ProfileEduWorkDetailsItemBinding
 import com.example.digitracksdk.presentation.home.jobs_and_refer_fds.referral_profile_details.model.ProfileDetailsType
 import com.example.digitracksdk.presentation.home.jobs_and_refer_fds.referral_profile_details.model.ProfileMoreDetailsModel
 
@@ -15,7 +16,7 @@ class ReferralProfileMoreDetailsAdapter(
     private val moreProfileList: ArrayList<ProfileMoreDetailsModel>,
     private val currentItemType: ProfileDetailsType
 ):RecyclerView.Adapter<ReferralProfileMoreDetailsAdapter.ViewHolder>() {
-    class ViewHolder(val binding:ProfileEduWorkDetailsItemBinding):RecyclerView.ViewHolder(binding.root)
+    class ViewHolder(val binding: ProfileEduWorkDetailsItemBinding):RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.profile_edu_work_details_item,parent,false)

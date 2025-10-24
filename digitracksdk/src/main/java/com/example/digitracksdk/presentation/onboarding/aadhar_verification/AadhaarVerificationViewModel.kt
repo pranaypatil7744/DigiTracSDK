@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
+import com.example.digitracksdk.R
 import com.example.digitracksdk.domain.model.ApiError
 import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification.AadhaarVerificationOtpValidationRequestModel
 import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification.AadhaarVerificationOtpValidationResponseModel
@@ -13,7 +13,7 @@ import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification.Aad
 import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification.GetAadhaarVerificationDetailsResponseModel
 import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification.ValidateAadhaarRequestModel
 import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification.ValidateAadhaarResponseModel
-import com.innov.digitrac.domain.model.onboarding.aadhaar_verification.*
+import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification.*
 import com.example.digitracksdk.domain.usecase.base.UseCaseResponse
 import com.example.digitracksdk.domain.usecase.onboarding.aadhaar_verification.AadhaarVerificationOtpValidationUseCase
 import com.example.digitracksdk.domain.usecase.onboarding.aadhaar_verification.AadhaarVerificationSendOtpUseCase

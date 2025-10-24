@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
+import com.example.digitracksdk.R
 import com.example.digitracksdk.domain.model.ApiError
 import com.example.digitracksdk.domain.model.profile_model.CheckOtpRequestModel
 import com.example.digitracksdk.domain.model.profile_model.CheckOtpResponseModel
@@ -22,7 +22,7 @@ import com.example.digitracksdk.domain.model.profile_model.NewInnovIdCreationReq
 import com.example.digitracksdk.domain.model.profile_model.NewInnovIdCreationResponseModel
 import com.example.digitracksdk.domain.model.profile_model.UpdateProfileRequestModel
 import com.example.digitracksdk.domain.model.profile_model.UpdateProfileResponseModel
-import com.innov.digitrac.domain.model.profile_model.*
+import com.example.digitracksdk.domain.model.profile_model.*
 import com.example.digitracksdk.domain.usecase.base.UseCaseResponse
 import com.example.digitracksdk.domain.usecase.profile_usecase.CheckOtpUseCase
 import com.example.digitracksdk.domain.usecase.profile_usecase.CityListUseCase
@@ -31,7 +31,7 @@ import com.example.digitracksdk.domain.usecase.profile_usecase.NewInnovIdCreatio
 import com.example.digitracksdk.domain.usecase.profile_usecase.StateListUseCase
 import com.example.digitracksdk.domain.usecase.profile_usecase.UpdateProfileUseCase
 import com.example.digitracksdk.domain.usecase.profile_usecase.ValidCandidateUseCase
-import com.innov.digitrac.domain.usecase.profile_usecase.*
+import com.example.digitracksdk.domain.usecase.profile_usecase.*
 import com.example.digitracksdk.listener.ValidationListener
 import com.example.digitracksdk.utils.AppUtils
 import com.example.digitracksdk.utils.DialogUtils

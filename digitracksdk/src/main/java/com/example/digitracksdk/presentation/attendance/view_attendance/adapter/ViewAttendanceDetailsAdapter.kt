@@ -4,8 +4,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ViewAttendanceDetailsItemBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.ViewAttendanceDetailsItemBinding
 import com.example.digitracksdk.presentation.my_profile.model.ProfileDetailsModel
 
 class ViewAttendanceDetailsAdapter(val context:Context,val list:ArrayList<ProfileDetailsModel>):RecyclerView.Adapter<ViewAttendanceDetailsAdapter.ViewHolder>() {

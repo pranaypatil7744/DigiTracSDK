@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
+import com.example.digitracksdk.R
 import com.example.digitracksdk.domain.model.ApiError
 import com.example.digitracksdk.domain.model.resignation.ResignationCategoryResponseModel
 import com.example.digitracksdk.domain.model.resignation.ResignationListRequestModel
@@ -18,7 +18,7 @@ import com.example.digitracksdk.domain.model.resignation.ResignationRequestModel
 import com.example.digitracksdk.domain.model.resignation.ResignationResponseModel
 import com.example.digitracksdk.domain.model.resignation.RevokeResignationRequestModel
 import com.example.digitracksdk.domain.model.resignation.RevokeResignationResponseModel
-import com.innov.digitrac.domain.model.resignation.*
+import com.example.digitracksdk.domain.model.resignation.*
 import com.example.digitracksdk.domain.usecase.base.UseCaseResponse
 import com.example.digitracksdk.domain.usecase.resignation_usecase.ResignationCategoryUseCase
 import com.example.digitracksdk.domain.usecase.resignation_usecase.ResignationListUseCase

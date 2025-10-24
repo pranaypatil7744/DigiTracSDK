@@ -7,11 +7,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.digitracksdk.domain.model.onboarding.GetEducationCategoryResponseModel
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
+import com.example.digitracksdk.R
 import com.example.digitracksdk.domain.model.ApiError
 import com.example.digitracksdk.domain.model.onboarding.InnovIDRequestModel
 import com.example.digitracksdk.domain.model.onboarding.PaperlessViewEducationDetailsResponseModel
-import com.innov.digitrac.domain.model.onboarding.*
+import com.example.digitracksdk.domain.model.onboarding.*
 import com.example.digitracksdk.domain.model.onboarding.educational_details.EducationalStreamRequestModel
 import com.example.digitracksdk.domain.model.onboarding.educational_details.EducationalStreamResponseModel
 import com.example.digitracksdk.domain.model.onboarding.insert.InsertEducationInfoRequestModel

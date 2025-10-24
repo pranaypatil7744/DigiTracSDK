@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.MileageTrackingItemsBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.MileageTrackingItemsBinding
 import com.example.digitracksdk.presentation.attendance.mileage_tracking.model.AttendanceMileageTrackingModel
 import com.example.digitracksdk.presentation.leaves.apply_leave.model.LeavesStatus
 

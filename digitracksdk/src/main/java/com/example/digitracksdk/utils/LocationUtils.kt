@@ -16,9 +16,8 @@ import android.os.Looper
 import android.provider.Settings
 import androidx.core.app.ActivityCompat
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.base.BaseApplication
-import com.innov.digitrac.databinding.LayoutLocationUtilsBinding
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.LayoutLocationUtilsBinding
 import com.google.android.gms.common.api.ResolvableApiException
 import com.google.android.gms.location.*
 import kotlinx.coroutines.CoroutineScope
@@ -78,7 +77,8 @@ class LocationUtils : BaseActivity() {
 
     @SuppressLint("MissingPermission")
     private fun getLastLocation() {
-        geocoder = Geocoder(BaseApplication.mContext, Locale.getDefault())
+        //TODO
+        geocoder = Geocoder(baseContext, Locale.getDefault())
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         if (checkPermissions()) {
             preferenceUtils.setValue(Constant.AskedPermission.LOCATION_PERMISSION_COUNT, 0)
@@ -245,15 +245,15 @@ class LocationUtils : BaseActivity() {
                 ) {
                     DialogUtils.showPermissionDialog(
                         this,
-                        getString(R.string.please_grant_the_location_permission_to_continue),
-                        getString(R.string.allow_permission),
-                        getString(R.string.go_to_settings),
-                        getString(R.string.deny)
+                        getString(com.example.digitracksdk.R.string.please_grant_the_location_permission_to_continue),
+                        getString(com.example.digitracksdk.R.string.allow_permission),
+                        getString(com.example.digitracksdk.R.string.go_to_settings),
+                        getString(com.example.digitracksdk.R.string.deny)
                     )
                 } else {
                     AppUtils.INSTANCE?.showLongToast(
                         this,
-                        getString(R.string.please_grant_the_location_permission_to_continue)
+                        getString(com.example.digitracksdk.R.string.please_grant_the_location_permission_to_continue)
                     )
                     finish()
                 }
@@ -303,7 +303,7 @@ class LocationUtils : BaseActivity() {
            if(Activity.RESULT_OK == resultCode){
                getLastLocation()
            } else {
-               showToast(msg =  getString(R.string.please_turn_on_location))
+               showToast(msg =  getString(com.example.digitracksdk.R.string.please_turn_on_location))
                val intent = Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
                startActivity(intent)
                setResult(Activity.RESULT_CANCELED, intent)

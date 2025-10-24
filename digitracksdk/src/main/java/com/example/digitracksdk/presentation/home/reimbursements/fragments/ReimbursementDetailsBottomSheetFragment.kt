@@ -29,11 +29,11 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.example.digitracksdk.Constant
+import com.example.digitracksdk.databinding.BottomSheetAddPhotoBinding
+import com.example.digitracksdk.databinding.FragmentReimbursementDetailsBottomSheetBinding
 import com.example.digitracksdk.domain.model.reimbursement_model.UpdateReimbursementStatusRequestModel
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.BottomSheetAddPhotoBinding
-import com.innov.digitrac.databinding.FragmentReimbursementDetailsBottomSheetBinding
-import com.innov.digitrac.domain.model.reimbursement_model.*
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
 import com.example.digitracksdk.presentation.home.reimbursements.ReimbursementActivity
 import com.example.digitracksdk.presentation.home.reimbursements.ReimbursementViewModel
 import com.example.digitracksdk.presentation.home.reimbursements.UpdateReimbursementVoucher
@@ -48,7 +48,6 @@ import com.example.digitracksdk.presentation.image_view.ImageViewActivity
 import com.example.digitracksdk.presentation.onboarding.document.DocumentDetailsActivity.Companion.viewImage
 import com.example.digitracksdk.utils.AppUtils
 import com.example.digitracksdk.utils.isNetworkAvailable
-import com.innov.digitrac.utils.*
 import org.koin.android.viewmodel.ext.android.viewModel
 import java.io.File
 

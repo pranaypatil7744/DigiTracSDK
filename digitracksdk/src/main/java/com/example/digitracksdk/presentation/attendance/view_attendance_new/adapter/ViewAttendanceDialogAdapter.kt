@@ -3,8 +3,8 @@ package com.example.digitracksdk.presentation.attendance.view_attendance_new.ada
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ItemViewAttendanceNewBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.ItemViewAttendanceNewBinding
 import com.example.digitracksdk.presentation.attendance.view_attendance_new.model.DialogModel
 
 class ViewAttendanceDialogAdapter(private val list: ArrayList<DialogModel>) :

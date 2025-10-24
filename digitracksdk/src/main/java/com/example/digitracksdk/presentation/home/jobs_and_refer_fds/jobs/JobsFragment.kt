@@ -12,9 +12,10 @@ import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.widget.doOnTextChanged
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseFragment
-import com.innov.digitrac.databinding.FragmentJobsBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.base.BaseFragment
+import com.example.digitracksdk.databinding.FragmentJobsBinding
 import com.example.digitracksdk.presentation.home.jobs_and_refer_fds.JobsAndReferFdsActivity
 import com.example.digitracksdk.presentation.home.jobs_and_refer_fds.JobsAndReferFriendViewModel
 import com.example.digitracksdk.presentation.home.jobs_and_refer_fds.job_details_screen.JobDetailsActivity

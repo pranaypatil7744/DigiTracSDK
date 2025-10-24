@@ -13,9 +13,9 @@ import com.google.android.play.core.appupdate.AppUpdateManagerFactory
 import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.UpdateAvailability
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivitySplashScreenBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivitySplashScreenBinding
 import com.example.digitracksdk.presentation.login.login_fragment.LoginViewModel
 import com.example.digitracksdk.utils.AppUtils
 import com.example.digitracksdk.utils.ImageUtils

@@ -4,8 +4,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.GeoTrackingItemBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.GeoTrackingItemBinding
 import com.example.digitracksdk.presentation.home.geo_tracking.model.GeoTrackingModel
 
 class GeoTrackingSummaryAdapter

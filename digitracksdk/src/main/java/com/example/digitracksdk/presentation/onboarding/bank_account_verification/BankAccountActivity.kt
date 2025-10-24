@@ -6,9 +6,9 @@ import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.core.content.ContextCompat
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityBankAccountBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityBankAccountBinding
 import com.example.digitracksdk.domain.model.home_model.response.InnovIDCardResponseModel
 import com.example.digitracksdk.domain.model.onboarding.bank_account_verification.BankAccountVerificationDetailsRequestModel
 import com.example.digitracksdk.domain.model.onboarding.bank_account_verification.BankAccountVerificationRequestModel

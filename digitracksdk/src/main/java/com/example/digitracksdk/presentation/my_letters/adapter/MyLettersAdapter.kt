@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View.INVISIBLE
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ItemMyLettersBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.ItemMyLettersBinding
 import com.example.digitracksdk.presentation.my_letters.model.MyLettersModel
 
 class MyLettersAdapter(val context: Context, private val myLettersList: ArrayList<MyLettersModel>, var listener: MyLettersClickManager):RecyclerView.Adapter<MyLettersAdapter.ViewHolder>() {

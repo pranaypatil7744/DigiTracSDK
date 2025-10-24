@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ItemPayoutBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.ItemPayoutBinding
 import com.example.digitracksdk.domain.model.view_payout.LSTReimbDetail
 
 class ViewPayoutAdapter(val context: Context, private val payoutList: ArrayList<LSTReimbDetail>) :

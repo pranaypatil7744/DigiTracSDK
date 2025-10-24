@@ -7,9 +7,10 @@ import android.view.View.GONE
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.HelpSupportItemTitleBinding
-import com.innov.digitrac.databinding.HelpSupportItemsBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.HelpSupportItemTitleBinding
+import com.example.digitracksdk.databinding.HelpSupportItemsBinding
 import com.example.digitracksdk.presentation.home.help_and_support.model.HelpAndSupportModel
 import com.example.digitracksdk.presentation.home.help_and_support.model.HelpSupportItemType
 import com.example.digitracksdk.presentation.home.help_and_support.model.HelpSupportStatus

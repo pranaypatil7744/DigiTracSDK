@@ -4,10 +4,11 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.JobDetailsTopItemBinding
-import com.innov.digitrac.databinding.JobDetailsWithPointsItemBinding
-import com.innov.digitrac.databinding.JobDetailsWithoutPointsItemBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.JobDetailsTopItemBinding
+import com.example.digitracksdk.databinding.JobDetailsWithPointsItemBinding
+import com.example.digitracksdk.databinding.JobDetailsWithoutPointsItemBinding
 import com.example.digitracksdk.presentation.home.jobs_and_refer_fds.job_details_screen.model.JobDetailsModel
 import com.example.digitracksdk.presentation.home.jobs_and_refer_fds.job_details_screen.model.JobDetailsType
 

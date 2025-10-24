@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.innov.digitrac.databinding.FragmentTrainingVideoBinding
+import com.example.digitracksdk.databinding.FragmentTrainingVideoBinding
 import com.example.digitracksdk.presentation.home.training.video_fragment.adapter.TrainingVideoAdapter
 import com.example.digitracksdk.presentation.home.training.video_fragment.model.TrainingVideoModel
 

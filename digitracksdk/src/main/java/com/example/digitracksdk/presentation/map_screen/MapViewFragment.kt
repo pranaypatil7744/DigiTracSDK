@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.innov.digitrac.base.BaseFragment
-import com.innov.digitrac.databinding.FragmentMapBinding
+import com.example.digitracksdk.base.BaseFragment
+import com.example.digitracksdk.databinding.FragmentMapBinding
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -15,7 +15,7 @@ import com.google.android.gms.maps.model.LatLng
 
 class MapViewFragment : BaseFragment(), OnMapReadyCallback {
 
-    lateinit var binding:FragmentMapBinding
+    lateinit var binding: FragmentMapBinding
     private lateinit var gMap: GoogleMap
     var currentLatitude: Double? = 0.0
     var currentLongitude: Double? = 0.0

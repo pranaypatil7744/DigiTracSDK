@@ -4,8 +4,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ViewAttendanceItemBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.ViewAttendanceItemBinding
 import com.example.digitracksdk.domain.model.attendance_model.ListViewAttendanceModel
 import com.example.digitracksdk.presentation.my_profile.model.ProfileDetailsModel
 
@@ -13,7 +13,7 @@ class ViewAttendanceAdapter(val context:Context, val list:ArrayList<ListViewAtte
                             private val listener: ViewAttendanceClickManager
 ):RecyclerView.Adapter<ViewAttendanceAdapter.ViewHolder>() {
 
-    class ViewHolder(val binding:ViewAttendanceItemBinding):RecyclerView.ViewHolder(binding.root)
+    class ViewHolder(val binding: ViewAttendanceItemBinding):RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.view_attendance_item,parent,false)

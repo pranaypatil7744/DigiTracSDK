@@ -4,8 +4,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ItemEducationalDetailsBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.ItemEducationalDetailsBinding
 import com.example.digitracksdk.domain.model.onboarding.ListEducationDetails
 
 class EducationalDetailAdapter(

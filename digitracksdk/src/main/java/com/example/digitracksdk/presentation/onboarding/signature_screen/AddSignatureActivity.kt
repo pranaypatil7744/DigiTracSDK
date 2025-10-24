@@ -5,9 +5,9 @@ import android.os.Bundle
 import android.view.View.VISIBLE
 import androidx.activity.enableEdgeToEdge
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityAddSignatureBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityAddSignatureBinding
 import com.example.digitracksdk.domain.model.my_letters.OfferLetterAcceptRejectRequestModel
 import com.example.digitracksdk.domain.model.onboarding.signature_model.InsertSignatureRequestModel
 import com.example.digitracksdk.presentation.my_letters.offer_letter.OfferLetterViewModel
@@ -24,7 +24,7 @@ class AddSignatureActivity : BaseActivity() {
     private val signatureViewModel: PaperlessViewGetSignatureViewModel by viewModel()
     private val offerLetterViewModel: OfferLetterViewModel by viewModel()
     var offerLetterModel: OfferLetterModel? = null
-    var isFromOfferLetter:Boolean = false
+    var isFromOfferLetter: Boolean = false
     var gnetAssociateId: String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +42,7 @@ class AddSignatureActivity : BaseActivity() {
 
     private fun setUpObserver() {
         binding.apply {
-            with(offerLetterViewModel){
+            with(offerLetterViewModel) {
                 offerLetterAcceptRejectResponseData.observe(this@AddSignatureActivity) {
                     if (it.status == Constant.success) {
                         showToast(it.Message.toString())
@@ -85,10 +85,10 @@ class AddSignatureActivity : BaseActivity() {
 
     private fun getIntentData() {
         intent.extras?.run {
-            isFromOfferLetter = getBoolean(Constant.IS_FROM_OFFER_LETTER,false)
+            isFromOfferLetter = getBoolean(Constant.IS_FROM_OFFER_LETTER, false)
             offerLetterModel = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                 getSerializable(Constant.DATA, OfferLetterModel::class.java)
-            }else
+            } else
                 getSerializable(Constant.DATA) as OfferLetterModel?
         }
         setUpToolbar()
@@ -107,9 +107,9 @@ class AddSignatureActivity : BaseActivity() {
                 } else {
                     val image = ImageUtils.INSTANCE?.bitMapToString(signatureView.signatureBitmap)
                     image?.let { it1 ->
-                        if (isFromOfferLetter){
+                        if (isFromOfferLetter) {
                             callAcceptOfferLetterApi(it1)
-                        }else{
+                        } else {
                             callInsertSignatureApi(it1)
                         }
                     }
@@ -125,8 +125,8 @@ class AddSignatureActivity : BaseActivity() {
                     AcceptStatus = "true",
                     GNETAssociateID = gnetAssociateId,
                     ImageDocArray = image,
-                    OfferID = offerLetterModel?.OfferId?.toInt()?:0,
-                    OfferPatternID = offerLetterModel?.OfferPatternId?.toInt()?:0,
+                    OfferID = offerLetterModel?.OfferId?.toInt() ?: 0,
+                    OfferPatternID = offerLetterModel?.OfferPatternId?.toInt() ?: 0,
                     OfferType = offerLetterModel?.CandidateType.toString()
                 )
             )
@@ -141,7 +141,9 @@ class AddSignatureActivity : BaseActivity() {
             signatureViewModel.callInsertSignatureApi(
                 request = InsertSignatureRequestModel(
                     ImageDocArray = image,
-                    preferenceUtils.getValue(Constant.PreferenceKeys.INNOV_ID), "", getString(R.string.accepted)
+                    preferenceUtils.getValue(Constant.PreferenceKeys.INNOV_ID),
+                    "",
+                    getString(R.string.accepted)
                 )
             )
         } else {
@@ -151,10 +153,10 @@ class AddSignatureActivity : BaseActivity() {
 
     private fun setUpToolbar() {
         binding.toolbar.apply {
-            if (isFromOfferLetter){
+            if (isFromOfferLetter) {
                 tvTitle.text = getString(R.string.signature_upload)
 
-            }else{
+            } else {
                 tvTitle.text = getString(R.string.add_signature)
             }
             divider.visibility = VISIBLE

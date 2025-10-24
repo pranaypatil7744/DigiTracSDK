@@ -13,14 +13,15 @@ import android.view.View.VISIBLE
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ActivitySubmitDocumentsBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivitySubmitDocumentsBinding
 import com.example.digitracksdk.utils.AppUtils
 import java.io.File
 
 
 class SubmitDocumentsActivity : AppCompatActivity() {
-    lateinit var binding:ActivitySubmitDocumentsBinding
+    lateinit var binding: ActivitySubmitDocumentsBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

@@ -21,12 +21,12 @@ import com.example.digitracksdk.domain.model.profile_model.ValidCandidateRequest
 import com.google.android.gms.auth.api.phone.SmsRetriever
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivitySignUpBinding
-import com.innov.digitrac.databinding.BottomSheetAddPhotoBinding
-import com.innov.digitrac.databinding.BottomSheetVerifyOtpBinding
-import com.innov.digitrac.domain.model.profile_model.*
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivitySignUpBinding
+import com.example.digitracksdk.databinding.BottomSheetAddPhotoBinding
+import com.example.digitracksdk.databinding.BottomSheetVerifyOtpBinding
+import com.example.digitracksdk.domain.model.profile_model.*
 import com.example.digitracksdk.listener.ValidationListener
 import com.example.digitracksdk.utils.ImageUtils
 import com.example.digitracksdk.presentation.my_profile.ProfileViewModel
@@ -38,7 +38,7 @@ import com.example.digitracksdk.utils.PreferenceUtils
 import com.example.digitracksdk.utils.isNetworkAvailable
 import com.example.digitracksdk.receiver.SMSBroadcastReceiver
 import com.example.digitracksdk.utils.AppUtils
-import com.innov.digitrac.utils.*
+import com.example.digitracksdk.utils.*
 import org.koin.android.viewmodel.ext.android.viewModel
 import java.io.File
 import java.util.*

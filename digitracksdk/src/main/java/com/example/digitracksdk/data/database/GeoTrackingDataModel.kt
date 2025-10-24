@@ -4,6 +4,7 @@ import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey
 import io.realm.annotations.Required
 
+
 /**
  * Created by Mo Khurseed Ansari on 25-Jul-2022.
  */

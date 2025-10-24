@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityExitQuestionnaireBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityExitQuestionnaireBinding
 import com.example.digitracksdk.domain.model.exit_questionnaire_model.ExitQuestionnaireRequestModel
 import com.example.digitracksdk.listener.ValidationListener
 import com.example.digitracksdk.presentation.onboarding.epf_details.adapter.DetailAdapter

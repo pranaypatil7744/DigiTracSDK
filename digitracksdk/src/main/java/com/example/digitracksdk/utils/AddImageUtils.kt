@@ -21,8 +21,8 @@ import com.canhub.cropper.CropImageView
 import com.canhub.cropper.options
 import com.developers.imagezipper.ImageZipper
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
 import com.example.digitracksdk.utils.PermissionUtils.Companion.getCameraPermission
 import com.example.digitracksdk.utils.PermissionUtils.Companion.getStoragePermission
 import com.example.digitracksdk.utils.PermissionUtils.Companion.requestCameraPermissions

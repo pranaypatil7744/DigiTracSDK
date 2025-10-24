@@ -7,10 +7,11 @@ import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.widget.doOnTextChanged
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.base.BaseFragment
-import com.innov.digitrac.databinding.FragmentReferralsBinding
+import com.example.digitracksdk.base.BaseFragment
+import com.example.digitracksdk.databinding.FragmentReferralsBinding
 import com.example.digitracksdk.presentation.home.jobs_and_refer_fds.JobsAndReferFdsActivity
 import com.example.digitracksdk.presentation.home.jobs_and_refer_fds.JobsAndReferFriendViewModel
 import com.example.digitracksdk.presentation.home.jobs_and_refer_fds.jobs.model.LstreferredDetailsItem

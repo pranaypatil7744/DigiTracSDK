@@ -8,9 +8,9 @@ import android.widget.ArrayAdapter
 import androidx.activity.enableEdgeToEdge
 import androidx.core.content.ContextCompat
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityAddPersonBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityAddPersonBinding
 import com.example.digitracksdk.domain.model.onboarding.LstReferenceDetail
 import com.example.digitracksdk.domain.model.onboarding.insert.GetReferenceCategoryModelItem
 import com.example.digitracksdk.domain.model.onboarding.insert.InsertCandidateReferenceDetailsModel

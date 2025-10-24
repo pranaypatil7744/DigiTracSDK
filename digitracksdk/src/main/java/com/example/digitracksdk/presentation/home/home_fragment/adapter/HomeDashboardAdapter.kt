@@ -4,8 +4,9 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.HomeItemsBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.HomeItemsBinding
 import com.example.digitracksdk.presentation.home.home_fragment.model.HomeDashboardMenu
 
 class HomeDashboardAdapter(

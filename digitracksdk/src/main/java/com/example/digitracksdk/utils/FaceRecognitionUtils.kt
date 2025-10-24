@@ -12,8 +12,7 @@ import com.amazonaws.services.rekognition.model.CompareFacesRequest
 import com.amazonaws.services.rekognition.model.Image
 import com.amazonaws.util.IOUtils
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseApplication
+import com.example.digitracksdk.R
 import java.io.File
 import java.io.FileInputStream
 import java.nio.ByteBuffer
@@ -34,7 +33,7 @@ class FaceRecognitionUtils(private val mContext: Context) {
                 val rekognitionClient: AmazonRekognition =
                     AmazonRekognitionClient(
                         BasicAWSCredentials(
-                            Constant.AwsKeys.aws_access_key,Constant.AwsKeys.aws_secret_key
+                            Constant.AwsKeys.aws_access_key, Constant.AwsKeys.aws_secret_key
                         )
                     )
 
@@ -55,7 +54,12 @@ class FaceRecognitionUtils(private val mContext: Context) {
                         targetImageBytes = ByteBuffer.wrap(IOUtils.toByteArray(inputStream))
                     }
                 } catch (e: Exception) {
-                    Toast.makeText(BaseApplication.mContext, BaseApplication.mContext.getString(R.string.exception_Failed_to_load_target_image), Toast.LENGTH_LONG).show()
+                    //todo
+//                    Toast.makeText(
+//                        BaseApplication.mContext,
+//                        BaseApplication.mContext.getString(R.string.exception_Failed_to_load_target_image),
+//                        Toast.LENGTH_LONG
+//                    ).show()
                 }
                 val source: Image = Image().withBytes(sourceImageBytes)
                 val target: Image = Image().withBytes(targetImageBytes)
@@ -88,7 +92,7 @@ class FaceRecognitionUtils(private val mContext: Context) {
         thread.start()
     }
 
-    interface FaceCallBack{
+    interface FaceCallBack {
         fun call(boolean: Boolean)
     }
 

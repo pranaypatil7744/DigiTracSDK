@@ -1,26 +1,29 @@
 package com.example.digitracksdk.presentation.attendance.new_timesheet
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.Dialog
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.chip.Chip
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityNewTimeSheetBinding
-import com.innov.digitrac.databinding.ItemCalendarDayHeaderBinding
-import com.innov.digitrac.databinding.ItemCalendarItemBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityNewTimeSheetBinding
+import com.example.digitracksdk.databinding.ItemCalendarDayHeaderBinding
+import com.example.digitracksdk.databinding.ItemCalendarItemBinding
 import com.example.digitracksdk.domain.model.attendance_model.AttendanceCycleRequestModel
 import com.example.digitracksdk.domain.model.attendance_model.AttendanceValidationRequestModel
 import com.example.digitracksdk.domain.model.attendance_model.LeaveHexCodeRequestModel
@@ -54,6 +57,7 @@ import java.time.temporal.WeekFields
 import java.util.ArrayList
 import java.util.Locale
 
+@RequiresApi(Build.VERSION_CODES.O)
 class NewTimeSheetActivity : BaseActivity() {
     lateinit var binding: ActivityNewTimeSheetBinding
     private val attendanceViewModel: AttendanceViewModel by viewModel()
@@ -84,6 +88,7 @@ class NewTimeSheetActivity : BaseActivity() {
     }
 
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun setObserver() {
         with(attendanceViewModel)
         {
@@ -325,6 +330,7 @@ class NewTimeSheetActivity : BaseActivity() {
             dayBinder = object : MonthDayBinder<DayViewContainer> {
                 override fun create(view: View) = DayViewContainer(view)
 
+                @SuppressLint("ResourceAsColor")
                 override fun bind(container: DayViewContainer, data: CalendarDay) {
                     container.day = data
                     container.textView.text = data.date.dayOfMonth.toString()

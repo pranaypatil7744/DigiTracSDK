@@ -6,10 +6,11 @@ import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.DividerItemBinding
-import com.innov.digitrac.databinding.IssueDetailsTwoLineItemBinding
-import com.innov.digitrac.databinding.ReimbursementDetailsMultiLineItemBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.DividerItemBinding
+import com.example.digitracksdk.databinding.IssueDetailsTwoLineItemBinding
+import com.example.digitracksdk.databinding.ReimbursementDetailsMultiLineItemBinding
 import com.example.digitracksdk.presentation.home.reimbursements.model.ReimbursementDetailsListModel
 import com.example.digitracksdk.presentation.home.reimbursements.model.ReimbursementDetailsType
 
@@ -24,7 +25,7 @@ class ReimbursementDetailsListAdapter(
     class ViewHolder : RecyclerView.ViewHolder {
         var reimbursementDetailsTwoLineItemBinding: IssueDetailsTwoLineItemBinding? = null
         var reimbursementDetailsMultiLineItemBinding: ReimbursementDetailsMultiLineItemBinding? = null
-        var dividerItemBinding:DividerItemBinding? = null
+        var dividerItemBinding: DividerItemBinding? = null
 
         constructor(binding: IssueDetailsTwoLineItemBinding) : super(binding.root) {
             reimbursementDetailsTwoLineItemBinding = binding

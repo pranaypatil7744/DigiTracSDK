@@ -13,10 +13,10 @@ import androidx.activity.result.contract.ActivityResultContracts
 import com.google.android.gms.auth.api.phone.SmsRetriever
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityLoginBinding
-import com.innov.digitrac.databinding.BottomSheetVerifyOtpBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityLoginBinding
+import com.example.digitracksdk.databinding.BottomSheetVerifyOtpBinding
 import com.example.digitracksdk.domain.model.login_model.FirebaseTokenUpdateRequestModel
 import com.example.digitracksdk.domain.model.login_model.LoginRequestModel
 import com.example.digitracksdk.domain.model.verify_otp_model.LoginOtpVerifyRequestModel

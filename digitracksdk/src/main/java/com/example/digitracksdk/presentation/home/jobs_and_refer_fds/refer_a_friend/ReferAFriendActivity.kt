@@ -10,10 +10,9 @@ import com.example.digitracksdk.domain.model.refer_a_friend.SkillListModel
 import com.example.digitracksdk.Constant
 import com.example.digitracksdk.domain.model.refer_a_friend.BranchDetailsRequestModel
 import com.example.digitracksdk.domain.model.refer_a_friend.BranchListModel
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityReferAfriendBinding
-import com.innov.digitrac.domain.model.refer_a_friend.*
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityReferAfriendBinding
 import com.example.digitracksdk.listener.ValidationListener
 import com.example.digitracksdk.utils.AppUtils
 import com.example.digitracksdk.utils.PreferenceUtils

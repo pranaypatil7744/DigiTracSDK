@@ -11,10 +11,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.BottomSheetViewAttendanceFilterBinding
-import com.innov.digitrac.databinding.GeoTrackingListingActivityBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.BottomSheetViewAttendanceFilterBinding
+import com.example.digitracksdk.databinding.GeoTrackingListingActivityBinding
 import com.example.digitracksdk.domain.model.geo_tracking_model.GeoTrackingList
 import com.example.digitracksdk.domain.model.geo_tracking_model.GeoTrackingSummaryListRequestModel
 import com.example.digitracksdk.presentation.home.geo_tracking.GeoTrackingSummaryViewModel

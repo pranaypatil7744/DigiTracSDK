@@ -7,9 +7,9 @@ import android.view.View.GONE
 import android.view.View.VISIBLE
 import androidx.activity.enableEdgeToEdge
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityOtherLetterBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityOtherLetterBinding
 import com.example.digitracksdk.domain.model.my_letters.AssociateAllLettersListModel
 import com.example.digitracksdk.domain.model.my_letters.OtherLettersRequestModel
 import com.example.digitracksdk.presentation.my_letters.offer_letter.adapter.OtherLetterAdapter

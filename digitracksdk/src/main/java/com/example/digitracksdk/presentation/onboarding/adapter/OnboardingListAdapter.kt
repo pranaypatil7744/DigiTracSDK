@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.updateLayoutParams
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.OnboardingItemsBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.OnboardingItemsBinding
 import com.example.digitracksdk.presentation.onboarding.model.OnboardingListModel
 import com.example.digitracksdk.presentation.onboarding.model.OnboardingStatus
 

@@ -7,8 +7,8 @@ import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ItemFamilyDetailsBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.ItemFamilyDetailsBinding
 import com.example.digitracksdk.domain.model.onboarding.ListFamily
 
 class FamilyDetailsAdapter(

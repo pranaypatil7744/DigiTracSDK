@@ -14,9 +14,9 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
 import com.example.digitracksdk.Constant
 import com.example.digitracksdk.Constant.PermissionRequestCodes.Companion.STORAGE_PERMISSION_CODE
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityEsicCardBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityEsicCardBinding
 import com.example.digitracksdk.utils.AppUtils
 import com.example.digitracksdk.utils.DialogUtils
 import com.example.digitracksdk.utils.ImageUtils

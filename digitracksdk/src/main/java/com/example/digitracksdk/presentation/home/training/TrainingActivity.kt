@@ -8,9 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityTrainingBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityTrainingBinding
 import com.example.digitracksdk.domain.model.training_model.TrainingRequestModel
 import com.example.digitracksdk.presentation.attendance.mileage_tracking.adapter.TabAdapter
 import com.example.digitracksdk.presentation.home.training.document_fragment.TrainingDocumentFragment

@@ -11,23 +11,22 @@ import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
+import com.example.digitracksdk.Constant
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.GeoTrackingActivityBinding
+import com.example.digitracksdk.presentation.home.geo_tracking_2.model.GeoTrackingDataBaseModel
+import com.example.digitracksdk.service.LocationTrackingService
+import com.example.digitracksdk.utils.AppUtils
+import com.example.digitracksdk.utils.LocationUtils
+import com.example.digitracksdk.utils.PreferenceUtils
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.GeoTrackingActivityBinding
-import com.example.digitracksdk.presentation.home.geo_tracking_2.model.GeoTrackingDataBaseModel
-import com.example.digitracksdk.service.LocationTrackingService
-import com.example.digitracksdk.utils.AppUtils
-import com.example.digitracksdk.utils.LocationUtils
-import com.example.digitracksdk.utils.PreferenceUtils
 import io.realm.Realm
-import io.realm.kotlin.where
 
 class GeoTrackingActivity : BaseActivity(), OnMapReadyCallback {
 
@@ -189,7 +188,7 @@ class GeoTrackingActivity : BaseActivity(), OnMapReadyCallback {
 
     private fun fetchDataFromDatabase() {
         val realm = Realm.getDefaultInstance()
-        val results = realm.where<GeoTrackingDataBaseModel>().findAll()
+        val results = realm.where<GeoTrackingDataBaseModel>(GeoTrackingDataBaseModel::class.java).findAll()// todo V
 
         val locationMarkerList = realm.copyFromRealm(results)
         AppUtils.INSTANCE?.logMe("Location TAG", "" + locationMarkerList.toString())

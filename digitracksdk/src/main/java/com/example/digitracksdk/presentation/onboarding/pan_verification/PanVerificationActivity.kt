@@ -5,7 +5,7 @@ import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.core.content.ContextCompat
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.base.BaseActivity
+import com.example.digitracksdk.base.BaseActivity
 import com.example.digitracksdk.domain.model.home_model.response.InnovIDCardResponseModel
 import com.example.digitracksdk.domain.model.onboarding.pan_verification.PanCardVerificationRequestModel
 import com.example.digitracksdk.domain.model.onboarding.pan_verification.Result
@@ -14,8 +14,8 @@ import com.example.digitracksdk.presentation.my_profile.adapter.MyProfileAdapter
 import com.example.digitracksdk.presentation.my_profile.model.ProfileModel
 import com.example.digitracksdk.utils.PreferenceUtils
 import com.example.digitracksdk.utils.isNetworkAvailable
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ActivityPanVerificationBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.ActivityPanVerificationBinding
 import com.example.digitracksdk.domain.model.onboarding.pan_verification.GetPanCardVerificationDetailsRequestModel
 import com.example.digitracksdk.utils.AppUtils
 import org.koin.android.viewmodel.ext.android.viewModel

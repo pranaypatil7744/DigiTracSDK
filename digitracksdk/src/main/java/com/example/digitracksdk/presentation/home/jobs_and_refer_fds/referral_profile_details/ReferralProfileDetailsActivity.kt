@@ -6,8 +6,9 @@ import android.view.View.VISIBLE
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ActivityReferralProfileDetailsBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityReferralProfileDetailsBinding
 import com.example.digitracksdk.presentation.home.jobs_and_refer_fds.jobs.model.LstreferredDetailsItem
 import com.example.digitracksdk.presentation.home.jobs_and_refer_fds.referral_profile_details.adapter.ReferralProfileDetailsAdapter
 import com.example.digitracksdk.presentation.home.jobs_and_refer_fds.referral_profile_details.model.ProfileDetailsType

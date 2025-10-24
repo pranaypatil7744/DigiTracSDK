@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.digitracksdk.domain.model.mileage_tracking_model.InsertMileageRegularizationRequestModel
 import com.example.digitracksdk.domain.model.mileage_tracking_model.InsertMileageRegularizationResponseModel
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
+import com.example.digitracksdk.R
 import com.example.digitracksdk.domain.model.ApiError
 import com.example.digitracksdk.domain.model.mileage_tracking_model.InsertMileageTrackingRequestModel
 import com.example.digitracksdk.domain.model.mileage_tracking_model.InsertMileageTrackingResponseModel
@@ -17,14 +17,12 @@ import com.example.digitracksdk.domain.model.mileage_tracking_model.MileageTrack
 import com.example.digitracksdk.domain.model.mileage_tracking_model.MileageTrackingFlagResponseModel
 import com.example.digitracksdk.domain.model.mileage_tracking_model.MileageTrackingListRequestModel
 import com.example.digitracksdk.domain.model.mileage_tracking_model.MileageTrackingListResponseModel
-import com.innov.digitrac.domain.model.mileage_tracking_model.*
 import com.example.digitracksdk.domain.usecase.base.UseCaseResponse
 import com.example.digitracksdk.domain.usecase.mileage_tracking_usecase.InsertMileageRegularizationUseCase
 import com.example.digitracksdk.domain.usecase.mileage_tracking_usecase.InsertMileageTrackingUseCase
 import com.example.digitracksdk.domain.usecase.mileage_tracking_usecase.MileageRegularizationListUseCase
 import com.example.digitracksdk.domain.usecase.mileage_tracking_usecase.MileageTrackingFlagUseCase
 import com.example.digitracksdk.domain.usecase.mileage_tracking_usecase.MileageTrackingListUseCase
-import com.innov.digitrac.domain.usecase.mileage_tracking_usecase.*
 import com.example.digitracksdk.listener.ValidationListener
 import com.example.digitracksdk.presentation.attendance.mileage_tracking.status_fragment.ReadingStatus
 import kotlinx.coroutines.cancel

@@ -10,9 +10,9 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityHomeBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityHomeBinding
 import com.example.digitracksdk.domain.model.CommonRequestModel
 import com.example.digitracksdk.domain.model.home_model.SurveyLinkRequestModel
 import com.example.digitracksdk.domain.model.home_model.response.HomeDashboardRequestModel

@@ -5,8 +5,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.ActivityMileageTrackingBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.ActivityMileageTrackingBinding
 import com.example.digitracksdk.presentation.attendance.mileage_tracking.adapter.TabAdapter
 import com.example.digitracksdk.presentation.attendance.mileage_tracking.regularization_fragment.MileageTrackingRegularizationFragment
 import com.example.digitracksdk.presentation.attendance.mileage_tracking.status_fragment.MileageTrackingStatusFragment
@@ -14,7 +14,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.example.digitracksdk.utils.AppUtils
 
 class MileageTrackingActivity : AppCompatActivity() {
-    lateinit var binding:ActivityMileageTrackingBinding
+    lateinit var binding: ActivityMileageTrackingBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

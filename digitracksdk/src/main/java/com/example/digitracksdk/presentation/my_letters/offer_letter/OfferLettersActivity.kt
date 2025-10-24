@@ -7,12 +7,12 @@ import android.view.View.VISIBLE
 import androidx.activity.enableEdgeToEdge
 import com.example.digitracksdk.domain.model.my_letters.DownloadCandidateOfferLetterRequestModel
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityOfferLettersBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityOfferLettersBinding
 import com.example.digitracksdk.domain.model.CommonRequestModel
 import com.example.digitracksdk.domain.model.my_letters.OfferLetterAcceptRejectRequestModel
-import com.innov.digitrac.domain.model.my_letters.*
+import com.example.digitracksdk.domain.model.my_letters.*
 import com.example.digitracksdk.presentation.my_letters.candidate_loi.model.CandidateLoiStatus
 import com.example.digitracksdk.presentation.my_letters.offer_letter.adapter.OfferLetterAdapter
 import com.example.digitracksdk.presentation.my_letters.offer_letter.model.OfferLetterModel

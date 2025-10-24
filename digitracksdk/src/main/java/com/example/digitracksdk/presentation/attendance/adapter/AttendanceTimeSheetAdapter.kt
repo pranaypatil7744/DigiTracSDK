@@ -4,10 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.TimeSheetHolidayItemBinding
-import com.innov.digitrac.databinding.TimeSheetListItemsBinding
-import com.innov.digitrac.databinding.TimeSheetTopItemBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.TimeSheetHolidayItemBinding
+import com.example.digitracksdk.databinding.TimeSheetListItemsBinding
+import com.example.digitracksdk.databinding.TimeSheetTopItemBinding
 import com.example.digitracksdk.presentation.attendance.model.AttendanceTimeSheetModel
 import com.example.digitracksdk.presentation.attendance.model.TimeSheetItemType
 
@@ -16,7 +16,7 @@ class AttendanceTimeSheetAdapter(
     var timeSheetList: ArrayList<AttendanceTimeSheetModel>
 ) : RecyclerView.Adapter<AttendanceTimeSheetAdapter.ViewHolder>() {
 
-    class ViewHolder:RecyclerView.ViewHolder{
+    class ViewHolder : RecyclerView.ViewHolder {
 
         var itemTimeSheetTopItemBinding: TimeSheetTopItemBinding? = null
         var itemTimeSheetHolidayItemBinding: TimeSheetHolidayItemBinding? = null
@@ -39,22 +39,27 @@ class AttendanceTimeSheetAdapter(
         return when (viewType) {
             TimeSheetItemType.TIME_SHEET_TOP_ITEM.value -> {
                 val view =
-                    LayoutInflater.from(context).inflate(R.layout.time_sheet_top_item, parent, false)
+                    LayoutInflater.from(context)
+                        .inflate(R.layout.time_sheet_top_item, parent, false)
                 val binding = TimeSheetTopItemBinding.bind(view)
                 ViewHolder(binding)
             }
+
             TimeSheetItemType.TIME_SHEET_DAILY_ITEM.value -> {
                 val view =
-                    LayoutInflater.from(context).inflate(R.layout.time_sheet_list_items, parent, false)
+                    LayoutInflater.from(context)
+                        .inflate(R.layout.time_sheet_list_items, parent, false)
                 val binding = TimeSheetListItemsBinding.bind(view)
                 ViewHolder(binding)
             }
+
             TimeSheetItemType.TIME_SHEET_HOLIDAY_ITEM.value -> {
                 val view = LayoutInflater.from(context)
                     .inflate(R.layout.time_sheet_holiday_item, parent, false)
                 val binding = TimeSheetHolidayItemBinding.bind(view)
                 ViewHolder(binding)
             }
+
             else -> {
                 val view = LayoutInflater.from(context)
                     .inflate(R.layout.time_sheet_holiday_item, parent, false)
@@ -78,12 +83,14 @@ class AttendanceTimeSheetAdapter(
 //                    }
                 }
             }
+
             TimeSheetItemType.TIME_SHEET_DAILY_ITEM.value -> {
                 holder.itemTimeSheetListItemsBinding?.apply {
                     recyclerHistoryList.adapter =
                         data.thisMonthHistory?.let { AttendanceTimeSheetListAdapter(context, it) }
                 }
             }
+
             TimeSheetItemType.TIME_SHEET_HOLIDAY_ITEM.value -> {
                 holder.itemTimeSheetHolidayItemBinding?.apply {
                     tvHoliday.text = data.monthYear

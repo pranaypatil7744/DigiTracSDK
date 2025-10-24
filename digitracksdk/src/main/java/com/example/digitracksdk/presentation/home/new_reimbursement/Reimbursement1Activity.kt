@@ -5,9 +5,9 @@ import android.view.View.GONE
 import androidx.activity.enableEdgeToEdge
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityReimbursement1Binding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityReimbursement1Binding
 import com.example.digitracksdk.presentation.home.new_reimbursement.fragments.NewReimbursementApprovedFragment
 import com.example.digitracksdk.presentation.home.new_reimbursement.fragments.NewReimbursementPendingFragment
 import com.example.digitracksdk.presentation.home.new_reimbursement.fragments.NewReimbursementRejectedFragment

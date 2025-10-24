@@ -5,8 +5,12 @@ import android.view.LayoutInflater
 import android.view.View.GONE
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.*
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.DividerItemBinding
+import com.example.digitracksdk.databinding.JobDetailsWithPointsItemBinding
+import com.example.digitracksdk.databinding.ProfileDetailsItemBinding
+import com.example.digitracksdk.databinding.ProfileDetailsTopItemBinding
 import com.example.digitracksdk.presentation.home.jobs_and_refer_fds.referral_profile_details.model.ProfileDetailsType
 import com.example.digitracksdk.presentation.home.jobs_and_refer_fds.referral_profile_details.model.ReferralProfileDetailsModel
 

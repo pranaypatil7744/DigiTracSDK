@@ -10,10 +10,10 @@ import android.widget.ArrayAdapter
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityBankDetailsBinding
-import com.innov.digitrac.databinding.BottomSheetAddPhotoBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityBankDetailsBinding
+import com.example.digitracksdk.databinding.BottomSheetAddPhotoBinding
 import com.example.digitracksdk.domain.model.CommonRequestModel
 import com.example.digitracksdk.domain.model.onboarding.InnovIDRequestModel
 import com.example.digitracksdk.domain.model.onboarding.bank_model.BankListModel

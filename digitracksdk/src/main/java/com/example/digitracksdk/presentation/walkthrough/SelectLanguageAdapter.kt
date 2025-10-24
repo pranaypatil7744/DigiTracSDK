@@ -4,8 +4,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.AttendanceListItemBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.AttendanceListItemBinding
 
 class SelectLanguageAdapter(var context: Context,var langList:ArrayList<String>,val listener: LanguageManager):RecyclerView.Adapter<SelectLanguageAdapter.ViewHolder>() {
 

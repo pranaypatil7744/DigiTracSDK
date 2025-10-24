@@ -11,7 +11,7 @@ import android.os.Build
 import android.os.SystemClock
 import androidx.core.app.NotificationCompat
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
+import com.example.digitracksdk.R
 import com.example.digitracksdk.data.source.remote.RetrofitService
 import com.example.digitracksdk.domain.model.login_model.FirebaseTokenUpdateRequestModel
 import com.example.digitracksdk.domain.model.login_model.FirebaseTokenUpdateResponseModel

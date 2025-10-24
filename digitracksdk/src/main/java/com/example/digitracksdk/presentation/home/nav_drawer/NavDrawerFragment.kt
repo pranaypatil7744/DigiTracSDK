@@ -7,8 +7,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.FragmentNavDrawerBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.FragmentNavDrawerBinding
 import com.example.digitracksdk.presentation.home.client_policy.ClientPolicyActivity
 import com.example.digitracksdk.presentation.home.help_and_support.HelpAndSupportActivity
 import com.example.digitracksdk.presentation.home.innov_id_card.InnovIdCardActivity

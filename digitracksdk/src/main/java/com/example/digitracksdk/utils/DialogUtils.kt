@@ -16,10 +16,10 @@ import android.widget.NumberPicker
 import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.multidex.BuildConfig
 import com.google.android.material.textfield.TextInputEditText
-import com.innov.digitrac.R
-import com.innov.digitrac.BuildConfig
-import com.innov.digitrac.databinding.*
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.*
 
 class DialogUtils {
     companion object {

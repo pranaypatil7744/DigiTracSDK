@@ -5,9 +5,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityViewPayoutBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityViewPayoutBinding
 import com.example.digitracksdk.domain.model.view_payout.LSTReimbDetail
 import com.example.digitracksdk.domain.model.view_payout.ViewPayoutRequest
 import com.example.digitracksdk.presentation.home.view_payout.adapter.ViewPayoutAdapter

@@ -18,12 +18,11 @@ import com.example.digitracksdk.domain.model.help_and_support.ListAssociateIssue
 import com.example.digitracksdk.domain.model.help_and_support.ListAssociateIssueUpdatesModel
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityHelpAndSupportBinding
-import com.innov.digitrac.databinding.BottomSheetHelpAndSupportBinding
-import com.innov.digitrac.databinding.BottomSheetIssueDetailsBinding
-import com.innov.digitrac.domain.model.help_and_support.*
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityHelpAndSupportBinding
+import com.example.digitracksdk.databinding.BottomSheetHelpAndSupportBinding
+import com.example.digitracksdk.databinding.BottomSheetIssueDetailsBinding
 import com.example.digitracksdk.presentation.home.help_and_support.adapter.HelpAndSupportAdapter
 import com.example.digitracksdk.presentation.home.help_and_support.model.HelpAndSupportModel
 import com.example.digitracksdk.presentation.home.help_and_support.model.HelpSupportDetails
@@ -32,7 +31,6 @@ import com.example.digitracksdk.presentation.home.help_and_support.model.HelpSup
 import com.example.digitracksdk.presentation.home.help_and_support.model.IssueDetailsModel
 import com.example.digitracksdk.presentation.home.help_and_support.model.IssueDetailsType
 import com.example.digitracksdk.presentation.home.help_and_support.adapter.IssueDetailsAdapter
-import com.innov.digitrac.presentation.home.help_and_support.model.*
 import com.example.digitracksdk.utils.AppUtils
 import com.example.digitracksdk.utils.PreferenceUtils
 import com.example.digitracksdk.utils.isNetworkAvailable

@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.innov.digitrac.base.BaseFragment
-import com.innov.digitrac.databinding.FragmentApprovedBinding
+import com.example.digitracksdk.base.BaseFragment
+import com.example.digitracksdk.databinding.FragmentApprovedBinding
 import com.example.digitracksdk.presentation.home.reimbursements.adapter.ReimbursementAdapter
 import com.example.digitracksdk.presentation.home.reimbursements.model.ReimbursementModel
 import com.example.digitracksdk.presentation.home.reimbursements.model.ReimbursementType

@@ -5,9 +5,9 @@ import android.os.Bundle
 import android.view.View.*
 import androidx.activity.enableEdgeToEdge
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivitySignatureBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivitySignatureBinding
 import com.example.digitracksdk.domain.model.onboarding.InnovIDRequestModel
 import com.example.digitracksdk.presentation.image_view.ImageViewActivity
 import com.example.digitracksdk.presentation.onboarding.document.DocumentDetailsActivity.Companion.viewImage

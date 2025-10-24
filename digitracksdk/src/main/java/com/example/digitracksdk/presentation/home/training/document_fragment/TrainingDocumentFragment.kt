@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseFragment
-import com.innov.digitrac.databinding.FragmentTrainingDocumentBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseFragment
+import com.example.digitracksdk.databinding.FragmentTrainingDocumentBinding
 import com.example.digitracksdk.domain.model.training_model.ViewTrainingDocumentRequestModel
 import com.example.digitracksdk.presentation.home.training.TrainingViewModel
 import com.example.digitracksdk.presentation.home.training.document_fragment.adapter.TrainingDocumentAdapter

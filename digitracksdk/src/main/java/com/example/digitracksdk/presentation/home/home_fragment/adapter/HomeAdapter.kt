@@ -6,8 +6,8 @@ import android.os.Looper
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.*
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.*
 import com.example.digitracksdk.presentation.home.home_fragment.model.HomeModel
 import java.util.*
 

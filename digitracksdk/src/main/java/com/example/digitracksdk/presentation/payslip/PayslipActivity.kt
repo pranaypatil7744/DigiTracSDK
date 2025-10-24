@@ -10,10 +10,10 @@ import com.example.digitracksdk.domain.model.pay_slip.PaySlipMonthYearRequestMod
 import com.example.digitracksdk.domain.model.pay_slip.SalaryReleaseStatusRequestModel
 import com.example.digitracksdk.Constant
 import com.example.digitracksdk.domain.model.pay_slip.PaySlipDownloadRequestModel
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityPayslipBinding
-import com.innov.digitrac.domain.model.pay_slip.*
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityPayslipBinding
+import com.example.digitracksdk.domain.model.pay_slip.*
 import com.example.digitracksdk.presentation.payslip.adapter.PayslipBottomSheetAdapter
 import com.example.digitracksdk.presentation.payslip.model.PayslipBottomSheetModel
 import com.example.digitracksdk.presentation.payslip.model.YearOrMonthListModel

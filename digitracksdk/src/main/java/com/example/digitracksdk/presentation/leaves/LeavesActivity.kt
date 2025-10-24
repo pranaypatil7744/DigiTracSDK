@@ -6,10 +6,10 @@ import android.view.View.GONE
 import android.view.View.VISIBLE
 import androidx.activity.enableEdgeToEdge
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityLeavesBinding
-import com.innov.digitrac.databinding.BottomSheetHolidayListBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityLeavesBinding
+import com.example.digitracksdk.databinding.BottomSheetHolidayListBinding
 import com.example.digitracksdk.domain.model.CommonRequestModel
 import com.example.digitracksdk.domain.model.leaves.ListHolidaysModel
 import com.example.digitracksdk.presentation.leaves.adapter.HolidayListAdapter

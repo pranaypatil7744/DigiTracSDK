@@ -8,8 +8,8 @@ import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.OfferLetterItemBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.OfferLetterItemBinding
 import com.example.digitracksdk.presentation.my_letters.candidate_loi.model.CandidateLoiStatus
 import com.example.digitracksdk.presentation.my_letters.offer_letter.model.OfferLetterModel
 

@@ -4,10 +4,11 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.NavItemDividerBinding
-import com.innov.digitrac.databinding.NavItemProfileBinding
-import com.innov.digitrac.databinding.NavItemsBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.NavItemDividerBinding
+import com.example.digitracksdk.databinding.NavItemProfileBinding
+import com.example.digitracksdk.databinding.NavItemsBinding
 import com.example.digitracksdk.presentation.home.nav_drawer.model.NavDrawerModel
 import com.example.digitracksdk.presentation.home.nav_drawer.model.NavDrawerType
 import com.example.digitracksdk.utils.ImageUtils

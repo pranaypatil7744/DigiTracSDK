@@ -27,10 +27,9 @@ import com.example.digitracksdk.utils.ImageUtils
 import com.example.digitracksdk.utils.PermissionUtils
 import com.example.digitracksdk.utils.PreferenceUtils
 import com.example.digitracksdk.Constant
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityAttendanceCameraBinding
 import com.example.digitracksdk.utils.AppUtils
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityAttendanceCameraBinding
-import com.innov.digitrac.utils.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay

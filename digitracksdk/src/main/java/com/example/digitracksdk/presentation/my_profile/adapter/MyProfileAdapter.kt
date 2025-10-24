@@ -7,9 +7,9 @@ import android.view.View.*
 import com.example.digitracksdk.domain.model.onboarding.pan_verification.Result
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.innov.digitrac.R
-import com.innov.digitrac.databinding.EmpProfileDetailsItemBinding
-import com.innov.digitrac.databinding.ItemProfileDetailsBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.databinding.EmpProfileDetailsItemBinding
+import com.example.digitracksdk.databinding.ItemProfileDetailsBinding
 import com.example.digitracksdk.domain.model.home_model.response.InnovIDCardResponseModel
 import com.example.digitracksdk.domain.model.onboarding.bank_account_verification.Details
 import com.example.digitracksdk.domain.model.onboarding.aadhaar_verification_digilocker.Data

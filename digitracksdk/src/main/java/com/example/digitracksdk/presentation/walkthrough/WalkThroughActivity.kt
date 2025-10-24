@@ -4,9 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import com.example.digitracksdk.Constant
-import com.innov.digitrac.R
-import com.innov.digitrac.base.BaseActivity
-import com.innov.digitrac.databinding.ActivityWalkThroughBinding
+import com.example.digitracksdk.R
+import com.example.digitracksdk.base.BaseActivity
+import com.example.digitracksdk.databinding.ActivityWalkThroughBinding
 import com.example.digitracksdk.presentation.login.LoginActivity
 import com.example.digitracksdk.presentation.signup.SignUpActivity
 import com.example.digitracksdk.utils.AppUtils
