@@ -5,7 +5,7 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
-import com.innov.digitrac.R
+import com.example.digitracksdk.R
 
 open class BaseFragment: Fragment() {
 
