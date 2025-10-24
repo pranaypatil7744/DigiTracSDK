@@ -10,7 +10,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
-import com.innov.digitrac.R
+import com.example.digitracksdk.R
 
 open class BaseActivity:AppCompatActivity() {
     var mCurrentPhotoPath: String? = ""
