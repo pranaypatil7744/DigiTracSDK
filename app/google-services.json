@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "135202343832",
+    "firebase_url": "https://digitracapp.firebaseio.com",
+    "project_id": "digitracapp",
+    "storage_bucket": "digitracapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135202343832:android:7a0b91006be6cea6e4b9ed",
+        "android_client_info": {
+          "package_name": "com.innov.digitrac"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "135202343832-ugud410i05d9gs5einoo4i84nsglrb08.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.innov.digitrac",
+            "certificate_hash": "f669c6f20291b8c77f4742c0d0348c49179c6b7b"
+          }
+        },
+        {
+          "client_id": "135202343832-tuv66vp1dq1sck4egrrlduopg3jreu64.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYQQiwK4YkCwnDOGeX62lHJ8rAytbyPwM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "135202343832-tuv66vp1dq1sck4egrrlduopg3jreu64.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "135202343832-mbib80tf1q60ovbbh87lqv2afsb555ou.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.innov.Digitrack"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
